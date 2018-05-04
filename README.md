@@ -47,8 +47,6 @@ The project is licensed under [GNU General Public License Version 3](http://www.
 
 ## How to use
 ```bash
-#
-#
 # experiment parameters
 radius = 10
 precision = 0.1
