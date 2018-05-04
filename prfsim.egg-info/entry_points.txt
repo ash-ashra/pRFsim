@@ -1,3 +1,0 @@
-[console_scripts]
-prfsim = prfsim.__main__:main
-
