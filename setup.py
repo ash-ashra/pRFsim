@@ -23,7 +23,7 @@ setup(name='prfsim',
       install_requires=['numpy', 'scipy', 'nibabel', 'pandas', 'seaborn'],
       keywords=['pRF', 'fMRI', 'retinotopy', 'simulation'],
       long_description=long_description,
-      packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
+      packages=['sim'],
       py_modules=['sim'],
       entry_points={
           'console_scripts': [
