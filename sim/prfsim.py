@@ -45,7 +45,7 @@ def progress(value, max=100):
     
     
     
-def generateStim(radius, precision, barWidth, angles, nFrames, length):
+def generateStim(radius, precision, barWidth, angles, nFrames, length, TR, TRs):
     ## Creating bar stimulus 3D array
     stim = np.zeros((nFrames*TRs, length, length))
     X = Y = np.arange(-radius, radius , precision)

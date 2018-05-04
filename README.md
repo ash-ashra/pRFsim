@@ -44,3 +44,71 @@ Please use the [github issues](https://github.com/arash-ash/prfsim/issues) for q
 
 ## License
 The project is licensed under [GNU General Public License Version 3](http://www.gnu.org/licenses/gpl.html).
+
+## How to use
+```bash
+#
+#
+# experiment parameters
+radius = 10
+precision = 0.1
+barWidth = radius / 4
+angles = [-90, 45, -180, 315, 90, 225, 0, 135]
+nFrames = len(angles)*3
+TR = 3.0
+TRs = 5 # number of TRs for each frame
+duration = nFrames*TRs
+
+x, y = np.mgrid[-radius:radius:precision,
+                -radius:radius:precision]
+pos = np.dstack((x, y))
+length = len(x[0])
+nVoxels = 6
+
+# parameters for double gamma distribution function hrf:
+n1 = 4
+lmbd1 = 2.0
+t01 = 0
+n2 = 7
+lmbd2 = 3
+t02 = 0
+a = 0.3
+
+t = np.arange(0,nFrames*TRs*TR,TR)
+hrf_gen = hrf_double_gamma(t, n1, n2, lmbd1, lmbd2, t01, t02, a)
+hrf_est = hrf_gen
+
+pt = time.process_time()
+stim = generateStim(radius=radius, precision=precision,
+                    barWidth=barWidth, angles=angles,
+                    nFrames=nFrames, length=length,
+		    TR=TR, TRs=TRs)
+elapsed_time = time.process_time() - pt
+print('stimulus generated in %0.3f seconds'%elapsed_time)
+
+pt = time.process_time()
+neuronal_responses = getNeuronalResponse(stim=stim, nVoxels=nVoxels,
+                                        radius=radius, precision=precision,
+                                        duration=duration)
+elapsed_time = time.process_time() - pt
+print('Neuronal responses generated in %0.3f seconds'%elapsed_time)
+
+
+pt = time.process_time()
+bolds = generateData(neuronal_responses=neuronal_responses,
+                     hrf=hrf_gen,
+                     duration=duration, nVoxels=nVoxels)
+elapsed_time = time.process_time() - pt
+print('BOLD responses generated in %0.3f seconds'%elapsed_time)
+
+
+pt = time.process_time()
+print('pRF estimations started...')
+results = estimateAll(bolds=bolds, stim=stim,
+                      hrf=hrf_est, radius=radius,
+                      precision=precision,
+                      nVoxels=nVoxels, margin = 1)
+elapsed_time = time.process_time() - pt
+print('pRF estimation errors generated in %0.3f seconds'%elapsed_time)
+```
+
