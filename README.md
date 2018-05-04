@@ -1,5 +1,5 @@
 # PyPRF
-<img src="logo.png" width=200 align="right" />
+<img src="logo.svg" width=200 align="right" />
 
 A free & open source *python package* for *population receptive field (PRF) simulation*. This package is mainly developed for functional magnetic resonance imaging (fMRI) experiments.
 
