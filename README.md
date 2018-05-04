@@ -47,6 +47,9 @@ The project is licensed under [GNU General Public License Version 3](http://www.
 
 ## How to use
 ```bash
+import prfsim.sim as psim
+import numpy as np
+
 # experiment parameters
 radius = 10
 precision = 0.1
@@ -73,40 +76,34 @@ t02 = 0
 a = 0.3
 
 t = np.arange(0,nFrames*TRs*TR,TR)
-hrf_gen = hrf_double_gamma(t, n1, n2, lmbd1, lmbd2, t01, t02, a)
+hrf_gen = psim.hrf_double_gamma(t, n1, n2, lmbd1, lmbd2, t01, t02, a)
 hrf_est = hrf_gen
 
-pt = time.process_time()
-stim = generateStim(radius=radius, precision=precision,
+stim = psim.generateStim(radius=radius, precision=precision,
                     barWidth=barWidth, angles=angles,
                     nFrames=nFrames, length=length,
-		    TR=TR, TRs=TRs)
-elapsed_time = time.process_time() - pt
-print('stimulus generated in %0.3f seconds'%elapsed_time)
+		            TR=TR, TRs=TRs)
 
-pt = time.process_time()
-neuronal_responses = getNeuronalResponse(stim=stim, nVoxels=nVoxels,
+print('stimulus generated')
+
+neuronal_responses = psim.getNeuronalResponse(stim=stim, nVoxels=nVoxels,
                                         radius=radius, precision=precision,
                                         duration=duration)
-elapsed_time = time.process_time() - pt
-print('Neuronal responses generated in %0.3f seconds'%elapsed_time)
 
+print('Neuronal responses generated')
 
-pt = time.process_time()
-bolds = generateData(neuronal_responses=neuronal_responses,
+bolds = psim.generateData(neuronal_responses=neuronal_responses,
                      hrf=hrf_gen,
                      duration=duration, nVoxels=nVoxels)
-elapsed_time = time.process_time() - pt
-print('BOLD responses generated in %0.3f seconds'%elapsed_time)
+
+print('BOLD responses generated')
 
 
-pt = time.process_time()
 print('pRF estimations started...')
-results = estimateAll(bolds=bolds, stim=stim,
+results = psim.estimateAll(bolds=bolds, stim=stim,
                       hrf=hrf_est, radius=radius,
                       precision=precision,
                       nVoxels=nVoxels, margin = 1)
-elapsed_time = time.process_time() - pt
-print('pRF estimation errors generated in %0.3f seconds'%elapsed_time)
+print('pRF estimation errors generated')
 ```
 
