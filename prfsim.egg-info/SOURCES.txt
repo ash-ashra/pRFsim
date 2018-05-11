@@ -1,8 +1,5 @@
-README.md
 setup.cfg
 setup.py
-prfsim/__init__.py
-prfsim/sim.py
 prfsim.egg-info/PKG-INFO
 prfsim.egg-info/SOURCES.txt
 prfsim.egg-info/dependency_links.txt

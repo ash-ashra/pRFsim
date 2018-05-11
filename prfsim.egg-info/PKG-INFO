@@ -1,13 +1,12 @@
 Metadata-Version: 1.1
 Name: prfsim
-Version: 0.1.11
+Version: 0.1.12
 Summary: A free & open source python tool for population receptive                     field simulation of fMRI data.
 Home-page: https://github.com/arash-ash/prfsim
 Author: Arash Ash
 Author-email: arash.ashrafnejad@gmail.com
 License: GNU General Public License Version 3
-Download-URL: https://github.com/arash-ash/prfsim/archive/v0.1.11.tar.gz
-Description-Content-Type: text/markdown
+Download-URL: https://github.com/arash-ash/prfsim/archive/v0.1.12.tar.gz
 Description: # PyPRF
         [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/arash-ash/pRFsim/master?filepath=pRFsim_Tutorial.ipynb)
         
