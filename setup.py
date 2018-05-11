@@ -16,7 +16,7 @@ with open('README.md', encoding='utf-8') as f:
 
 
 setup(name='prfsim',
-      version='0.1.8',
+      version='0.1.9',
       description=('A free & open source python tool for population receptive \
                     field simulation of fMRI data.'),
       long_description=long_description,

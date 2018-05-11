@@ -52,7 +52,8 @@ def generateStim(radius, precision, barWidth,
     f = 0
     for angle in angles:
       for k in range(3):
-        rot = rotate(img_temps[k], angle=angle, mode='nearest', reshape=False)
+        rot = rotate(img_temps[k], angle=angle,
+ mode='nearest', reshape=False)
         stim[f, :, :] = (rot > np.max(rot)/2)*1.0
         f += 1
         
