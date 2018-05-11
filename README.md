@@ -1,3 +1,5 @@
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/arash-ash/pRFsim/master?filepath=pRFsim_Tutorial.ipynb)
+
 # PyPRF
 <img src="logo.svg" width=200 align="right" />
 
