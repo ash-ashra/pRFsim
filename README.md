@@ -23,6 +23,7 @@ If you install `pyprf` using `pip` (as described above), all of the following de
 | [Pandas](https://pandas.pydata.org/)                  | 0.22.0         |
 | [SciPy](http://www.scipy.org/)                        | 1.0.0          |
 | [Seaborn](https://seaborn.pydata.org/)   		| 0.8.1          |
+| [Pillow](https://pillow.readthedocs.io/)   		| 5.0.0          |
 
 ## Contributions
 
