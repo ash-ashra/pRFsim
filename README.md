@@ -1,6 +1,6 @@
+# PyPRF
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/arash-ash/pRFsim/master?filepath=pRFsim_Tutorial.ipynb)
 
-# PyPRF
 <img src="logo.svg" width=200 align="right" />
 
 A free & open source *python package* for *population receptive field (PRF) simulation*. This package is mainly developed for functional magnetic resonance imaging (fMRI) experiments.
