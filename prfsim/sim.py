@@ -10,37 +10,71 @@ from matplotlib import pyplot as plt; figSize = 5
 import numpy as np
 import pandas as pd
 
+from scipy.ndimage.interpolation import rotate
+from scipy.misc import imresize
 from scipy.stats import gamma
 from scipy.misc import factorial
 from scipy.stats import norm
 from scipy.stats import multivariate_normal
 from scipy.optimize import minimize
-from scipy.optimize import brute
-from scipy.optimize import least_squares
 
 import seaborn as sns; sns.set()
-import time
 
     
     
     
-def generateStim(radius, precision, barWidth, angles, nFrames, length, TR, TRs):
-    ## Creating bar stimulus 3D array
-    stim = np.zeros((nFrames*TRs, length, length))
+def generateStim(radius, precision, barWidth,
+                 angles, nFrames, length, TR, TRs, isCheckerboard=False): 
     X = Y = np.arange(-radius, radius , precision)
+    
+    if isCheckerboard:
+         # create the checkerboard pattern
+         arr = np.zeros((16,16))
+         arr[::2,::2] = 1
+         arr[1::2,1::2] = 1
+         checkerboard = imresize(arr,np.array((length, length)),
+                                 interp='nearest')
+
+    # create three vertical bars
+    img_temps = np.zeros((3, length, length))
+    for k in range(3):
+      for i, x in enumerate(X): # do with multithreading
+        for j, y in enumerate(Y):
+          if x <= (0.5*k-0.5)*radius + barWidth:
+            if x >= (0.5*k-0.5)*radius - barWidth:
+                if isCheckerboard:
+                    img_temps[k, i, j] = checkerboard[i, j]
+                else:
+                    img_temps[k, i, j] = 1
+       
+    # rotate them
+    stim = np.zeros((nFrames, length, length))
     f = 0
     for angle in angles:
-        for k in range(3):
-            for i, x in enumerate(X): # do with multithreading
-                for j, y in enumerate(Y):
-                    if np.sin(np.deg2rad(angle))*x - np.cos(np.deg2rad(angle))*y <= (0.5-0.5*k)*radius + barWidth:
-                        if np.sin(np.deg2rad(angle))*x - np.cos(np.deg2rad(angle))*y >= (0.5-0.5*k)*radius - barWidth:
-                            for TR in range(TRs):
-                                stim[f*TRs + TR, j, i] = 1
-            # updates the frame
-            f = f + 1
-            
-    return stim
+      for k in range(3):
+        rot = rotate(img_temps[k], angle=angle, mode='nearest', reshape=False)
+        stim[f, :, :] = (rot > np.max(rot)/2)*1.0
+        f += 1
+        
+    # delay them
+    duration = nFrames*TRs
+    stim_slow = np.zeros((duration, length, length))
+    for f in range(nFrames):
+      for TR in range(TRs):
+        stim_slow[f*TRs + TR, :, :] = stim[f, :, :]
+    
+    fig = plt.figure(figsize=(figSize, figSize))
+    plt.grid(None)
+    shape2D = (len(X), len(Y))
+    proj2D = np.zeros(shape2D)
+    for i in range(nFrames):
+        proj2D = proj2D + (stim[i, :, :]).reshape(shape2D)
+        
+    plt.title('stimulus projection across time')
+    plt.imshow(proj2D.T)
+    plt.show()
+
+    return stim_slow
   
   
 def pRF_size(x, y):
@@ -182,7 +216,7 @@ def estimateAll(bolds, stim, hrf, radius, precision, nVoxels, margin = 1):
     img = Xs_err_im
   fig = plt.figure(figsize=(figSize, figSize))
   plt.grid(None)
-  plt.title('$x$ estimation error \% of each voxel')
+  plt.title('$x$ estimation error% of each voxel')
   ax = sns.heatmap(img, square=True, cmap="YlGnBu")
   plt.show()
   
@@ -192,7 +226,7 @@ def estimateAll(bolds, stim, hrf, radius, precision, nVoxels, margin = 1):
     img = Ys_err_im
   fig = plt.figure(figsize=(figSize, figSize))
   plt.grid(None) 
-  plt.title('$y$ estimation error \% of each voxel')
+  plt.title('$y$ estimation error% of each voxel')
   ax = sns.heatmap(img, square=True, cmap="YlGnBu")
   plt.show()
   
@@ -202,7 +236,7 @@ def estimateAll(bolds, stim, hrf, radius, precision, nVoxels, margin = 1):
     img = Ss_err_im
   fig = plt.figure(figsize=(figSize, figSize))
   plt.grid(None) 
-  plt.title('$\sigma$ estimation error \% of each voxel')
+  plt.title('$\sigma$ estimation error% of each voxel')
   ax = sns.heatmap(img, square=True, cmap="YlGnBu")
   plt.show()
   return results

@@ -40,20 +40,19 @@ hrf_est = hrf_gen
 stim = psim.generateStim(radius=radius, precision=precision,
                     barWidth=barWidth, angles=angles,
                     nFrames=nFrames, length=length,
-		            TR=TR, TRs=TRs)
-
+		            TR=TR, TRs=TRs, isCheckerboard=False)
 print('stimulus generated')
+
 
 neuronal_responses = psim.getNeuronalResponse(stim=stim, nVoxels=nVoxels,
                                         radius=radius, precision=precision,
                                         duration=duration)
-
 print('Neuronal responses generated')
+
 
 bolds = psim.generateData(neuronal_responses=neuronal_responses,
                      hrf=hrf_gen,
                      duration=duration, nVoxels=nVoxels)
-
 print('BOLD responses generated')
 
 

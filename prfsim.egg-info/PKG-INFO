@@ -1,15 +1,15 @@
 Metadata-Version: 1.1
 Name: prfsim
-Version: 0.1.5
+Version: 0.1.8
 Summary: A free & open source python tool for population receptive                     field simulation of fMRI data.
 Home-page: https://github.com/arash-ash/prfsim
 Author: Arash Ash
 Author-email: arash.ashrafnejad@gmail.com
 License: GNU General Public License Version 3
-Download-URL: https://github.com/arash-ash/prfsim/archive/v0.1.5.tar.gz
+Download-URL: https://github.com/arash-ash/prfsim/archive/v0.1.8.tar.gz
 Description-Content-Type: text/markdown
 Description: # PyPRF
-        <img src="logo.png" width=200 align="right" />
+        <img src="logo.svg" width=200 align="right" />
         
         A free & open source *python package* for *population receptive field (PRF) simulation*. This package is mainly developed for functional magnetic resonance imaging (fMRI) experiments.
         
@@ -92,20 +92,19 @@ Description: # PyPRF
         stim = psim.generateStim(radius=radius, precision=precision,
                             barWidth=barWidth, angles=angles,
                             nFrames=nFrames, length=length,
-        		            TR=TR, TRs=TRs)
-        
+        		            TR=TR, TRs=TRs, isCheckerboard=False)
         print('stimulus generated')
+        
         
         neuronal_responses = psim.getNeuronalResponse(stim=stim, nVoxels=nVoxels,
                                                 radius=radius, precision=precision,
                                                 duration=duration)
-        
         print('Neuronal responses generated')
+        
         
         bolds = psim.generateData(neuronal_responses=neuronal_responses,
                              hrf=hrf_gen,
                              duration=duration, nVoxels=nVoxels)
-        
         print('BOLD responses generated')
         
         
