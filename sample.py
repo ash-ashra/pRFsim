@@ -7,7 +7,8 @@ Created on Fri May  4 17:18:12 2018
 """
 import prfsim.sim as psim
 import numpy as np
-from matplotlib import pyplot as plt; figSize = 5
+from matplotlib import pyplot as plt
+figSize = 5
 
 
 # experiment parameters
@@ -21,10 +22,10 @@ angles = [-90, 45, -180, 315, 90, 225, 0, 135
           ]
 
 TR = 3.0
-TRs = 5 # number of TRs for each frame
+TRs = 5  # number of TRs for each frame
 
 noise = 1.0
-sqrtVoxels = 200
+sqrtVoxels = 30
 
 # parameters for double gamma distribution function hrf:
 n1 = 4
@@ -35,11 +36,12 @@ lmbd2 = 3
 t02 = 0
 a = 0.3
 
-t = np.arange(0,len(angles)*3*TRs*TR,TR)
+t = np.arange(0, len(angles)*3*TRs*TR, TR)
 hrf_gen = psim.hrf_double_gamma(t, n1, n2, lmbd1, lmbd2, t01, t02, a)
 hrf_est = hrf_gen
 
-stim = psim.init(radius, precision, TR, TRs, sqrtVoxels, angles, t, isCheckerboard=False)
+stim = psim.init(radius, precision, TR, TRs, sqrtVoxels,
+                 angles, t, isCheckerboard=False)
 print('stimulus generated')
 
 
@@ -52,5 +54,5 @@ print('BOLD responses generated')
 
 
 print('pRF estimations started...')
-results = psim.estimateAll(bolds, hrf_est, margin = 0)
+results = psim.estimateAll(bolds, hrf_est, margin=0)
 print('pRF estimation errors generated')
