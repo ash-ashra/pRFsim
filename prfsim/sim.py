@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8. -*-
+# -*- coding: utf-8 -*-
 """
 Created on Fri Apr  6 21:07:09 2018
 
@@ -20,6 +20,7 @@ from scipy.stats import norm
 from scipy.optimize import least_squares
 
 import seaborn as sns
+from pylab import savefig
 sns.set()
 figSize = 5
 
@@ -184,7 +185,7 @@ def pRF_model(x0, y0, sigma):
     return model
 
 
-def pRF_response(x, y):
+def pRF_response(x, y, sigma, exponent=1.0):
     """Short summary.
 
     Parameters
@@ -201,11 +202,11 @@ def pRF_response(x, y):
 
     """
     global stim
-    model = pRF_model(x, y, pRF_size(x, y))
-    return np.sum(np.sum(stim * model, axis=1), axis=1)
+    model = pRF_model(x, y, sigma)
+    return np.power(np.sum(np.sum(stim * model, axis=1), axis=1), exponent)
 
 
-def getNeuronalResponse():
+def getNeuronalResponse(exponent):
     """Short summary.
 
     Returns
@@ -225,7 +226,8 @@ def getNeuronalResponse():
 
     for i, x in enumerate(X_pRF):  # do with multithreading
         for j, y in enumerate(Y_pRF):
-            pRF_responses[:, i, j] = pRF_response(x, y)
+            sigma = pRF_size(x, y)
+            pRF_responses[:, i, j] = pRF_response(x, y, sigma, exponent)
 
     return pRF_responses
 
@@ -343,7 +345,7 @@ def generateData(neuronal_responses, hrf, noise):
     return bolds
 
 
-def pred_pRF_response(x, hrf):
+def pred_pRF_response(x, hrf, exponent):
     """Short summary.
 
     Parameters
@@ -361,14 +363,12 @@ def pred_pRF_response(x, hrf):
     """
     global stim
     global duration
-    model = pRF_model(x[0], x[1], x[2])
-    response = stim * model
-    rf_response = np.sum(np.sum(response, axis=1), axis=1)
+    rf_response = pRF_response(x[0], x[1], x[2], exponent)
     pred = x[3] * np.convolve(rf_response, hrf)[:duration]
     return pred
 
 
-def MSE(x, bold, hrf):
+def MSE(x, bold, hrf, exponent):
     """Short summary.
 
     Parameters
@@ -386,11 +386,11 @@ def MSE(x, bold, hrf):
         Description of returned object.
 
     """
-    prediction = pred_pRF_response(x, hrf)
+    prediction = pred_pRF_response(x, hrf, exponent)
     return (bold - prediction)
 
 
-def estimatePRF(bold, hrf):
+def estimatePRF(bold, hrf, exponent):
     """Short summary.
 
     Parameters
@@ -412,7 +412,8 @@ def estimatePRF(bold, hrf):
     global stim
 
     x0 = [0, 0, pRF_size(radius, radius), 1]
-    res = least_squares(MSE, args=(bold, hrf), x0=x0, bounds=(-radius, radius))
+    res = least_squares(MSE, args=(bold, hrf, exponent),
+                        x0=x0, bounds=(-radius, radius))
 
     # plt.plot(t, bold, t, pred_pRF_response(res.x, hrf), t, hrf)
     # plt.legend(['bold', 'model', 'hrf'])
@@ -424,7 +425,7 @@ def estimatePRF(bold, hrf):
     return x_min, y_min, s_min
 
 
-def estimateAll(bolds, hrf, margin=0):
+def estimateAll(bolds, hrf, exponent, margin=0):
     """Short summary.
 
     Parameters
@@ -468,7 +469,7 @@ def estimateAll(bolds, hrf, margin=0):
             if count % 10 == 0:
                 print(count)
             bold = bolds[:, i, j]
-            x_est, y_est, s_est = estimatePRF(bold, hrf)
+            x_est, y_est, s_est = estimatePRF(bold, hrf, exponent)
             s = pRF_size(x, y)
             Xs.append(x)
             Ys.append(y)
@@ -511,10 +512,14 @@ def estimateAll(bolds, hrf, margin=0):
         img = Xs_err_im
     plt.figure(1, figsize=(figSize, figSize))
     plt.grid(None)
-    plt.title('$x$ estimation error percentages with average of %.3f' %
+    plt.title('$x$ error percentage average = %.2f' %
               Xs_err_mean)
-    sns.heatmap(img, square=True, cmap="YlGnBu", vmin=0, vmax=5)
-    plt.show()
+    sns.heatmap(img, square=True, cmap="YlGnBu", vmin=0, vmax=10)
+    exponentInt = int(10*exponent)
+    plt.savefig('x_%d.pdf' % exponentInt)
+    plt.clf()
+    plt.cla()
+    plt.close()
 
     if margin > 0:
         img = Ys_err_im[margin:-margin, margin:-margin]
@@ -523,10 +528,13 @@ def estimateAll(bolds, hrf, margin=0):
 
     plt.figure(2, figsize=(figSize, figSize))
     plt.grid(None)
-    plt.title('$y$ estimation error percentages with average of %.3f' %
+    plt.title('$y$ error percentage average = %.2f' %
               Ys_err_mean)
-    sns.heatmap(img, square=True, cmap="YlGnBu", vmin=0, vmax=5)
-    plt.show()
+    sns.heatmap(img, square=True, cmap="YlGnBu", vmin=0, vmax=10)
+    plt.savefig('y_%d.pdf' % exponentInt)
+    plt.clf()
+    plt.cla()
+    plt.close()
 
     if margin > 0:
         img = Ss_err_im[margin:-margin, margin:-margin]
@@ -536,9 +544,11 @@ def estimateAll(bolds, hrf, margin=0):
     plt.figure(3, figsize=(figSize, figSize))
     plt.grid(None)
     plt.title(
-        '$\sigma$ estimation error percentages with average of %.3f' %
+        '$\sigma$ error percentage average = %.2f' %
         Ss_err_mean)
-    sns.heatmap(img, square=True, cmap="YlGnBu", vmin=0, vmax=5)
-    plt.show()
-
+    sns.heatmap(img, square=True, cmap="YlGnBu", vmin=0, vmax=10)
+    plt.savefig('sigma_%d.pdf' % exponentInt)
+    plt.clf()
+    plt.cla()
+    plt.close()
     return results

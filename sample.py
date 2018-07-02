@@ -7,8 +7,8 @@ Created on Fri May  4 17:18:12 2018
 """
 import prfsim.sim as psim
 import numpy as np
-from matplotlib import pyplot as plt
-figSize = 5
+# from matplotlib import pyplot as plt
+# figSize = 5
 
 
 # experiment parameters
@@ -44,15 +44,14 @@ stim = psim.init(radius, precision, TR, TRs, sqrtVoxels,
                  angles, t, isCheckerboard=False)
 print('stimulus generated')
 
-
-neuronal_responses = psim.getNeuronalResponse()
+# for n in np.arange(0.5, 1, 0.1):
+n = 8.0
+neuronal_responses = psim.getNeuronalResponse(n)
 print('Neuronal responses generated')
-
 
 bolds = psim.generateData(neuronal_responses, hrf_gen, noise)
 print('BOLD responses generated')
 
-
 print('pRF estimations started...')
-results = psim.estimateAll(bolds, hrf_est, margin=0)
+results = psim.estimateAll(bolds, hrf_est, n, margin=0)
 print('pRF estimation errors generated')
