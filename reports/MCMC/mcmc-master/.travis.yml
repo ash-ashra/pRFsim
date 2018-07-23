@@ -1,0 +1,33 @@
+sudo: false
+
+language: python
+
+addons:
+    apt:
+        packages:
+            - texlive-latex-recommended
+            - texlive-latex-extra
+            - texlive-fonts-recommended
+            - texlive-fonts-extra
+            - dvipng
+
+env:
+    matrix:
+        - PYTHON_VERSION=2.7
+
+install:
+    - source .ci/install.sh
+
+before_script: # configure a headless display to test plot generation
+    - "export DISPLAY=:99.0"
+    - "sh -e /etc/init.d/xvfb start"
+    - sleep 3 # give xvfb some time to start
+
+script:
+    - source .ci/build.sh
+
+after_success: |
+    if [[ "$PYTHON_VERSION" == "2.7" ]] && [ -n "$GITHUB_API_KEY" ]; then
+        source .ci/upload.sh
+    fi
+
