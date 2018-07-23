@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.6.2)  2 JUL 2018 17:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.6.2)  2 JUL 2018 20:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -53,6 +53,15 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen110
 \Gm@dimlist=\toks15
 )
+(/usr/share/texlive/texmf-dist/tex/latex/apacite/apacite.sty
+Package: apacite 2013/07/21 v6.03 APA citation
+\c@BibCnt=\count90
+\bibleftmargin=\skip43
+\bibindent=\skip44
+\bibparsep=\skip45
+\bibitemsep=\skip46
+\biblabelsep=\skip47
+)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -75,7 +84,7 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 )
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count90
+\c@float@type=\count91
 \float@exts=\toks16
 \float@box=\box26
 \@float@everytoks=\toks17
@@ -83,18 +92,18 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -105,14 +114,14 @@ LaTeX Font Info:    ... okay on input line 11.
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
 * h-part:(L,W,R)=(45.80893pt, 505.89pt, 45.80894pt)
-* v-part:(T,H,B)=(77.84674pt, 650.43pt, 116.77011pt)
+* v-part:(T,H,B)=(106.75473pt, 578.15999pt, 160.13213pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
 * \textwidth=505.89pt
-* \textheight=650.43pt
+* \textheight=578.15999pt
 * \oddsidemargin=-26.46106pt
 * \evensidemargin=-26.46106pt
-* \topmargin=-31.42325pt
+* \topmargin=-2.51526pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
@@ -130,18 +139,24 @@ LaTeX Font Info:    ... okay on input line 11.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+\c@maskedRefs=\count92
+(/usr/share/texlive/texmf-dist/tex/latex/apacite/english.apc
+File: english.apc 2013/07/21 v6.03 apacite language file
+LaTeX Info: Redefining \BPBI on input line 129.
+LaTeX Info: Redefining \BHBI on input line 130.
+)
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count91
+\scratchcounter=\count93
 \scratchdimen=\dimen113
 \scratchbox=\box28
-\nofMPsegments=\count92
-\nofMParguments=\count93
+\nofMPsegments=\count94
+\nofMParguments=\count95
 \everyMPshowfont=\toks18
-\MPscratchCnt=\count94
+\MPscratchCnt=\count96
 \MPscratchDim=\dimen114
-\MPnumerator=\count95
-\makeMPintoPDFobject=\count96
+\MPnumerator=\count97
+\makeMPintoPDFobject=\count98
 \everyMPtoPDFconversion=\toks19
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -196,101 +211,150 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 13.
+(Font)              <12> on input line 19.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 13.
+(Font)              <8> on input line 19.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 13.
+(Font)              <6> on input line 19.
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 18.
+(Font)              <7> on input line 29.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 18.
-<x_5.pdf, id=9, 361.35pt x 361.35pt>
-File: x_5.pdf Graphic file (type pdf)
-<use x_5.pdf>
-Package pdftex.def Info: x_5.pdf  used on input line 30.
-(pdftex.def)             Requested size: 161.8885pt x 161.8892pt.
-<y_5.pdf, id=10, 361.35pt x 361.35pt>
-File: y_5.pdf Graphic file (type pdf)
-<use y_5.pdf>
-Package pdftex.def Info: y_5.pdf  used on input line 31.
-(pdftex.def)             Requested size: 161.8885pt x 161.8892pt.
-<sigma_5.pdf, id=11, 361.35pt x 361.35pt>
-File: sigma_5.pdf Graphic file (type pdf)
-<use sigma_5.pdf>
-Package pdftex.def Info: sigma_5.pdf  used on input line 32.
-(pdftex.def)             Requested size: 161.8885pt x 161.8892pt.
-<x_6.pdf, id=12, 361.35pt x 361.35pt>
-File: x_6.pdf Graphic file (type pdf)
-<use x_6.pdf>
-Package pdftex.def Info: x_6.pdf  used on input line 38.
-(pdftex.def)             Requested size: 161.8885pt x 161.8892pt.
-<y_6.pdf, id=13, 361.35pt x 361.35pt>
-File: y_6.pdf Graphic file (type pdf)
-<use y_6.pdf>
-Package pdftex.def Info: y_6.pdf  used on input line 39.
-(pdftex.def)             Requested size: 161.8885pt x 161.8892pt.
-<sigma_6.pdf, id=14, 361.35pt x 361.35pt>
-File: sigma_6.pdf Graphic file (type pdf)
-<use sigma_6.pdf>
-Package pdftex.def Info: sigma_6.pdf  used on input line 40.
-(pdftex.def)             Requested size: 161.8885pt x 161.8892pt.
-<x_7.pdf, id=15, 361.35pt x 361.35pt>
-File: x_7.pdf Graphic file (type pdf)
-<use x_7.pdf>
-Package pdftex.def Info: x_7.pdf  used on input line 46.
-(pdftex.def)             Requested size: 161.8885pt x 161.8892pt.
-<y_7.pdf, id=16, 361.35pt x 361.35pt>
-File: y_7.pdf Graphic file (type pdf)
-<use y_7.pdf>
-Package pdftex.def Info: y_7.pdf  used on input line 47.
-(pdftex.def)             Requested size: 161.8885pt x 161.8892pt.
-<sigma_7.pdf, id=17, 361.35pt x 361.35pt>
-File: sigma_7.pdf Graphic file (type pdf)
-<use sigma_7.pdf>
-Package pdftex.def Info: sigma_7.pdf  used on input line 48.
-(pdftex.def)             Requested size: 161.8885pt x 161.8892pt.
-<x_9.pdf, id=18, 361.35pt x 361.35pt>
-File: x_9.pdf Graphic file (type pdf)
-<use x_9.pdf>
-Package pdftex.def Info: x_9.pdf  used on input line 54.
-(pdftex.def)             Requested size: 161.8885pt x 161.8892pt.
-<y_9.pdf, id=19, 361.35pt x 361.35pt>
-File: y_9.pdf Graphic file (type pdf)
-<use y_9.pdf>
-Package pdftex.def Info: y_9.pdf  used on input line 55.
-(pdftex.def)             Requested size: 161.8885pt x 161.8892pt.
-<sigma_9.pdf, id=20, 361.35pt x 361.35pt>
-File: sigma_9.pdf Graphic file (type pdf)
-<use sigma_9.pdf>
-Package pdftex.def Info: sigma_9.pdf  used on input line 56.
-(pdftex.def)             Requested size: 161.8885pt x 161.8892pt.
-<x_10.pdf, id=21, 361.35pt x 361.35pt>
+(Font)              <5> on input line 29.
+ (./main.bbl)
+<x_10.pdf, id=9, 361.35pt x 361.35pt>
 File: x_10.pdf Graphic file (type pdf)
 <use x_10.pdf>
-Package pdftex.def Info: x_10.pdf  used on input line 62.
+Package pdftex.def Info: x_10.pdf  used on input line 60.
 (pdftex.def)             Requested size: 161.8885pt x 161.8892pt.
-<y_10.pdf, id=22, 361.35pt x 361.35pt>
+<y_10.pdf, id=10, 361.35pt x 361.35pt>
 File: y_10.pdf Graphic file (type pdf)
 <use y_10.pdf>
-Package pdftex.def Info: y_10.pdf  used on input line 63.
+Package pdftex.def Info: y_10.pdf  used on input line 61.
 (pdftex.def)             Requested size: 161.8885pt x 161.8892pt.
-<sigma_10.pdf, id=23, 361.35pt x 361.35pt>
+<sigma_10.pdf, id=11, 361.35pt x 361.35pt>
 File: sigma_10.pdf Graphic file (type pdf)
 <use sigma_10.pdf>
-Package pdftex.def Info: sigma_10.pdf  used on input line 64.
+Package pdftex.def Info: sigma_10.pdf  used on input line 62.
 (pdftex.def)             Requested size: 161.8885pt x 161.8892pt.
- (./main.bbl) [2 <./x_5.pdf> <./y_5.pdf
+<x_9.pdf, id=12, 361.35pt x 361.35pt>
+File: x_9.pdf Graphic file (type pdf)
+<use x_9.pdf>
+Package pdftex.def Info: x_9.pdf  used on input line 65.
+(pdftex.def)             Requested size: 161.8885pt x 161.8892pt.
+<y_9.pdf, id=13, 361.35pt x 361.35pt>
+File: y_9.pdf Graphic file (type pdf)
+<use y_9.pdf>
+Package pdftex.def Info: y_9.pdf  used on input line 66.
+(pdftex.def)             Requested size: 161.8885pt x 161.8892pt.
+<sigma_9.pdf, id=14, 361.35pt x 361.35pt>
+File: sigma_9.pdf Graphic file (type pdf)
+<use sigma_9.pdf>
+Package pdftex.def Info: sigma_9.pdf  used on input line 67.
+(pdftex.def)             Requested size: 161.8885pt x 161.8892pt.
+<x_8.pdf, id=15, 361.35pt x 361.35pt>
+File: x_8.pdf Graphic file (type pdf)
+<use x_8.pdf>
+Package pdftex.def Info: x_8.pdf  used on input line 70.
+(pdftex.def)             Requested size: 161.8885pt x 161.8892pt.
+<y_8.pdf, id=16, 361.35pt x 361.35pt>
+File: y_8.pdf Graphic file (type pdf)
+<use y_8.pdf>
+Package pdftex.def Info: y_8.pdf  used on input line 71.
+(pdftex.def)             Requested size: 161.8885pt x 161.8892pt.
+<sigma_8.pdf, id=17, 361.35pt x 361.35pt>
+File: sigma_8.pdf Graphic file (type pdf)
+<use sigma_8.pdf>
+Package pdftex.def Info: sigma_8.pdf  used on input line 72.
+(pdftex.def)             Requested size: 161.8885pt x 161.8892pt.
+<x_7.pdf, id=18, 361.35pt x 361.35pt>
+File: x_7.pdf Graphic file (type pdf)
+<use x_7.pdf>
+Package pdftex.def Info: x_7.pdf  used on input line 78.
+(pdftex.def)             Requested size: 161.8885pt x 161.8892pt.
+<y_7.pdf, id=19, 361.35pt x 361.35pt>
+File: y_7.pdf Graphic file (type pdf)
+<use y_7.pdf>
+Package pdftex.def Info: y_7.pdf  used on input line 79.
+(pdftex.def)             Requested size: 161.8885pt x 161.8892pt.
+<sigma_7.pdf, id=20, 361.35pt x 361.35pt>
+File: sigma_7.pdf Graphic file (type pdf)
+<use sigma_7.pdf>
+Package pdftex.def Info: sigma_7.pdf  used on input line 80.
+(pdftex.def)             Requested size: 161.8885pt x 161.8892pt.
+<x_6.pdf, id=21, 361.35pt x 361.35pt>
+File: x_6.pdf Graphic file (type pdf)
+<use x_6.pdf>
+Package pdftex.def Info: x_6.pdf  used on input line 83.
+(pdftex.def)             Requested size: 161.8885pt x 161.8892pt.
+<y_6.pdf, id=22, 361.35pt x 361.35pt>
+File: y_6.pdf Graphic file (type pdf)
+<use y_6.pdf>
+Package pdftex.def Info: y_6.pdf  used on input line 84.
+(pdftex.def)             Requested size: 161.8885pt x 161.8892pt.
+<sigma_6.pdf, id=23, 361.35pt x 361.35pt>
+File: sigma_6.pdf Graphic file (type pdf)
+<use sigma_6.pdf>
+Package pdftex.def Info: sigma_6.pdf  used on input line 85.
+(pdftex.def)             Requested size: 161.8885pt x 161.8892pt.
+<x_5.pdf, id=24, 361.35pt x 361.35pt>
+File: x_5.pdf Graphic file (type pdf)
+<use x_5.pdf>
+Package pdftex.def Info: x_5.pdf  used on input line 88.
+(pdftex.def)             Requested size: 161.8885pt x 161.8892pt.
+<y_5.pdf, id=25, 361.35pt x 361.35pt>
+File: y_5.pdf Graphic file (type pdf)
+<use y_5.pdf>
+Package pdftex.def Info: y_5.pdf  used on input line 89.
+(pdftex.def)             Requested size: 161.8885pt x 161.8892pt.
+<sigma_5.pdf, id=26, 361.35pt x 361.35pt>
+File: sigma_5.pdf Graphic file (type pdf)
+<use sigma_5.pdf>
+Package pdftex.def Info: sigma_5.pdf  used on input line 90.
+(pdftex.def)             Requested size: 161.8885pt x 161.8892pt.
+ [2]
+[3 <./x_10.pdf> <./y_10.pdf
 
-pdfTeX warning: /usr/bin/pdflatex (file ./y_5.pdf): PDF inclusion: multiple pdf
+pdfTeX warning: /usr/bin/pdflatex (file ./y_10.pdf): PDF inclusion: multiple pd
+fs with page group included in a single page
+> <./sigma_10.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./sigma_10.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+> <./x_9.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./x_9.pdf): PDF inclusion: multiple pdf
 s with page group included in a single page
-> <./sigma_5.pdf
+> <./y_9.pdf
 
-pdfTeX warning: /usr/bin/pdflatex (file ./sigma_5.pdf): PDF inclusion: multiple
+pdfTeX warning: /usr/bin/pdflatex (file ./y_9.pdf): PDF inclusion: multiple pdf
+s with page group included in a single page
+> <./sigma_9.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./sigma_9.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./x_8.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./x_8.pdf): PDF inclusion: multiple pdf
+s with page group included in a single page
+> <./y_8.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./y_8.pdf): PDF inclusion: multiple pdf
+s with page group included in a single page
+> <./sigma_8.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./sigma_8.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+>] [4 <./x_7.pdf> <./y_7.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./y_7.pdf): PDF inclusion: multiple pdf
+s with page group included in a single page
+> <./sigma_7.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./sigma_7.pdf): PDF inclusion: multiple
  pdfs with page group included in a single page
 > <./x_6.pdf
 
@@ -304,61 +368,43 @@ s with page group included in a single page
 
 pdfTeX warning: /usr/bin/pdflatex (file ./sigma_6.pdf): PDF inclusion: multiple
  pdfs with page group included in a single page
->] [3 <./x_7.pdf> <./y_7.pdf
+> <./x_5.pdf
 
-pdfTeX warning: /usr/bin/pdflatex (file ./y_7.pdf): PDF inclusion: multiple pdf
+pdfTeX warning: /usr/bin/pdflatex (file ./x_5.pdf): PDF inclusion: multiple pdf
 s with page group included in a single page
-> <./sigma_7.pdf
+> <./y_5.pdf
 
-pdfTeX warning: /usr/bin/pdflatex (file ./sigma_7.pdf): PDF inclusion: multiple
+pdfTeX warning: /usr/bin/pdflatex (file ./y_5.pdf): PDF inclusion: multiple pdf
+s with page group included in a single page
+> <./sigma_5.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./sigma_5.pdf): PDF inclusion: multiple
  pdfs with page group included in a single page
-> <./x_9.pdf
-
-pdfTeX warning: /usr/bin/pdflatex (file ./x_9.pdf): PDF inclusion: multiple pdf
-s with page group included in a single page
-> <./y_9.pdf
-
-pdfTeX warning: /usr/bin/pdflatex (file ./y_9.pdf): PDF inclusion: multiple pdf
-s with page group included in a single page
-> <./sigma_9.pdf
-
-pdfTeX warning: /usr/bin/pdflatex (file ./sigma_9.pdf): PDF inclusion: multiple
- pdfs with page group included in a single page
-> <./x_10.pdf
-
-pdfTeX warning: /usr/bin/pdflatex (file ./x_10.pdf): PDF inclusion: multiple pd
-fs with page group included in a single page
-> <./y_10.pdf
-
-pdfTeX warning: /usr/bin/pdflatex (file ./y_10.pdf): PDF inclusion: multiple pd
-fs with page group included in a single page
-> <./sigma_10.pdf
-
-pdfTeX warning: /usr/bin/pdflatex (file ./sigma_10.pdf): PDF inclusion: multipl
-e pdfs with page group included in a single page
 >] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 2055 strings out of 494923
- 29641 string characters out of 6180743
- 87906 words of memory out of 5000000
- 5348 multiletter control sequences out of 15000+600000
+ 2521 strings out of 494923
+ 35616 string characters out of 6180743
+ 100518 words of memory out of 5000000
+ 5803 multiletter control sequences out of 15000+600000
  7626 words of font info for 27 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 41i,8n,31p,271b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,6n,31p,419b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmti10.pfb>
-Output written on main.pdf (3 pages, 4004579 bytes).
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmti10.pfb>
+Output written on main.pdf (4 pages, 4099135 bytes).
 PDF statistics:
- 40931 PDF objects out of 45951 (max. 8388607)
- 27100 compressed objects within 271 object streams
+ 41040 PDF objects out of 45951 (max. 8388607)
+ 27138 compressed objects within 272 object streams
  0 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,8 +1,63 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{}
 
-\bibitem{Kay2013}
-Kendrick~N. Kay, Jonathan Winawer, Aviv Mezer, and Brian~A. Wandell.
-\newblock {Compressive spatial summation in human visual cortex.}
-\newblock {\em Journal of neurophysiology}, 2013.
+\bibitem [\protect \citeauthoryear {%
+Dumoulin%
+\ \BBA {} Wandell%
+}{%
+Dumoulin%
+\ \BBA {} Wandell%
+}{%
+{\protect \APACyear {2008}}%
+}]{%
+Dumoulin2008}
+\APACinsertmetastar {%
+Dumoulin2008}%
+\begin{APACrefauthors}%
+Dumoulin, S\BPBI O.%
+\BCBT {}\ \BBA {} Wandell, B\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Population receptive field estimates in human visual
+  cortex}} {{Population receptive field estimates in human visual
+  cortex}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{NeuroImage}{39}{2}{647--660}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.neuroimage.2007.09.034} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kay%
+, Winawer%
+, Mezer%
+\BCBL {}\ \BBA {} Wandell%
+}{%
+Kay%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2013}}%
+}]{%
+Kay2013}
+\APACinsertmetastar {%
+Kay2013}%
+\begin{APACrefauthors}%
+Kay, K\BPBI N.%
+, Winawer, J.%
+, Mezer, A.%
+\BCBL {}\ \BBA {} Wandell, B\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Compressive spatial summation in human visual cortex.}}
+  {{Compressive spatial summation in human visual cortex.}}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of neurophysiology}{}{}{}.
+\newblock
+\begin{APACrefDOI} \doi{10.1152/jn.00105.2013} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
 
 \end{thebibliography}

@@ -45,7 +45,7 @@ stim = psim.init(radius, precision, TR, TRs, sqrtVoxels,
 print('stimulus generated')
 
 # for n in np.arange(0.5, 1, 0.1):
-n = 8.0
+n = 0.8
 neuronal_responses = psim.getNeuronalResponse(n)
 print('Neuronal responses generated')
 
