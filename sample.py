@@ -12,10 +12,11 @@ import numpy as np
 
 
 # experiment parameters
-radius = 10.001
+radius = 10.3
 precision = 0.1
 
-angles = [-90, 45, -180, 315, 90, 225, 0, 135
+angles = [
+          -90, 45, -180, 315, 90, 225, 0, 135
           # ,-91, 44, -181, 314, 91, 224, 1, 134
           # ,-88, 46, -179, 316, 89, 226, -1, 136
           # ,-91, 44, -181, 314, 91, 224, 1, 134
@@ -37,21 +38,28 @@ t02 = 0
 a = 0.3
 
 t = np.arange(0, len(angles)*3*TRs*TR, TR)
-hrf_gen = psim.hrf_double_gamma(t, n1, n2, lmbd1, lmbd2, t01, t02, a)
-hrf_est = hrf_gen
+hrf = psim.hrf_double_gamma(t, n1, n2, lmbd1, lmbd2, t01, t02, a)
 
-stim = psim.init(radius, precision, TR, TRs, sqrtVoxels,
-                 angles, t, isCheckerboard=False)
-print('stimulus generated')
+for shift in np.arange(0, radius/4, radius/16):
+    title = '%.2f' % shift
+    stim = psim.init(radius, radius/4+shift, precision, TR, TRs, sqrtVoxels,
+                     angles+shift, t, title, makeDiscontinous=False)
+    print('stimulus generated')
 
-# for n in np.arange(0.5, 1, 0.1):
-n = 0.8
-neuronal_responses = psim.getNeuronalResponse(n)
-print('Neuronal responses generated')
+    # for n in np.arange(0.5, 1, 0.1):
+    exponent = 0.8
+    neuronal_responses = psim.getNeuronalResponse(exponent)
+    print('Neuronal responses generated')
 
-bolds = psim.generateData(neuronal_responses, hrf_gen, noise)
-print('BOLD responses generated')
+    n_hrf_pars = psim.findNonLinearHRF(neuronal_responses, hrf, noise)
+    print('Equivalent non-liner HRF is found')
 
-print('pRF estimations started...')
-results = psim.estimateAll(bolds, hrf_est, n, margin=0)
-print('pRF estimation errors generated')
+    bolds = psim.generateData(neuronal_responses, noise,
+                              hrf, n_hrf_pars, makeNonLinear=False)
+    print('BOLD responses generated')
+
+    print('pRF estimations started...')
+    results = psim.estimateAll(bolds, exponent,
+                               hrf, n_hrf_pars, title,
+                               assumeNonLinear=False)
+    print('pRF estimation errors generated')

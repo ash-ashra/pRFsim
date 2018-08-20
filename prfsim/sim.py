@@ -5,7 +5,7 @@ Created on Fri Apr  6 21:07:09 2018
 
 @author: arash
 """
-
+import time
 from matplotlib import pyplot as plt
 import numpy as np
 import pandas as pd
@@ -20,19 +20,22 @@ from scipy.stats import norm
 from scipy.optimize import least_squares
 
 import seaborn as sns
-from pylab import savefig
+# from pylab import savefig
 sns.set()
 figSize = 5
 
 
-def init(radius_tmp, precision_tmp, TR_tmp, TRs_tmp, sqrtVoxels_tmp,
-         angles, t_tmp, isCheckerboard=False):
+def init(radius_tmp, barWidth_tmp, precision_tmp, TR_tmp,
+         TRs_tmp, sqrtVoxels_tmp, angles, t_tmp, title,
+         makeDiscontinous=False):
     """Short summary.
 
     Parameters
     ----------
     radius_tmp : type
         Description of parameter `radius_tmp`.
+    barWidth_tmp : type
+        Description of parameter `barWidth_tmp`.
     precision_tmp : type
         Description of parameter `precision_tmp`.
     TR_tmp : type
@@ -45,8 +48,10 @@ def init(radius_tmp, precision_tmp, TR_tmp, TRs_tmp, sqrtVoxels_tmp,
         Description of parameter `angles`.
     t_tmp : type
         Description of parameter `t_tmp`.
-    isCheckerboard : type
-        Description of parameter `isCheckerboard`.
+    title : type
+        Description of parameter `title`.
+    makeDiscontinous : type
+        Description of parameter `makeDiscontinous`.
 
     Returns
     -------
@@ -74,7 +79,7 @@ def init(radius_tmp, precision_tmp, TR_tmp, TRs_tmp, sqrtVoxels_tmp,
     duration = nFrames * TRs
 
     global barWidth
-    barWidth = radius / 4
+    barWidth = barWidth_tmp
 
     X = Y = np.arange(-radius, radius, precision)
 
@@ -86,13 +91,13 @@ def init(radius_tmp, precision_tmp, TR_tmp, TRs_tmp, sqrtVoxels_tmp,
     global length
     length = len(X)
 
-    if isCheckerboard:
-        # create the checkerboard pattern
-        arr = np.zeros((16, 16))
-        arr[::2, ::2] = 1
-        arr[1::2, 1::2] = 1
-        checkerboard = imresize(arr, np.array((length, length)),
-                                interp='nearest')
+    # if isCheckerboard:
+    #     # create the checkerboard pattern
+    #     arr = np.zeros((16, 16))
+    #     arr[::2, ::2] = 1
+    #     arr[1::2, 1::2] = 1
+    #     checkerboard = imresize(arr, np.array((length, length)),
+    #                             interp='nearest')
 
     # create three vertical bars
     img_temps = np.zeros((3, length, length))
@@ -101,10 +106,14 @@ def init(radius_tmp, precision_tmp, TR_tmp, TRs_tmp, sqrtVoxels_tmp,
             for j, y in enumerate(Y):
                 if x <= (0.5 * k - 0.5) * radius + barWidth:
                     if x >= (0.5 * k - 0.5) * radius - barWidth:
-                        if isCheckerboard:
-                            img_temps[k, i, j] = checkerboard[i, j]
-                        else:
-                            img_temps[k, i, j] = 1
+                        # if isCheckerboard:
+                        #     img_temps[k, i, j] = checkerboard[i, j]
+                        # else:
+                        # if makeDiscontinous:
+                        #     index = (2*k) % 3
+                        #     img_temps[index, i, j] = 1
+                        # else:
+                        img_temps[k, i, j] = 1
 
     # rotate them
     stim_compact = np.zeros((nFrames, length, length))
@@ -113,7 +122,12 @@ def init(radius_tmp, precision_tmp, TR_tmp, TRs_tmp, sqrtVoxels_tmp,
         for k in range(3):
             rot = rotate(img_temps[k], angle=angle,
                          mode='nearest', reshape=False)
-            stim_compact[f, :, :] = (rot > np.max(rot) / 2) * 1.0
+
+            if makeDiscontinous:
+                index = (4*f) % nFrames
+                stim_compact[index, :, :] = (rot > np.max(rot) / 2) * 1.0
+            else:
+                stim_compact[f, :, :] = (rot > np.max(rot) / 2) * 1.0
             f += 1
 
     # delay them
@@ -124,16 +138,15 @@ def init(radius_tmp, precision_tmp, TR_tmp, TRs_tmp, sqrtVoxels_tmp,
         for TR in range(TRs):
             stim[f * TRs + TR, :, :] = stim_compact[f, :, :]
 
-    # shape2D = (len(X), len(Y))
-    # proj2D = np.zeros(shape2D)
-    # for i in range(nFrames):
-    #     proj2D = proj2D + (stim_compact[i, :, :]).reshape(shape2D)
-    #
-    # fig = plt.figure(figsize=(figSize, figSize))
-    # plt.grid(None)
-    # plt.title('stimulus projection across time')
-    # plt.imshow(proj2D.T)
-    # plt.show()
+    shape2D = (len(X), len(Y))
+    proj2D = np.zeros(shape2D)
+    for i in range(nFrames):
+        proj2D = proj2D + (stim_compact[i, :, :]).reshape(shape2D)
+    plt.figure(figsize=(figSize, figSize))
+    plt.grid(None)
+    plt.title('stimulus projection across time')
+    plt.imshow(proj2D.T)
+    plt.savefig('/home/arash/results/stimProj_%s.eps' % title)
     return stim
 
 
@@ -315,7 +328,102 @@ def hrf_friston(t, beta1, beta2, beta3):
             + beta3 * 1.0 / factorial(15) * np.power(t, 15) * np.exp(-t))
 
 
-def generateData(neuronal_responses, hrf, noise):
+def bold_response_nonlinear(n, t,
+                            beta1, beta2, beta3,
+                            beta11, beta12, beta13,
+                            beta21, beta22, beta23,
+                            beta31, beta32, beta33):
+    """Short summary.
+
+    Parameters
+    ----------
+    n : type
+        Description of parameter `n`.
+    t : type
+        Description of parameter `t`.
+    beta1 : type
+        Description of parameter `beta1`.
+    beta2 : type
+        Description of parameter `beta2`.
+    beta3 : type
+        Description of parameter `beta3`.
+    beta11 : type
+        Description of parameter `beta11`.
+    beta12 : type
+        Description of parameter `beta12`.
+    beta13 : type
+        Description of parameter `beta13`.
+    beta21 : type
+        Description of parameter `beta21`.
+    beta22 : type
+        Description of parameter `beta22`.
+    beta23 : type
+        Description of parameter `beta23`.
+    beta31 : type
+        Description of parameter `beta31`.
+    beta32 : type
+        Description of parameter `beta32`.
+    beta33 : type
+        Description of parameter `beta33`.
+
+    Returns
+    -------
+    type
+        Description of returned object.
+
+    """
+    b1 = 1.0 / factorial(3) * np.power(t, 3) * np.exp(-t)
+    b2 = 1.0 / factorial(7) * np.power(t, 7) * np.exp(-t)
+    b3 = 1.0 / factorial(15) * np.power(t, 15) * np.exp(-t)
+
+    x1 = np.convolve(n, b1)[0:len(t)]
+    x2 = np.convolve(n, b2)[0:len(t)]
+    x3 = np.convolve(n, b3)[0:len(t)]
+
+    y11 = np.multiply(x1, x1)
+    y12 = np.multiply(x1, x2)
+    y13 = np.multiply(x1, x3)
+    y21 = np.multiply(x2, x1)
+    y22 = np.multiply(x2, x2)
+    y23 = np.multiply(x3, x3)
+    y31 = np.multiply(x3, x1)
+    y32 = np.multiply(x3, x2)
+    y33 = np.multiply(x3, x3)
+
+    return (beta1 * x1 + beta2 * x2 + beta3 * x3
+            + beta11 * y11 + beta12 * y12 + beta13 * y13
+            + beta21 * y21 + beta22 * y22 + beta23 * y23
+            + beta31 * y31 + beta32 * y32 + beta33 * y33)
+
+
+def RSS_NHRF(x, bold, n):
+    """Short summary.
+
+    Parameters
+    ----------
+    x : type
+        Description of parameter `x`.
+    bold : type
+        Description of parameter `bold`.
+    n : type
+        Description of parameter `n`.
+
+    Returns
+    -------
+    type
+        Description of returned object.
+
+    """
+    prediction = bold_response_nonlinear(n=n, t=t,
+                                         beta1=x[0], beta2=x[1], beta3=x[2],
+                                         beta11=x[3], beta12=x[4], beta13=x[5],
+                                         beta21=x[6], beta22=x[7], beta23=x[8],
+                                         beta31=x[9], beta32=x[10],
+                                         beta33=x[11])
+    return np.sum((bold - prediction)**2)
+
+
+def findNonLinearHRF(neuronal_responses, hrf, noise):
     """Short summary.
 
     Parameters
@@ -333,16 +441,84 @@ def generateData(neuronal_responses, hrf, noise):
         Description of returned object.
 
     """
+    # count = 0
+    # prev_cost = 1e30
+    bolds = np.zeros((duration, sqrtVoxels, sqrtVoxels))
+    print('Searching for non-linear HRF...')
+    for i in range(sqrtVoxels):
+        for j in range(sqrtVoxels):
+            # count += 1
+            n = neuronal_responses[:, i, j]
+            bolds[:, i, j] = np.convolve(
+                hrf, n)[0:duration] + norm.rvs(scale=noise, size=duration)
+            # x0 = 10 * (np.random.rand(12) + 1e-10)
+            # res = least_squares(RSS_NHRF, x0, args=(bolds[:, i, j], n))
+            # if res.cost < prev_cost:
+            #     pars = res.x
+            #     prev_cost = res.cost
+            #     print(count)
+    x0 = 10 * (np.random.rand(12) + 1e-10)
+    res = least_squares(RSS_NHRF, x0, args=(np.mean(np.mean(bolds)),
+                        np.mean(np.mean(neuronal_responses))))
+    pars = res.x
+    return pars
+
+
+def generateData(neuronal_responses, noise, hrf, n_hrf_pars, makeNonLinear):
+    """Short summary.
+
+    Parameters
+    ----------
+    neuronal_responses : type
+        Description of parameter `neuronal_responses`.
+    noise : type
+        Description of parameter `noise`.
+    hrf : type
+        Description of parameter `hrf`.
+    n_hrf_pars : type
+        Description of parameter `n_hrf_pars`.
+    makeNonLinear : type
+        Description of parameter `makeNonLinear`.
+
+    Returns
+    -------
+    type
+        Description of returned object.
+
+    """
     global sqrtVoxels
     global duration
     # Hemodynamic Responses
     bolds = np.zeros((duration, sqrtVoxels, sqrtVoxels))
-    for i in range(sqrtVoxels):  # do with multithreading
-        for j in range(sqrtVoxels):
-            n = neuronal_responses[:, i, j]
-            bolds[:, i, j] = np.convolve(
-                hrf, n)[0:duration] + norm.rvs(scale=noise, size=duration)
-    return bolds
+
+    if not makeNonLinear:
+        for i in range(sqrtVoxels):
+            for j in range(sqrtVoxels):
+                n = neuronal_responses[:, i, j]
+                bolds[:, i, j] = np.convolve(
+                    hrf, n)[0:duration] + norm.rvs(scale=noise, size=duration)
+        return bolds
+    else:
+        x = n_hrf_pars
+        non_bolds = np.zeros((duration, sqrtVoxels, sqrtVoxels))
+        for i in range(sqrtVoxels):
+            for j in range(sqrtVoxels):
+                n = neuronal_responses[:, i, j]
+                non_bolds[:, i, j] = bold_response_nonlinear(n=n, t=t,
+                                                             beta1=x[0],
+                                                             beta2=x[1],
+                                                             beta3=x[2],
+                                                             beta11=x[3],
+                                                             beta12=x[4],
+                                                             beta13=x[5],
+                                                             beta21=x[6],
+                                                             beta22=x[7],
+                                                             beta23=x[8],
+                                                             beta31=x[9],
+                                                             beta32=x[10],
+                                                             beta33=x[11])
+                + norm.rvs(scale=noise, size=duration)
+        return non_bolds
 
 
 def pred_pRF_response(x, hrf, exponent):
@@ -425,15 +601,24 @@ def estimatePRF(bold, hrf, exponent):
     return x_min, y_min, s_min
 
 
-def estimateAll(bolds, hrf, exponent, margin=0):
+def estimateAll(bolds, exponent, hrf, n_hrf_pars,
+                title, assumeNonLinear=False, margin=0):
     """Short summary.
 
     Parameters
     ----------
     bolds : type
         Description of parameter `bolds`.
+    exponent : type
+        Description of parameter `exponent`.
     hrf : type
         Description of parameter `hrf`.
+    n_hrf_pars : type
+        Description of parameter `n_hrf_pars`.
+    assumeNonLinear : type
+        Description of parameter `assumeNonLinear`.
+    title : type
+        Description of parameter `title`.
     margin : type
         Description of parameter `margin`.
 
@@ -478,6 +663,10 @@ def estimateAll(bolds, hrf, exponent, margin=0):
             Ys_est.append(y_est)
             Ss_est.append(s_est)
 
+            if y == 0:
+                y = precision
+            if x == 0:
+                x = precision
             x_err = abs((x_est - x) / x) * 100
             y_err = abs((y_est - y) / y) * 100
             s_err = abs((s_est - s) / s) * 100
@@ -506,17 +695,20 @@ def estimateAll(bolds, hrf, exponent, margin=0):
     Ys_err_mean = Ys_err_im.mean()
     Ss_err_mean = Ss_err_im.mean()
 
+    strTime = time.strftime("%Y-%m-%d-%H:%M")
+
     if margin > 0:
         img = Xs_err_im[margin:-margin, margin:-margin]
     else:
         img = Xs_err_im
     plt.figure(1, figsize=(figSize, figSize))
     plt.grid(None)
-    plt.title('$x$ error percentage average = %.2f' %
+    plt.title('average $x$ error percentage = %.2f' %
               Xs_err_mean)
-    sns.heatmap(img, square=True, cmap="YlGnBu", vmin=0, vmax=10)
-    exponentInt = int(10*exponent)
-    plt.savefig('x_%d.pdf' % exponentInt)
+    sns.heatmap(img, square=True, cmap="Blues", vmin=0, vmax=100)
+    exponentInt = int(10 * exponent)
+    plt.savefig('/home/arash/results/%s_%s_x_%d.eps' % (strTime,
+                title, exponentInt))
     plt.clf()
     plt.cla()
     plt.close()
@@ -528,10 +720,11 @@ def estimateAll(bolds, hrf, exponent, margin=0):
 
     plt.figure(2, figsize=(figSize, figSize))
     plt.grid(None)
-    plt.title('$y$ error percentage average = %.2f' %
+    plt.title('average $y$ error percentage = %.2f' %
               Ys_err_mean)
-    sns.heatmap(img, square=True, cmap="YlGnBu", vmin=0, vmax=10)
-    plt.savefig('y_%d.pdf' % exponentInt)
+    sns.heatmap(img, square=True, cmap="Blues", vmin=0, vmax=100)
+    plt.savefig('/home/arash/results/%s_%s_y_%d.eps' % (strTime,
+                title, exponentInt))
     plt.clf()
     plt.cla()
     plt.close()
@@ -542,12 +735,12 @@ def estimateAll(bolds, hrf, exponent, margin=0):
         img = Ss_err_im
 
     plt.figure(3, figsize=(figSize, figSize))
-    plt.grid(None)
     plt.title(
-        '$\sigma$ error percentage average = %.2f' %
+        'average $\sigma$ error percentage = %.2f' %
         Ss_err_mean)
-    sns.heatmap(img, square=True, cmap="YlGnBu", vmin=0, vmax=10)
-    plt.savefig('sigma_%d.pdf' % exponentInt)
+    sns.heatmap(img, square=True, cmap="Blues", vmin=0, vmax=100)
+    plt.savefig('/home/arash/results/%s_%s_sigma_%d.eps' % (strTime,
+                title, exponentInt))
     plt.clf()
     plt.cla()
     plt.close()
