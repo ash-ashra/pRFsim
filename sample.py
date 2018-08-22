@@ -29,7 +29,8 @@ noise = 1.0
 sqrtVoxels = 6
 
 # parameters for non-linear frinson hrf:
-n_hrf_pars = [0.5, -1.4, 11.3, 0.1, 0.9, 0.2, -0.9, 0.9, -5.4, 1.4, -0.4, 1.9]
+n_hrf_pars = [0.5, -1.4, 11.3, 0.1, 0.9, 0.2,
+              -0.9, 0.9, -5.4, 1.4, -0.4, 1.9]
 
 t = np.arange(0, len(angles)*3*TRs*TR, TR)
 
@@ -51,7 +52,8 @@ for shift in np.arange(0, radius/4, radius/16):
     print('Equivalent linear HRF is found')
 
     bolds = psim.generateData(neuronal_responses, noise,
-                              hrf, n_hrf_pars, makeNonLinear=True)
+                              hrf, n_hrf_pars,
+                              makeNonLinear=True)
     print('BOLD responses generated')
 
     print('pRF estimations started...')
