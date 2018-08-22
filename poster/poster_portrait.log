@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.7.26)  14 AUG 2018 12:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.7.26)  22 AUG 2018 15:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -758,22 +758,11 @@ ABD: EveryShipout initializing macros
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \FSZ=\skip78
-Package epstopdf Info: Source file: <images/logo.eps>
-(epstopdf)                    date: 2018-05-05 13:55:01
-(epstopdf)                    size: 15104 bytes
-(epstopdf)             Output file: <images/logo-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-05-05 13:55:01
-(epstopdf)                    size: 8051 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/logo-eps-converted-
-to.pdf images/logo.eps>
-(epstopdf)             \includegraphics on input line 147.
-Package epstopdf Info: Output file is already uptodate.
-<images/logo-eps-converted-to.pdf, id=29, 1401.235pt x 1553.805pt>
-File: images/logo-eps-converted-to.pdf Graphic file (type pdf)
-<use images/logo-eps-converted-to.pdf>
-Package pdftex.def Info: images/logo-eps-converted-to.pdf  used on input line 1
-47.
-(pdftex.def)             Requested size: 72.13982pt x 80.0pt.
+<images/BAM.png, id=29, 318.18875pt x 327.2225pt>
+File: images/BAM.png Graphic file (type png)
+<use images/BAM.png>
+Package pdftex.def Info: images/BAM.png  used on input line 149.
+(pdftex.def)             Requested size: 116.68413pt x 120.0pt.
 Package epstopdf Info: Source file: <images/bilkent.eps>
 (epstopdf)                    date: 2018-05-05 13:55:01
 (epstopdf)                    size: 263960 bytes
@@ -782,125 +771,210 @@ Package epstopdf Info: Source file: <images/bilkent.eps>
 (epstopdf)                    size: 16905 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/bilkent-eps-convert
 ed-to.pdf images/bilkent.eps>
-(epstopdf)             \includegraphics on input line 147.
+(epstopdf)             \includegraphics on input line 149.
 Package epstopdf Info: Output file is already uptodate.
-<images/bilkent-eps-converted-to.pdf, id=30, 87.32625pt x 87.32625pt>
+<images/bilkent-eps-converted-to.pdf, id=31, 87.32625pt x 87.32625pt>
 File: images/bilkent-eps-converted-to.pdf Graphic file (type pdf)
 <use images/bilkent-eps-converted-to.pdf>
 Package pdftex.def Info: images/bilkent-eps-converted-to.pdf  used on input lin
-e 147.
-(pdftex.def)             Requested size: 90.00566pt x 90.0pt.
+e 149.
+(pdftex.def)             Requested size: 100.006pt x 100.0pt.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 147.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 149.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 147.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 149.
 LaTeX Font Info:    Font shape `T1/ppl/bx/sc' in size <24.88> not available
-(Font)              Font shape `T1/ppl/b/sc' tried instead on input line 147.
-LaTeX Font Info:    Try loading font information for U+msa on input line 147.
+(Font)              Font shape `T1/ppl/b/sc' tried instead on input line 149.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 149.
+LaTeX Font Info:    Try loading font information for U+msa on input line 149.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 147.
+LaTeX Font Info:    Try loading font information for U+msb on input line 149.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 1590) in paragraph at lines 192--192
+Underfull \hbox (badness 1590) in paragraph at lines 199--199
 []\T1/ppl/m/n/10 Tracks of fea-tures through scenes are
  []
 
 
-Underfull \hbox (badness 3343) in paragraph at lines 192--192
+Underfull \hbox (badness 3343) in paragraph at lines 199--199
 []\T1/ppl/m/n/10 Speed: In-ter-ac-tive edit-ing re-quires
  []
 
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 192.
 LaTeX Font Info:    Font shape `T1/ppl/bx/sc' in size <14.4> not available
-(Font)              Font shape `T1/ppl/b/sc' tried instead on input line 192.
+(Font)              Font shape `T1/ppl/b/sc' tried instead on input line 199.
 Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+<images/stim_0.00_0.png, id=34, 361.35pt x 361.35pt>
+File: images/stim_0.00_0.png Graphic file (type png)
+<use images/stim_0.00_0.png>
+Package pdftex.def Info: images/stim_0.00_0.png  used on input line 261.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_0.00_1.png, id=35, 361.35pt x 361.35pt>
+File: images/stim_0.00_1.png Graphic file (type png)
+<use images/stim_0.00_1.png>
+Package pdftex.def Info: images/stim_0.00_1.png  used on input line 261.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_0.00_2.png, id=36, 361.35pt x 361.35pt>
+File: images/stim_0.00_2.png Graphic file (type png)
+<use images/stim_0.00_2.png>
+Package pdftex.def Info: images/stim_0.00_2.png  used on input line 261.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_0.00_3.png, id=37, 361.35pt x 361.35pt>
+File: images/stim_0.00_3.png Graphic file (type png)
+<use images/stim_0.00_3.png>
+Package pdftex.def Info: images/stim_0.00_3.png  used on input line 261.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_0.00_4.png, id=38, 361.35pt x 361.35pt>
+File: images/stim_0.00_4.png Graphic file (type png)
+<use images/stim_0.00_4.png>
+Package pdftex.def Info: images/stim_0.00_4.png  used on input line 261.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_0.00_5.png, id=39, 361.35pt x 361.35pt>
+File: images/stim_0.00_5.png Graphic file (type png)
+<use images/stim_0.00_5.png>
+Package pdftex.def Info: images/stim_0.00_5.png  used on input line 261.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_0.00_6.png, id=40, 361.35pt x 361.35pt>
+File: images/stim_0.00_6.png Graphic file (type png)
+<use images/stim_0.00_6.png>
+Package pdftex.def Info: images/stim_0.00_6.png  used on input line 261.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_0.00_7.png, id=41, 361.35pt x 361.35pt>
+File: images/stim_0.00_7.png Graphic file (type png)
+<use images/stim_0.00_7.png>
+Package pdftex.def Info: images/stim_0.00_7.png  used on input line 261.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_0.00_8.png, id=42, 361.35pt x 361.35pt>
+File: images/stim_0.00_8.png Graphic file (type png)
+<use images/stim_0.00_8.png>
+Package pdftex.def Info: images/stim_0.00_8.png  used on input line 261.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_0.00_9.png, id=43, 361.35pt x 361.35pt>
+File: images/stim_0.00_9.png Graphic file (type png)
+<use images/stim_0.00_9.png>
+Package pdftex.def Info: images/stim_0.00_9.png  used on input line 261.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_0.00_10.png, id=44, 361.35pt x 361.35pt>
+File: images/stim_0.00_10.png Graphic file (type png)
+<use images/stim_0.00_10.png>
+Package pdftex.def Info: images/stim_0.00_10.png  used on input line 261.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_0.00_11.png, id=45, 361.35pt x 361.35pt>
+File: images/stim_0.00_11.png Graphic file (type png)
+<use images/stim_0.00_11.png>
+Package pdftex.def Info: images/stim_0.00_11.png  used on input line 261.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_0.00_12.png, id=46, 361.35pt x 361.35pt>
+File: images/stim_0.00_12.png Graphic file (type png)
+<use images/stim_0.00_12.png>
+Package pdftex.def Info: images/stim_0.00_12.png  used on input line 261.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_0.00_13.png, id=47, 361.35pt x 361.35pt>
+File: images/stim_0.00_13.png Graphic file (type png)
+<use images/stim_0.00_13.png>
+Package pdftex.def Info: images/stim_0.00_13.png  used on input line 261.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_0.00_14.png, id=48, 361.35pt x 361.35pt>
+File: images/stim_0.00_14.png Graphic file (type png)
+<use images/stim_0.00_14.png>
+Package pdftex.def Info: images/stim_0.00_14.png  used on input line 261.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_0.00_15.png, id=49, 361.35pt x 361.35pt>
+File: images/stim_0.00_15.png Graphic file (type png)
+<use images/stim_0.00_15.png>
+Package pdftex.def Info: images/stim_0.00_15.png  used on input line 261.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_0.00_16.png, id=50, 361.35pt x 361.35pt>
+File: images/stim_0.00_16.png Graphic file (type png)
+<use images/stim_0.00_16.png>
+Package pdftex.def Info: images/stim_0.00_16.png  used on input line 261.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_0.00_17.png, id=51, 361.35pt x 361.35pt>
+File: images/stim_0.00_17.png Graphic file (type png)
+<use images/stim_0.00_17.png>
+Package pdftex.def Info: images/stim_0.00_17.png  used on input line 261.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_0.00_18.png, id=52, 361.35pt x 361.35pt>
+File: images/stim_0.00_18.png Graphic file (type png)
+<use images/stim_0.00_18.png>
+Package pdftex.def Info: images/stim_0.00_18.png  used on input line 261.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_0.00_19.png, id=53, 361.35pt x 361.35pt>
+File: images/stim_0.00_19.png Graphic file (type png)
+<use images/stim_0.00_19.png>
+Package pdftex.def Info: images/stim_0.00_19.png  used on input line 261.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_0.00_20.png, id=54, 361.35pt x 361.35pt>
+File: images/stim_0.00_20.png Graphic file (type png)
+<use images/stim_0.00_20.png>
+Package pdftex.def Info: images/stim_0.00_20.png  used on input line 261.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_0.00_21.png, id=55, 361.35pt x 361.35pt>
+File: images/stim_0.00_21.png Graphic file (type png)
+<use images/stim_0.00_21.png>
+Package pdftex.def Info: images/stim_0.00_21.png  used on input line 261.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_0.00_22.png, id=56, 361.35pt x 361.35pt>
+File: images/stim_0.00_22.png Graphic file (type png)
+<use images/stim_0.00_22.png>
+Package pdftex.def Info: images/stim_0.00_22.png  used on input line 261.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_0.00_23.png, id=57, 361.35pt x 361.35pt>
+File: images/stim_0.00_23.png Graphic file (type png)
+<use images/stim_0.00_23.png>
+Package pdftex.def Info: images/stim_0.00_23.png  used on input line 261.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 209--209
-[]\T1/ppl/m/n/10 Efficient in-cor-po-ra-tion of a back-
+Underfull \hbox (badness 10000) in paragraph at lines 261--261
+
  []
 
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-<images/red-4-sec_000_rastered.png, id=33, 803.0pt x 702.625pt>
-File: images/red-4-sec_000_rastered.png Graphic file (type png)
-<use images/red-4-sec_000_rastered.png>
-Package pdftex.def Info: images/red-4-sec_000_rastered.png  used on input line 
-248.
-(pdftex.def)             Requested size: 82.55293pt x 72.22859pt.
-<images/red-4-sec_024_rastered.png, id=35, 803.0pt x 702.625pt>
-File: images/red-4-sec_024_rastered.png Graphic file (type png)
-<use images/red-4-sec_024_rastered.png>
-Package pdftex.def Info: images/red-4-sec_024_rastered.png  used on input line 
-248.
-(pdftex.def)             Requested size: 82.55293pt x 72.22859pt.
-<images/red-4-sec_048_rastered.png, id=36, 803.0pt x 702.625pt>
-File: images/red-4-sec_048_rastered.png Graphic file (type png)
-<use images/red-4-sec_048_rastered.png>
-Package pdftex.def Info: images/red-4-sec_048_rastered.png  used on input line 
-248.
-(pdftex.def)             Requested size: 82.55293pt x 72.22859pt.
-<images/red-4-sec_072_rastered.png, id=37, 803.0pt x 702.625pt>
-File: images/red-4-sec_072_rastered.png Graphic file (type png)
-<use images/red-4-sec_072_rastered.png>
-Package pdftex.def Info: images/red-4-sec_072_rastered.png  used on input line 
-248.
-(pdftex.def)             Requested size: 82.55293pt x 72.22859pt.
-<images/red-4-sec_095_rastered.png, id=38, 803.0pt x 702.625pt>
-File: images/red-4-sec_095_rastered.png Graphic file (type png)
-<use images/red-4-sec_095_rastered.png>
-Package pdftex.def Info: images/red-4-sec_095_rastered.png  used on input line 
-248.
-(pdftex.def)             Requested size: 82.55293pt x 72.22859pt.
-
-Underfull \hbox (badness 10000) in alignment at lines 248--248
-[][][][][]
- []
-
-<images/giraffe-run-000-rastered.png, id=39, 803.0pt x 481.8pt>
+<images/giraffe-run-000-rastered.png, id=58, 803.0pt x 481.8pt>
 File: images/giraffe-run-000-rastered.png Graphic file (type png)
 <use images/giraffe-run-000-rastered.png>
 Package pdftex.def Info: images/giraffe-run-000-rastered.png  used on input lin
-e 248.
+e 261.
 (pdftex.def)             Requested size: 82.55293pt x 49.52817pt.
-<images/giraffe-run-100-rastered.png, id=40, 803.0pt x 481.8pt>
+<images/giraffe-run-100-rastered.png, id=59, 803.0pt x 481.8pt>
 File: images/giraffe-run-100-rastered.png Graphic file (type png)
 <use images/giraffe-run-100-rastered.png>
 Package pdftex.def Info: images/giraffe-run-100-rastered.png  used on input lin
-e 248.
+e 261.
 (pdftex.def)             Requested size: 82.55293pt x 49.52817pt.
-<images/giraffe-run-200-rastered.png, id=41, 803.0pt x 481.8pt>
+<images/giraffe-run-200-rastered.png, id=60, 803.0pt x 481.8pt>
 File: images/giraffe-run-200-rastered.png Graphic file (type png)
 <use images/giraffe-run-200-rastered.png>
 Package pdftex.def Info: images/giraffe-run-200-rastered.png  used on input lin
-e 248.
+e 261.
 (pdftex.def)             Requested size: 82.55293pt x 49.52817pt.
-<images/giraffe-run-300-rastered.png, id=42, 803.0pt x 481.8pt>
+<images/giraffe-run-300-rastered.png, id=61, 803.0pt x 481.8pt>
 File: images/giraffe-run-300-rastered.png Graphic file (type png)
 <use images/giraffe-run-300-rastered.png>
 Package pdftex.def Info: images/giraffe-run-300-rastered.png  used on input lin
-e 248.
+e 261.
 (pdftex.def)             Requested size: 82.55293pt x 49.52817pt.
-<images/giraffe-run-458-rastered.png, id=43, 803.0pt x 481.8pt>
+<images/giraffe-run-458-rastered.png, id=62, 803.0pt x 481.8pt>
 File: images/giraffe-run-458-rastered.png Graphic file (type png)
 <use images/giraffe-run-458-rastered.png>
 Package pdftex.def Info: images/giraffe-run-458-rastered.png  used on input lin
-e 248.
+e 261.
 (pdftex.def)             Requested size: 82.55293pt x 49.52817pt.
 
-Underfull \hbox (badness 10000) in alignment at lines 248--248
+Underfull \hbox (badness 10000) in alignment at lines 261--261
 [][][][][]
  []
 
 
-Underfull \hbox (badness 6775) in paragraph at lines 248--248
+Underfull \hbox (badness 6775) in paragraph at lines 261--261
 \T1/ppl/m/n/10 eight user in-ter-ac-tions, of which three
  []
 
@@ -910,247 +984,247 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-<images/candidates_lips_ridge_left_bg.png, id=44, 1083.04625pt x 868.24374pt>
+<images/candidates_lips_ridge_left_bg.png, id=63, 1083.04625pt x 868.24374pt>
 File: images/candidates_lips_ridge_left_bg.png Graphic file (type png)
 <use images/candidates_lips_ridge_left_bg.png>
 Package pdftex.def Info: images/candidates_lips_ridge_left_bg.png  used on inpu
-t line 293.
+t line 306.
 (pdftex.def)             Requested size: 90.33865pt x 72.41528pt.
-<images/candidates_lips_ridge_left_no_bg.png, id=45, 1083.04625pt x 868.24374pt
+<images/candidates_lips_ridge_left_no_bg.png, id=64, 1083.04625pt x 868.24374pt
 >
 File: images/candidates_lips_ridge_left_no_bg.png Graphic file (type png)
 <use images/candidates_lips_ridge_left_no_bg.png>
 Package pdftex.def Info: images/candidates_lips_ridge_left_no_bg.png  used on i
-nput line 293.
+nput line 306.
 (pdftex.def)             Requested size: 90.33865pt x 72.41528pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--293
+Underfull \hbox (badness 10000) in paragraph at lines 306--306
 []
  []
 
 
-Underfull \hbox (badness 2512) in paragraph at lines 293--293
+Underfull \hbox (badness 2512) in paragraph at lines 306--306
 []\T1/ppl/m/n/10 We in-cor-po-rate a back-ground model,
  []
 
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-<images/basis-giraffe-example-frame.png, id=46, 481.8pt x 361.35pt>
+<images/basis-giraffe-example-frame.png, id=65, 481.8pt x 361.35pt>
 File: images/basis-giraffe-example-frame.png Graphic file (type png)
 <use images/basis-giraffe-example-frame.png>
 Package pdftex.def Info: images/basis-giraffe-example-frame.png  used on input 
-line 351.
+line 364.
 (pdftex.def)             Requested size: 58.91624pt x 44.18718pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 351--351
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
 
  []
 
-<images/basis-giraffe-basis-01.png, id=47, 19.07124pt x 19.07124pt>
+<images/basis-giraffe-basis-01.png, id=66, 19.07124pt x 19.07124pt>
 File: images/basis-giraffe-basis-01.png Graphic file (type png)
 <use images/basis-giraffe-basis-01.png>
 Package pdftex.def Info: images/basis-giraffe-basis-01.png  used on input line 
-351.
+364.
 (pdftex.def)             Requested size: 12.96214pt x 12.96214pt.
-<images/basis-giraffe-basis-02.png, id=48, 19.07124pt x 19.07124pt>
+<images/basis-giraffe-basis-02.png, id=67, 19.07124pt x 19.07124pt>
 File: images/basis-giraffe-basis-02.png Graphic file (type png)
 <use images/basis-giraffe-basis-02.png>
 Package pdftex.def Info: images/basis-giraffe-basis-02.png  used on input line 
-351.
+364.
 (pdftex.def)             Requested size: 12.96214pt x 12.96214pt.
-<images/basis-giraffe-basis-03.png, id=49, 19.07124pt x 19.07124pt>
+<images/basis-giraffe-basis-03.png, id=68, 19.07124pt x 19.07124pt>
 File: images/basis-giraffe-basis-03.png Graphic file (type png)
 <use images/basis-giraffe-basis-03.png>
 Package pdftex.def Info: images/basis-giraffe-basis-03.png  used on input line 
-351.
+364.
 (pdftex.def)             Requested size: 12.96214pt x 12.96214pt.
-<images/basis-giraffe-basis-04.png, id=50, 19.07124pt x 19.07124pt>
+<images/basis-giraffe-basis-04.png, id=69, 19.07124pt x 19.07124pt>
 File: images/basis-giraffe-basis-04.png Graphic file (type png)
 <use images/basis-giraffe-basis-04.png>
 Package pdftex.def Info: images/basis-giraffe-basis-04.png  used on input line 
-351.
+364.
 (pdftex.def)             Requested size: 12.96214pt x 12.96214pt.
-<images/basis-giraffe-basis-05.png, id=51, 19.07124pt x 19.07124pt>
+<images/basis-giraffe-basis-05.png, id=70, 19.07124pt x 19.07124pt>
 File: images/basis-giraffe-basis-05.png Graphic file (type png)
 <use images/basis-giraffe-basis-05.png>
 Package pdftex.def Info: images/basis-giraffe-basis-05.png  used on input line 
-351.
+364.
 (pdftex.def)             Requested size: 12.96214pt x 12.96214pt.
-<images/basis-giraffe-basis-06.png, id=52, 19.07124pt x 19.07124pt>
+<images/basis-giraffe-basis-06.png, id=71, 19.07124pt x 19.07124pt>
 File: images/basis-giraffe-basis-06.png Graphic file (type png)
 <use images/basis-giraffe-basis-06.png>
 Package pdftex.def Info: images/basis-giraffe-basis-06.png  used on input line 
-351.
+364.
 (pdftex.def)             Requested size: 12.96214pt x 12.96214pt.
-<images/basis-giraffe-basis-07.png, id=53, 19.07124pt x 19.07124pt>
+<images/basis-giraffe-basis-07.png, id=72, 19.07124pt x 19.07124pt>
 File: images/basis-giraffe-basis-07.png Graphic file (type png)
 <use images/basis-giraffe-basis-07.png>
 Package pdftex.def Info: images/basis-giraffe-basis-07.png  used on input line 
-351.
+364.
 (pdftex.def)             Requested size: 12.96214pt x 12.96214pt.
-<images/basis-giraffe-basis-08.png, id=54, 19.07124pt x 19.07124pt>
+<images/basis-giraffe-basis-08.png, id=73, 19.07124pt x 19.07124pt>
 File: images/basis-giraffe-basis-08.png Graphic file (type png)
 <use images/basis-giraffe-basis-08.png>
 Package pdftex.def Info: images/basis-giraffe-basis-08.png  used on input line 
-351.
+364.
 (pdftex.def)             Requested size: 12.96214pt x 12.96214pt.
-<images/basis-giraffe-basis-09.png, id=55, 19.07124pt x 19.07124pt>
+<images/basis-giraffe-basis-09.png, id=74, 19.07124pt x 19.07124pt>
 File: images/basis-giraffe-basis-09.png Graphic file (type png)
 <use images/basis-giraffe-basis-09.png>
 Package pdftex.def Info: images/basis-giraffe-basis-09.png  used on input line 
-351.
+364.
 (pdftex.def)             Requested size: 12.96214pt x 12.96214pt.
-<images/basis-giraffe-basis-10.png, id=56, 19.07124pt x 19.07124pt>
+<images/basis-giraffe-basis-10.png, id=75, 19.07124pt x 19.07124pt>
 File: images/basis-giraffe-basis-10.png Graphic file (type png)
 <use images/basis-giraffe-basis-10.png>
 Package pdftex.def Info: images/basis-giraffe-basis-10.png  used on input line 
-351.
+364.
 (pdftex.def)             Requested size: 12.96214pt x 12.96214pt.
-<images/basis-giraffe-basis-11.png, id=57, 19.07124pt x 19.07124pt>
+<images/basis-giraffe-basis-11.png, id=76, 19.07124pt x 19.07124pt>
 File: images/basis-giraffe-basis-11.png Graphic file (type png)
 <use images/basis-giraffe-basis-11.png>
 Package pdftex.def Info: images/basis-giraffe-basis-11.png  used on input line 
-351.
+364.
 (pdftex.def)             Requested size: 12.96214pt x 12.96214pt.
-<images/basis-giraffe-basis-12.png, id=58, 19.07124pt x 19.07124pt>
+<images/basis-giraffe-basis-12.png, id=77, 19.07124pt x 19.07124pt>
 File: images/basis-giraffe-basis-12.png Graphic file (type png)
 <use images/basis-giraffe-basis-12.png>
 Package pdftex.def Info: images/basis-giraffe-basis-12.png  used on input line 
-351.
+364.
 (pdftex.def)             Requested size: 12.96214pt x 12.96214pt.
-<images/basis-giraffe-basis-13.png, id=59, 19.07124pt x 19.07124pt>
+<images/basis-giraffe-basis-13.png, id=78, 19.07124pt x 19.07124pt>
 File: images/basis-giraffe-basis-13.png Graphic file (type png)
 <use images/basis-giraffe-basis-13.png>
 Package pdftex.def Info: images/basis-giraffe-basis-13.png  used on input line 
-351.
+364.
 (pdftex.def)             Requested size: 12.96214pt x 12.96214pt.
-<images/basis-giraffe-basis-14.png, id=60, 19.07124pt x 19.07124pt>
+<images/basis-giraffe-basis-14.png, id=79, 19.07124pt x 19.07124pt>
 File: images/basis-giraffe-basis-14.png Graphic file (type png)
 <use images/basis-giraffe-basis-14.png>
 Package pdftex.def Info: images/basis-giraffe-basis-14.png  used on input line 
-351.
+364.
 (pdftex.def)             Requested size: 12.96214pt x 12.96214pt.
-<images/basis-giraffe-basis-15.png, id=61, 19.07124pt x 19.07124pt>
+<images/basis-giraffe-basis-15.png, id=80, 19.07124pt x 19.07124pt>
 File: images/basis-giraffe-basis-15.png Graphic file (type png)
 <use images/basis-giraffe-basis-15.png>
 Package pdftex.def Info: images/basis-giraffe-basis-15.png  used on input line 
-351.
+364.
 (pdftex.def)             Requested size: 12.96214pt x 12.96214pt.
-<images/basis-giraffe-basis-16.png, id=62, 19.07124pt x 19.07124pt>
+<images/basis-giraffe-basis-16.png, id=81, 19.07124pt x 19.07124pt>
 File: images/basis-giraffe-basis-16.png Graphic file (type png)
 <use images/basis-giraffe-basis-16.png>
 Package pdftex.def Info: images/basis-giraffe-basis-16.png  used on input line 
-351.
+364.
 (pdftex.def)             Requested size: 12.96214pt x 12.96214pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 351--351
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
 
  []
 
-<images/basis-giraffe-response-01.png, id=63, 481.8pt x 361.35pt>
+<images/basis-giraffe-response-01.png, id=82, 481.8pt x 361.35pt>
 File: images/basis-giraffe-response-01.png Graphic file (type png)
 <use images/basis-giraffe-response-01.png>
 Package pdftex.def Info: images/basis-giraffe-response-01.png  used on input li
-ne 351.
+ne 364.
 (pdftex.def)             Requested size: 12.96098pt x 9.72073pt.
-<images/basis-giraffe-response-02.png, id=64, 481.8pt x 361.35pt>
+<images/basis-giraffe-response-02.png, id=83, 481.8pt x 361.35pt>
 File: images/basis-giraffe-response-02.png Graphic file (type png)
 <use images/basis-giraffe-response-02.png>
 Package pdftex.def Info: images/basis-giraffe-response-02.png  used on input li
-ne 351.
+ne 364.
 (pdftex.def)             Requested size: 12.96098pt x 9.72073pt.
-<images/basis-giraffe-response-03.png, id=65, 481.8pt x 361.35pt>
+<images/basis-giraffe-response-03.png, id=84, 481.8pt x 361.35pt>
 File: images/basis-giraffe-response-03.png Graphic file (type png)
 <use images/basis-giraffe-response-03.png>
 Package pdftex.def Info: images/basis-giraffe-response-03.png  used on input li
-ne 351.
+ne 364.
 (pdftex.def)             Requested size: 12.96098pt x 9.72073pt.
-<images/basis-giraffe-response-04.png, id=66, 481.8pt x 361.35pt>
+<images/basis-giraffe-response-04.png, id=85, 481.8pt x 361.35pt>
 File: images/basis-giraffe-response-04.png Graphic file (type png)
 <use images/basis-giraffe-response-04.png>
 Package pdftex.def Info: images/basis-giraffe-response-04.png  used on input li
-ne 351.
+ne 364.
 (pdftex.def)             Requested size: 12.96098pt x 9.72073pt.
-<images/basis-giraffe-response-05.png, id=67, 481.8pt x 361.35pt>
+<images/basis-giraffe-response-05.png, id=86, 481.8pt x 361.35pt>
 File: images/basis-giraffe-response-05.png Graphic file (type png)
 <use images/basis-giraffe-response-05.png>
 Package pdftex.def Info: images/basis-giraffe-response-05.png  used on input li
-ne 351.
+ne 364.
 (pdftex.def)             Requested size: 12.96098pt x 9.72073pt.
-<images/basis-giraffe-response-06.png, id=68, 481.8pt x 361.35pt>
+<images/basis-giraffe-response-06.png, id=87, 481.8pt x 361.35pt>
 File: images/basis-giraffe-response-06.png Graphic file (type png)
 <use images/basis-giraffe-response-06.png>
 Package pdftex.def Info: images/basis-giraffe-response-06.png  used on input li
-ne 351.
+ne 364.
 (pdftex.def)             Requested size: 12.96098pt x 9.72073pt.
-<images/basis-giraffe-response-07.png, id=69, 481.8pt x 361.35pt>
+<images/basis-giraffe-response-07.png, id=88, 481.8pt x 361.35pt>
 File: images/basis-giraffe-response-07.png Graphic file (type png)
 <use images/basis-giraffe-response-07.png>
 Package pdftex.def Info: images/basis-giraffe-response-07.png  used on input li
-ne 351.
+ne 364.
 (pdftex.def)             Requested size: 12.96098pt x 9.72073pt.
-<images/basis-giraffe-response-08.png, id=70, 481.8pt x 361.35pt>
+<images/basis-giraffe-response-08.png, id=89, 481.8pt x 361.35pt>
 File: images/basis-giraffe-response-08.png Graphic file (type png)
 <use images/basis-giraffe-response-08.png>
 Package pdftex.def Info: images/basis-giraffe-response-08.png  used on input li
-ne 351.
+ne 364.
 (pdftex.def)             Requested size: 12.96098pt x 9.72073pt.
-<images/basis-giraffe-response-09.png, id=71, 481.8pt x 361.35pt>
+<images/basis-giraffe-response-09.png, id=90, 481.8pt x 361.35pt>
 File: images/basis-giraffe-response-09.png Graphic file (type png)
 <use images/basis-giraffe-response-09.png>
 Package pdftex.def Info: images/basis-giraffe-response-09.png  used on input li
-ne 351.
+ne 364.
 (pdftex.def)             Requested size: 12.96098pt x 9.72073pt.
-<images/basis-giraffe-response-10.png, id=72, 481.8pt x 361.35pt>
+<images/basis-giraffe-response-10.png, id=91, 481.8pt x 361.35pt>
 File: images/basis-giraffe-response-10.png Graphic file (type png)
 <use images/basis-giraffe-response-10.png>
 Package pdftex.def Info: images/basis-giraffe-response-10.png  used on input li
-ne 351.
+ne 364.
 (pdftex.def)             Requested size: 12.96098pt x 9.72073pt.
-<images/basis-giraffe-response-11.png, id=73, 481.8pt x 361.35pt>
+<images/basis-giraffe-response-11.png, id=92, 481.8pt x 361.35pt>
 File: images/basis-giraffe-response-11.png Graphic file (type png)
 <use images/basis-giraffe-response-11.png>
 Package pdftex.def Info: images/basis-giraffe-response-11.png  used on input li
-ne 351.
+ne 364.
 (pdftex.def)             Requested size: 12.96098pt x 9.72073pt.
-<images/basis-giraffe-response-12.png, id=74, 481.8pt x 361.35pt>
+<images/basis-giraffe-response-12.png, id=93, 481.8pt x 361.35pt>
 File: images/basis-giraffe-response-12.png Graphic file (type png)
 <use images/basis-giraffe-response-12.png>
 Package pdftex.def Info: images/basis-giraffe-response-12.png  used on input li
-ne 351.
+ne 364.
 (pdftex.def)             Requested size: 12.96098pt x 9.72073pt.
-<images/basis-giraffe-response-13.png, id=75, 481.8pt x 361.35pt>
+<images/basis-giraffe-response-13.png, id=94, 481.8pt x 361.35pt>
 File: images/basis-giraffe-response-13.png Graphic file (type png)
 <use images/basis-giraffe-response-13.png>
 Package pdftex.def Info: images/basis-giraffe-response-13.png  used on input li
-ne 351.
+ne 364.
 (pdftex.def)             Requested size: 12.96098pt x 9.72073pt.
-<images/basis-giraffe-response-14.png, id=76, 481.8pt x 361.35pt>
+<images/basis-giraffe-response-14.png, id=95, 481.8pt x 361.35pt>
 File: images/basis-giraffe-response-14.png Graphic file (type png)
 <use images/basis-giraffe-response-14.png>
 Package pdftex.def Info: images/basis-giraffe-response-14.png  used on input li
-ne 351.
+ne 364.
 (pdftex.def)             Requested size: 12.96098pt x 9.72073pt.
-<images/basis-giraffe-response-15.png, id=77, 481.8pt x 361.35pt>
+<images/basis-giraffe-response-15.png, id=96, 481.8pt x 361.35pt>
 File: images/basis-giraffe-response-15.png Graphic file (type png)
 <use images/basis-giraffe-response-15.png>
 Package pdftex.def Info: images/basis-giraffe-response-15.png  used on input li
-ne 351.
+ne 364.
 (pdftex.def)             Requested size: 12.96098pt x 9.72073pt.
-<images/basis-giraffe-response-16.png, id=78, 481.8pt x 361.35pt>
+<images/basis-giraffe-response-16.png, id=97, 481.8pt x 361.35pt>
 File: images/basis-giraffe-response-16.png Graphic file (type png)
 <use images/basis-giraffe-response-16.png>
 Package pdftex.def Info: images/basis-giraffe-response-16.png  used on input li
-ne 351.
+ne 364.
 (pdftex.def)             Requested size: 12.96098pt x 9.72073pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 351--351
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 351--351
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
 
  []
 
@@ -1158,20 +1232,20 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--365
+Underfull \hbox (badness 10000) in paragraph at lines 378--378
 
  []
 
-<images/chart.png, id=79, 100.375pt x 100.375pt>
+<images/chart.png, id=98, 100.375pt x 100.375pt>
 File: images/chart.png Graphic file (type png)
 <use images/chart.png>
-Package pdftex.def Info: images/chart.png  used on input line 365.
+Package pdftex.def Info: images/chart.png  used on input line 378.
 (pdftex.def)             Requested size: 54.9877pt x 54.98892pt.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 365.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 378.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 365--365
+Underfull \hbox (badness 10000) in paragraph at lines 378--378
 \T1/pcr/m/n/10 http : / / www . cs . unibas . ch /
  []
 
@@ -1181,30 +1255,21 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-Package epstopdf Info: Source file: <images/method.eps>
-(epstopdf)                    date: 2018-05-05 13:55:01
-(epstopdf)                    size: 79302 bytes
-(epstopdf)             Output file: <images/method-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-05-05 13:55:01
-(epstopdf)                    size: 32185 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/method-eps-converte
-d-to.pdf images/method.eps>
-(epstopdf)             \includegraphics on input line 391.
-Package epstopdf Info: Output file is already uptodate.
-<images/method-eps-converted-to.pdf, id=80, 268.00125pt x 516.93124pt>
-File: images/method-eps-converted-to.pdf Graphic file (type pdf)
-<use images/method-eps-converted-to.pdf>
-Package pdftex.def Info: images/method-eps-converted-to.pdf  used on input line
- 391.
-(pdftex.def)             Requested size: 186.56563pt x 359.8538pt.
 
-Underfull \hbox (badness 2197) in paragraph at lines 391--391
-[]\T1/ppl/m/n/10 The cost is in-ter-preted as a di-rected
- []
+LaTeX Warning: Citation `Dumoulin2008' on page 1 undefined on input line 404.
 
 
-Underfull \hbox (badness 4084) in paragraph at lines 391--391
-\T1/ppl/m/n/10 and edges. The nodes en-code can-di-
+LaTeX Warning: Citation `Kay2013' on page 1 undefined on input line 404.
+
+
+LaTeX Warning: Citation `Dumoulin2008' on page 1 undefined on input line 404.
+
+
+LaTeX Warning: Citation `Kay2013' on page 1 undefined on input line 404.
+
+
+Underfull \hbox (badness 1377) in paragraph at lines 404--404
+[]\T1/ppl/m/n/10 According to the Com-pres-sive Spa-tial
  []
 
 Missing character: There is no ; in font nullfont!
@@ -1212,54 +1277,70 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 [2
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/logo-eps-converte
-d-to.pdf> <./images/bilkent-eps-converted-to.pdf> <./images/red-4-sec_000_raste
-red.png> <./images/red-4-sec_024_rastered.png> <./images/red-4-sec_048_rastered
-.png> <./images/red-4-sec_072_rastered.png> <./images/red-4-sec_095_rastered.pn
-g> <./images/giraffe-run-000-rastered.png> <./images/giraffe-run-100-rastered.p
-ng> <./images/giraffe-run-200-rastered.png> <./images/giraffe-run-300-rastered.
-png> <./images/giraffe-run-458-rastered.png> <./images/candidates_lips_ridge_le
-ft_bg.png> <./images/candidates_lips_ridge_left_no_bg.png> <./images/basis-gira
-ffe-example-frame.png (PNG copy)> <./images/basis-giraffe-basis-01.png (PNG cop
-y)> <./images/basis-giraffe-basis-02.png (PNG copy)> <./images/basis-giraffe-ba
-sis-03.png (PNG copy)> <./images/basis-giraffe-basis-04.png (PNG copy)> <./imag
-es/basis-giraffe-basis-05.png (PNG copy)> <./images/basis-giraffe-basis-06.png 
-(PNG copy)> <./images/basis-giraffe-basis-07.png (PNG copy)> <./images/basis-gi
-raffe-basis-08.png (PNG copy)> <./images/basis-giraffe-basis-09.png (PNG copy)>
- <./images/basis-giraffe-basis-10.png (PNG copy)> <./images/basis-giraffe-basis
--11.png (PNG copy)> <./images/basis-giraffe-basis-12.png (PNG copy)> <./images/
-basis-giraffe-basis-13.png (PNG copy)> <./images/basis-giraffe-basis-14.png (PN
-G copy)> <./images/basis-giraffe-basis-15.png (PNG copy)> <./images/basis-giraf
-fe-basis-16.png (PNG copy)> <./images/basis-giraffe-response-01.png (PNG copy)>
- <./images/basis-giraffe-response-02.png (PNG copy)> <./images/basis-giraffe-re
-sponse-03.png (PNG copy)> <./images/basis-giraffe-response-04.png (PNG copy)> <
-./images/basis-giraffe-response-05.png (PNG copy)> <./images/basis-giraffe-resp
-onse-06.png (PNG copy)> <./images/basis-giraffe-response-07.png (PNG copy)> <./
-images/basis-giraffe-response-08.png (PNG copy)> <./images/basis-giraffe-respon
-se-09.png (PNG copy)> <./images/basis-giraffe-response-10.png (PNG copy)> <./im
-ages/basis-giraffe-response-11.png (PNG copy)> <./images/basis-giraffe-response
--12.png (PNG copy)> <./images/basis-giraffe-response-13.png (PNG copy)> <./imag
-es/basis-giraffe-response-14.png (PNG copy)> <./images/basis-giraffe-response-1
-5.png (PNG copy)> <./images/basis-giraffe-response-16.png (PNG copy)> <./images
-/chart.png> <./images/method-eps-converted-to.pdf>] (./poster_portrait.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/BAM.png> <./image
+s/bilkent-eps-converted-to.pdf> <./images/stim_0.00_0.png> <./images/stim_0.00_
+1.png> <./images/stim_0.00_2.png> <./images/stim_0.00_3.png> <./images/stim_0.0
+0_4.png> <./images/stim_0.00_5.png> <./images/stim_0.00_6.png> <./images/stim_0
+.00_7.png> <./images/stim_0.00_8.png> <./images/stim_0.00_9.png> <./images/stim
+_0.00_10.png> <./images/stim_0.00_11.png> <./images/stim_0.00_12.png> <./images
+/stim_0.00_13.png> <./images/stim_0.00_14.png> <./images/stim_0.00_15.png> <./i
+mages/stim_0.00_16.png> <./images/stim_0.00_17.png> <./images/stim_0.00_18.png>
+ <./images/stim_0.00_19.png> <./images/stim_0.00_20.png> <./images/stim_0.00_21
+.png> <./images/stim_0.00_22.png> <./images/stim_0.00_23.png> <./images/giraffe
+-run-000-rastered.png> <./images/giraffe-run-100-rastered.png> <./images/giraff
+e-run-200-rastered.png> <./images/giraffe-run-300-rastered.png> <./images/giraf
+fe-run-458-rastered.png> <./images/candidates_lips_ridge_left_bg.png> <./images
+/candidates_lips_ridge_left_no_bg.png> <./images/basis-giraffe-example-frame.pn
+g (PNG copy)> <./images/basis-giraffe-basis-01.png (PNG copy)> <./images/basis-
+giraffe-basis-02.png (PNG copy)> <./images/basis-giraffe-basis-03.png (PNG copy
+)> <./images/basis-giraffe-basis-04.png (PNG copy)> <./images/basis-giraffe-bas
+is-05.png (PNG copy)> <./images/basis-giraffe-basis-06.png (PNG copy)> <./image
+s/basis-giraffe-basis-07.png (PNG copy)> <./images/basis-giraffe-basis-08.png (
+PNG copy)> <./images/basis-giraffe-basis-09.png (PNG copy)> <./images/basis-gir
+affe-basis-10.png (PNG copy)> <./images/basis-giraffe-basis-11.png (PNG copy)> 
+<./images/basis-giraffe-basis-12.png (PNG copy)> <./images/basis-giraffe-basis-
+13.png (PNG copy)> <./images/basis-giraffe-basis-14.png (PNG copy)> <./images/b
+asis-giraffe-basis-15.png (PNG copy)> <./images/basis-giraffe-basis-16.png (PNG
+ copy)> <./images/basis-giraffe-response-01.png (PNG copy)> <./images/basis-gir
+affe-response-02.png (PNG copy)> <./images/basis-giraffe-response-03.png (PNG c
+opy)> <./images/basis-giraffe-response-04.png (PNG copy)> <./images/basis-giraf
+fe-response-05.png (PNG copy)> <./images/basis-giraffe-response-06.png (PNG cop
+y)> <./images/basis-giraffe-response-07.png (PNG copy)> <./images/basis-giraffe
+-response-08.png (PNG copy)> <./images/basis-giraffe-response-09.png (PNG copy)
+> <./images/basis-giraffe-response-10.png (PNG copy)> <./images/basis-giraffe-r
+esponse-11.png (PNG copy)> <./images/basis-giraffe-response-12.png (PNG copy)> 
+<./images/basis-giraffe-response-13.png (PNG copy)> <./images/basis-giraffe-res
+ponse-14.png (PNG copy)> <./images/basis-giraffe-response-15.png (PNG copy)> <.
+/images/basis-giraffe-response-16.png (PNG copy)> <./images/chart.png>]
+(./poster_portrait.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 16118 strings out of 494923
- 331980 string characters out of 6180742
- 584252 words of memory out of 5000000
- 19022 multiletter control sequences out of 15000+600000
- 28379 words of font info for 56 fonts, out of 8000000 for 9000
+ 16217 strings out of 494923
+ 333959 string characters out of 6180742
+ 864770 words of memory out of 5000000
+ 19102 multiletter control sequences out of 15000+600000
+ 28988 words of font info for 57 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
- 62i,23n,76p,417b,1374s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/
-usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/te
-xmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/font
-s/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
-palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/upl
-ri8a.pfb>
-Output written on poster_portrait.pdf (1 page, 10741252 bytes).
+ 62i,23n,76p,417b,1363s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on poster_portrait.pdf (1 page, 7511748 bytes).
 PDF statistics:
- 133 PDF objects out of 1000 (max. 8388607)
- 43 compressed objects within 1 object stream
+ 187 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 360 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 450 words of extra memory for PDF output out of 10000 (max. 10000000)
 

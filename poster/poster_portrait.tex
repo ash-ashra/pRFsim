@@ -124,7 +124,7 @@
   % Format of text header
   eyecatcher=true,
   headerborder=closed,
-  headerheight=0.1\textheight,
+  headerheight=0.12\textheight,
 %  textfont=\sc, An example of changing the text font
   headershape=roundedright,
   headershade=shadelr,
@@ -136,14 +136,16 @@
   linewidth=2pt
   }
   % Eye Catcher
-  {\includegraphics[height=8.0em]{images/logo.eps}} 
+  {\includegraphics[height=12.0em]{images/BAM.png}} 
   % Title
-  {\bf\textsc{Test of Goodness of Population Receptive Field Estimates}\vspace{0.5em}}
+  {\bf\textsc{Test of Goodness of Population Receptive Field Estimates}\vspace{0.3em}}
   % Authors
-  {\textsc{ Arash.Ashrafnejad and Hossein.Mehrzadfar and Huseyin.Boyaci @bilkent.edu.tr}}
+  {\textsc{ Arash.Ashrafnejad and Hossein.Mehrzadfar and Huseyin.Boyaci @bilkent.edu.tr}\\
+  \vspace{1em}
+  \bf41st European Conference on Visual Perception ECVP 2018}
   % University logo
   {% The makebox allows the title to flow into the logo, this is a hack because of the L shaped logo.
-    \includegraphics[height=9.0em]{images/bilkent.eps}
+    \includegraphics[height=10.0em]{images/bilkent.eps}
   }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -174,13 +176,18 @@
 
 
 
+
+
+
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \headerbox{Problem}{name=problem,column=0,row=0}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    Tracks of features through scenes are needed for data analysis, as well as
-   for movie special effects. Tracks are found in an interactive process. The
-     artist marks a position, and the computer proposes a track which is then
-     further refined by the artist.
+   for movie special effects. Tracks are found in an interactive process.
 
    This is a difficult problem due to three aspects. 
    \begin{enumerate}\compresslist
@@ -194,34 +201,40 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \headerbox{Contributions}{name=contribution,column=0,below=problem}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-   We formulated tracking as path search in a large graph, and solve it
-   efficiently with a modificiation of Dijkstra's algorithm.  
 
-   The method is based on \cite{awf:tracking}. Our main contributions are
-   \begin{enumerate}\compresslist
-   \item Efficient incorporation of a background appearance model
-   \item Formulation as a shortest path problem
-   \item (Correct) handling of occlusions
-   \item High-Efficiency implementation with up to 150 fps for a high
-   resolution video
-   \end{enumerate}
    \vspace{0.3em}
   }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{Results}{name=results,column=1,span=2,row=0}{
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \drawvideo{5}{40}{%
-      \includegraphics[width=0.2\linewidth]{red-4-sec_000_rastered}%
-        \includegraphics[width=0.2\linewidth]{red-4-sec_024_rastered}%
-        \includegraphics[width=0.2\linewidth]{red-4-sec_048_rastered}%
-        \includegraphics[width=0.2\linewidth]{red-4-sec_072_rastered}%
-        \includegraphics[width=0.2\linewidth]{red-4-sec_095_rastered}%
+    \drawvideo{24}{120}{%
+        \includegraphics[width=0.0417\linewidth]{{stim_0.00_0}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_0.00_1}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_0.00_2}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_0.00_3}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_0.00_4}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_0.00_5}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_0.00_6}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_0.00_7}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_0.00_8}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_0.00_9}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_0.00_10}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_0.00_11}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_0.00_12}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_0.00_13}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_0.00_14}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_0.00_15}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_0.00_16}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_0.00_17}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_0.00_18}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_0.00_19}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_0.00_20}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_0.00_21}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_0.00_22}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_0.00_23}.png}%
     }
-  \begin{tabular*}{\linewidth}{*{5}{@{}p{0.2\linewidth}@{}}}
-    {\hfill{}Frame 0\hfill{}} & {\hfill{}24\hfill{}} &  {\hfill{}48\hfill{}} &  {\hfill{}72\hfill{}} & {\hfill{}95\hfill{}}
-  \end{tabular*}
-  \\[1em]
+
       \drawvideo{5}{40}{%
         \includegraphics[width=0.2\linewidth]{giraffe-run-000-rastered}%
           \includegraphics[width=0.2\linewidth]{giraffe-run-100-rastered}%
@@ -370,23 +383,23 @@ sessions.
     patch looks like', but also for the rest of the frame, `this is how the patch
     does not look like'. 
     
-    Can we also \emph{efficiently} use a background tracks model, allowing us
-    to reason, `this would be a good track, but part of it can be better
-    explained by tracking another point'.
    \vspace{0.3em}
   }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \headerbox{Method}{name=method,column=0,below=contribution,above=references}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \noindent{\centering\includegraphics[width=0.95\linewidth]{images/method.eps}\\}
-  \indent The cost is interpreted as a directed acyclic graph
-  with weights on the nodes and edges. The nodes encode candidate positions,
-  and the edges the transition costs between candidates. Additional edges
-  (dashed) allow occlusion transitions which skip frames.
-
-  The optimal track is found with a modification of Dijkstra's shortest path
-  search. The search was speed up by lower bounding the cost, and lazily
-  evaluating the accurate cost only where necessary to find the global optimum.
+  A population receptive field (pRF) is the region of the visual field where stimuli illicit responses from a local population of neurons. In \cite{Dumoulin2008} the authors proposed a model of neuronal population receptive field defined by a two-dimensional Gaussian function:
+  
+  \begin{equation}
+  g(x, y) = e^{-\frac{(x-x_0)^2+(y-y_0)^2}{2\sigma^2}}
+  \end{equation}
+  
+  Recent study by \cite{Kay2013} showed that linear spatial summation model proposed by \cite{Dumoulin2008} deviates from linearity in early visual areas (e.g., V1, V2) and grows more in the anterior extrastriate areas (e.g., LO-2, VO-2) and the data is more accurately explained when this compressive static nonlinearity is applied after linear summation.
+  
+  According to the Compressive Spatial Summation (CSS) model proposed by \cite{Kay2013}, the pRF response is modeled as the element-wise (Hadamard) product of effective stimulus $s(x, y, t)$ and the Gaussian pRF model $g(x, y)$ then raised to power $n$ and multiplied with a gain factor $g$.
+  \begin{equation}
+  r(t) = g (\sum_{x, y} s(x, y, t) g(x, t))^n
+  \end{equation}
    \vspace{0.3em}
   }
 

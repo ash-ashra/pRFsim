@@ -104,8 +104,8 @@ def init(radius_tmp, barWidth_tmp, precision_tmp, TR_tmp,
     for k in range(3):
         for i, x in enumerate(X):  # do with multithreading
             for j, y in enumerate(Y):
-                if x <= (0.5 * k - 0.5) * radius + barWidth:
-                    if x >= (0.5 * k - 0.5) * radius - barWidth:
+                if x <= (-0.5 * k + 0.5) * radius + barWidth:
+                    if x >= (-0.5 * k + 0.5) * radius - barWidth:
                         # if isCheckerboard:
                         #     img_temps[k, i, j] = checkerboard[i, j]
                         # else:
@@ -124,11 +124,20 @@ def init(radius_tmp, barWidth_tmp, precision_tmp, TR_tmp,
                          mode='nearest', reshape=False)
 
             if makeDiscontinous:
-                index = (4*f) % nFrames
-                stim_compact[index, :, :] = (rot > np.max(rot) / 2) * 1.0
+                index = (5*f) % nFrames
             else:
-                stim_compact[f, :, :] = (rot > np.max(rot) / 2) * 1.0
+                index = f
+            stim_compact[index, :, :] = (rot > np.max(rot) / 2) * 1.0
             f += 1
+
+    for f in range(nFrames):
+        plt.figure(figsize=(figSize, figSize))
+        plt.grid(None)
+        plt.axis('off')
+        plt.imshow(stim_compact[f, :, :],
+                   cmap="Blues")
+        plt.savefig('/home/arash/results/stim_%s_%d.png' % (title, f))
+        plt.close()
 
     # delay them
     duration = nFrames * TRs
@@ -145,8 +154,9 @@ def init(radius_tmp, barWidth_tmp, precision_tmp, TR_tmp,
     plt.figure(figsize=(figSize, figSize))
     plt.grid(None)
     plt.title('stimulus projection across time')
-    plt.imshow(proj2D.T)
+    plt.imshow(proj2D)
     plt.savefig('/home/arash/results/stimProj_%s.eps' % title)
+    plt.close()
     return stim
 
 
@@ -444,7 +454,6 @@ def findNonLinearHRF(neuronal_responses, hrf, noise):
     # count = 0
     # prev_cost = 1e30
     bolds = np.zeros((duration, sqrtVoxels, sqrtVoxels))
-    print('Searching for non-linear HRF...')
     for i in range(sqrtVoxels):
         for j in range(sqrtVoxels):
             # count += 1
@@ -459,6 +468,80 @@ def findNonLinearHRF(neuronal_responses, hrf, noise):
             #     print(count)
     x0 = 10 * (np.random.rand(12) + 1e-10)
     res = least_squares(RSS_NHRF, x0, args=(np.mean(np.mean(bolds)),
+                        np.mean(np.mean(neuronal_responses))))
+    pars = res.x
+    return pars
+
+
+def RSS_HRF(x, bold, n):
+    """Short summary.
+
+    Parameters
+    ----------
+    x : type
+        Description of parameter `x`.
+    bold : type
+        Description of parameter `bold`.
+    n : type
+        Description of parameter `n`.
+
+    Returns
+    -------
+    type
+        Description of returned object.
+
+    """
+    hrf = hrf_double_gamma(t, x[0], x[1], x[2], x[3], x[4], x[5], x[6])
+    prediction = np.convolve(hrf, n)[0:duration]
+    return np.sum((bold - prediction)**2)
+
+
+def findLinearHRF(neuronal_responses, n_hrf_pars, noise):
+    """Short summary.
+
+    Parameters
+    ----------
+    neuronal_responses : type
+        Description of parameter `neuronal_responses`.
+    n_hrf_pars : type
+        Description of parameter `n_hrf_pars`.
+    noise : type
+        Description of parameter `noise`.
+
+    Returns
+    -------
+    type
+        Description of returned object.
+
+    """
+    # count = 0
+    # prev_cost = 1e30
+    x = n_hrf_pars
+    bolds = np.zeros((duration, sqrtVoxels, sqrtVoxels))
+    for i in range(sqrtVoxels):
+        for j in range(sqrtVoxels):
+            # count += 1
+            n = neuronal_responses[:, i, j]
+            bolds[:, i, j] = bold_response_nonlinear(n=n, t=t,
+                                                     beta1=x[0],
+                                                     beta2=x[1], beta3=x[2],
+                                                     beta11=x[3],
+                                                     beta12=x[4], beta13=x[5],
+                                                     beta21=x[6],
+                                                     beta22=x[7], beta23=x[8],
+                                                     beta31=x[9],
+                                                     beta32=x[10],
+                                                     beta33=x[11]) + norm.rvs(
+                                                     scale=noise,
+                                                     size=duration)
+            # x0 = 10 * (np.random.rand(12) + 1e-10)
+            # res = least_squares(RSS_NHRF, x0, args=(bolds[:, i, j], n))
+            # if res.cost < prev_cost:
+            #     pars = res.x
+            #     prev_cost = res.cost
+            #     print(count)
+    x0 = 10 * (np.random.rand(7) + 1e-10)
+    res = least_squares(RSS_HRF, x0, args=(np.mean(np.mean(bolds)),
                         np.mean(np.mean(neuronal_responses))))
     pars = res.x
     return pars
@@ -602,7 +685,7 @@ def estimatePRF(bold, hrf, exponent):
 
 
 def estimateAll(bolds, exponent, hrf, n_hrf_pars,
-                title, assumeNonLinear=False, margin=0):
+                title, assumeLinear=False, margin=0):
     """Short summary.
 
     Parameters
