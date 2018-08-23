@@ -26,7 +26,7 @@ TR = 3.0
 TRs = 5  # number of TRs for each frame
 
 noise = 1.0
-sqrtVoxels = 6
+sqrtVoxels = 30
 
 # parameters for non-linear frinson hrf:
 n_hrf_pars = [0.5, -1.4, 11.3, 0.1, 0.9, 0.2,
@@ -37,7 +37,7 @@ t = np.arange(0, len(angles)*3*TRs*TR, TR)
 for shift in np.arange(0, radius/4, radius/16):
     title = '%.2f' % shift
     stim = psim.init(radius, radius/4+shift, precision, TR, TRs, sqrtVoxels,
-                     angles, t, title, makeDiscontinous=False)
+                     angles, t, title, makeDiscontinous=True)
     print('stimulus generated')
 
     # for n in np.arange(0.5, 1, 0.1):
