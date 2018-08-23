@@ -12,8 +12,8 @@ import numpy as np
 
 
 # experiment parameters
-radius = 10.3
-precision = 0.1
+radius = 10.3  # in cm
+precision = 0.1  # in cm
 
 angles = [
           -90, 45, -180, 315, 90, 225, 0, 135
@@ -22,22 +22,22 @@ angles = [
           # ,-91, 44, -181, 314, 91, 224, 1, 134
           ]
 
-TR = 3.0
-TRs = 5  # number of TRs for each frame
+TR = 3.0  # in seconds
+TRs = 3   # number of TRs for each frame
 
-noise = 1.0
-sqrtVoxels = 30
+noise = 1.0  # in cm
+sqrtVoxels = 30  # number of voxels in each dimension
 
 # parameters for non-linear frinson hrf:
-n_hrf_pars = [0.5, -1.4, 11.3, 0.1, 0.9, 0.2,
-              -0.9, 0.9, -5.4, 1.4, -0.4, 1.9]
+n_hrf_pars = [0.33, 0.33, 0.33, 0.25, 0, -0.25,
+              0, 0, 0, 0, 0, 0]
 
 t = np.arange(0, len(angles)*3*TRs*TR, TR)
 
 for shift in np.arange(0, radius/4, radius/16):
     title = '%.2f' % shift
     stim = psim.init(radius, radius/4+shift, precision, TR, TRs, sqrtVoxels,
-                     angles, t, title, makeDiscontinous=True)
+                     angles, t, title, makeDiscontinous=False)
     print('stimulus generated')
 
     # for n in np.arange(0.5, 1, 0.1):
@@ -47,7 +47,7 @@ for shift in np.arange(0, radius/4, radius/16):
 
     # n_hrf_pars = psim.findNonLinearHRF(neuronal_responses, hrf, noise)
     # print(n_hrf_pars)
-    x = psim.findLinearHRF(neuronal_responses, n_hrf_pars, noise)
+    x = psim.findLinearHRF(neuronal_responses, n_hrf_pars)
     hrf = psim.hrf_double_gamma(t, x[0], x[1], x[2], x[3], x[4], x[5], x[6])
     print('Equivalent linear HRF is found')
 

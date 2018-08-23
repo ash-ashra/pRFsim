@@ -11,7 +11,7 @@ import numpy as np
 import pandas as pd
 
 from scipy.ndimage.interpolation import rotate
-from scipy.misc import imresize
+# from scipy.misc import imresize
 from scipy.stats import gamma
 from scipy.misc import factorial
 from scipy.stats import norm
@@ -433,7 +433,7 @@ def RSS_NHRF(x, bold, n):
     return np.sum((bold - prediction)**2)
 
 
-def findNonLinearHRF(neuronal_responses, hrf, noise):
+def findNonLinearHRF(neuronal_responses, hrf):
     """Short summary.
 
     Parameters
@@ -459,7 +459,7 @@ def findNonLinearHRF(neuronal_responses, hrf, noise):
             # count += 1
             n = neuronal_responses[:, i, j]
             bolds[:, i, j] = np.convolve(
-                hrf, n)[0:duration] + norm.rvs(scale=noise, size=duration)
+                hrf, n)[0:duration]
             # x0 = 10 * (np.random.rand(12) + 1e-10)
             # res = least_squares(RSS_NHRF, x0, args=(bolds[:, i, j], n))
             # if res.cost < prev_cost:
@@ -496,7 +496,7 @@ def RSS_HRF(x, bold, n):
     return np.sum((bold - prediction)**2)
 
 
-def findLinearHRF(neuronal_responses, n_hrf_pars, noise):
+def findLinearHRF(neuronal_responses, n_hrf_pars):
     """Short summary.
 
     Parameters
@@ -531,9 +531,7 @@ def findLinearHRF(neuronal_responses, n_hrf_pars, noise):
                                                      beta22=x[7], beta23=x[8],
                                                      beta31=x[9],
                                                      beta32=x[10],
-                                                     beta33=x[11]) + norm.rvs(
-                                                     scale=noise,
-                                                     size=duration)
+                                                     beta33=x[11])
             # x0 = 10 * (np.random.rand(12) + 1e-10)
             # res = least_squares(RSS_NHRF, x0, args=(bolds[:, i, j], n))
             # if res.cost < prev_cost:

@@ -179,35 +179,24 @@
 
 
 
-
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Problem}{name=problem,column=0,row=0}{
+  \headerbox{Introduction}{name=introduction,column=0,row=0}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-   Tracks of features through scenes are needed for data analysis, as well as
-   for movie special effects. Tracks are found in an interactive process.
-
-   This is a difficult problem due to three aspects. 
+   We present a method based on computer simulations to test the goodness of population receptive field (pRF) estimates. In particular, we have examined the effect of having different hemodynamic response function (HRF) models when:
+ 
    \begin{enumerate}\compresslist
-      \item Appearance changes due to lighting and pose
-      \item Occlusions
-      \item Speed: Interactive editing requires faster than framerate calculation
+		\item Simulating fMRI responses using linear and non-linear "simulation HRFs"
+		\item Estimating pRFs using a certain "estimation HRF"
    \end{enumerate}
    \vspace{0.3em}
  }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Contributions}{name=contribution,column=0,below=problem}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-   \vspace{0.3em}
-  }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\headerbox{Results}{name=results,column=1,span=2,row=0}{
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Stimulation}{name=stimulus,column=1,span=2,row=0}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \noindent We have used the drifting bar apertures at various orientations used in-[1] in order to simulate the fMRI responses.
+  
     \drawvideo{24}{120}{%
         \includegraphics[width=0.0417\linewidth]{{stim_0.00_0}.png}%
         \includegraphics[width=0.0417\linewidth]{{stim_0.00_1}.png}%
@@ -234,31 +223,10 @@
         \includegraphics[width=0.0417\linewidth]{{stim_0.00_22}.png}%
         \includegraphics[width=0.0417\linewidth]{{stim_0.00_23}.png}%
     }
-
-      \drawvideo{5}{40}{%
-        \includegraphics[width=0.2\linewidth]{giraffe-run-000-rastered}%
-          \includegraphics[width=0.2\linewidth]{giraffe-run-100-rastered}%
-          \includegraphics[width=0.2\linewidth]{giraffe-run-200-rastered}%
-          \includegraphics[width=0.2\linewidth]{giraffe-run-300-rastered}%
-          \includegraphics[width=0.2\linewidth]{giraffe-run-458-rastered}%
-      }
-  \begin{tabular*}{\linewidth}{*{5}{@{}p{0.2\linewidth}@{}}}
-    {\hfill{}Frame 0\hfill{}}  &
-    {\hfill{}100\hfill{}} &
-    {\hfill{}200\hfill{}} &
-    {\hfill{}300\hfill{}} &
-    {\hfill{}458\hfill{}} 
-  \end{tabular*}
-      \begin{multicols}{2}
-    Between one and three user clicks were needed to achieve accurate tracking for
-      the head sequence. Note the correct handling of the occluded ear, which
-      required only a single click. 
-
-      The eye of the running giraffe required eight user interactions, of which three
-      marked occlusions. 
-      \end{multicols}
-      \vspace{-0.6em}
+    \vspace{-0.6em}
 }
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \headerbox{References}{name=references,column=0,above=bottom}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -267,126 +235,89 @@
     \renewcommand{\section}[2]{\vskip 0.05em}
       \begin{thebibliography}{1}\itemsep=-0.01em
       \setlength{\baselineskip}{0.4em}
-      \bibitem{amberg11:graphtrack}
-        B.~Amberg, T. Vetter.
-        \newblock {GraphTrack}: {F}ast and {G}lobally {O}ptimal {T}racking in {V}ideos
-        \newblock In {\em CVPR '11}
-      \bibitem{awf:tracking}
-        A.~Buchanan and A.~Fitzgibbon.
-        \newblock {I}nteractive {F}eature {T}racking using {K-D} {T}rees and {D}ynamic {P}rogramming.
-        \newblock In {\em CVPR '06}
+      \bibitem{Dumoulin2008}
+        S.~Dumoulin, B.~Wandell.
+        \newblock {P}opulation {R}eceptive {F}ield {E}stimates in {H}uman {V}isual {C}ortex.
+        \newblock In {\em NeuroImage '08}
+      \bibitem{Kay2013}
+        K.~Kay and J.~Winawer et all.
+        \newblock {C}ompressive {S}patial {S}ummation in {H}uman {V}isual {C}ortex.
+        \newblock In {\em Journal of Neurophysiology '13}
       \end{thebibliography}
    \vspace{0.3em}
   }
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Background Model}{name=background model,column=1,below=results}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent\begin{tabular}{@{\hspace{0.0em}}c@{\hspace{1.5em}}c@{\hspace{0.0em}}}
-With & Without\\
-background model & background model\\
-\includegraphics[width=0.46\linewidth]{candidates_lips_ridge_left_bg} &
-\includegraphics[width=0.46\linewidth]{candidates_lips_ridge_left_no_bg} \\[2em]
-%\begin{sideways}{\makebox[0.32\linewidth][c]{Flank of a giraffe}}\end{sideways} & 
-%\includegraphics[width=0.40\linewidth]{candidates_giraffes_flank_bg}&
-%\includegraphics[width=0.40\linewidth]{candidates_giraffes_flank_no_bg}\\
-\end{tabular}
-  \indent We incorporate a background model, such that a click tells us not only `this
-  is how the landmark looks like', but also `this is how the landmark
-  does \emph{not} look like' for all other patches in that frame.
 
-  The figure contrasts the per frame evidence for each candidate patch with and
-  without a background model. Using the background model makes the correct
-  patch probable enough, that it is chosen. But note that global reasoning over
-  the entire path is still necessary, as the correct patch is not the most
-  probable patch in this frame.
 
-  The background model is essential for a good user experience, as it avoids
-  learning an overly broad apperance model when marking up difficult frames.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \headerbox{Background Model}{name=background model,column=1,below=stimulus}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \indent We have assumed a multivariate normal distribution for the pRF model and used log-polar varying sigma values to have a biologically plausible pRF sizes according to:
+  
+  \begin{equation}
+  	\sigma(x, y) = \frac{1}{2} \ln(e + \sqrt{x^2 + y^2})
+  \end{equation}
+  which leads to eccentricity values that resemble the primary visual cortex pRF sizes.
+  
+
+  We have also used a double Gamma function as the linear HRF model which is comprised of two Gamma functions defined according to:
+  
+  \begin{equation}
+  	content...
+  \end{equation}
+  
+  Furthermore, we have used the Friston (1998) non-linear HRF as the non-linear
+  model defined according to:
+  
+  \begin{equation}
+  content...
+  \end{equation}
+  
+  where, 
+  
+  \begin{equation}
+  content...
+  \end{equation}
+  
    \vspace{0.3em}
   }
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\headerbox{Speed}{name=speed,column=2,row=0,below=results,bottomaligned=background model}{
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\basiswidth}{0.22}
-\newcommand{\basisskip}{0.04} % (1-4*\basiswidth)/3
-\newcommand{\imagegrid}[1]{
-\begin{tabular}{@{}
-  c@{\hspace{\basisskip\linewidth}}%
-  c@{\hspace{\basisskip\linewidth}}%
-  c@{\hspace{\basisskip\linewidth}}%
-  c@{}}
-  %
-\includegraphics[width=\basiswidth\linewidth,height=\basiswidth\linewidth,keepaspectratio]{#1-01} &
-\includegraphics[width=\basiswidth\linewidth,height=\basiswidth\linewidth,keepaspectratio]{#1-02} &
-\includegraphics[width=\basiswidth\linewidth,height=\basiswidth\linewidth,keepaspectratio]{#1-03} &
-\includegraphics[width=\basiswidth\linewidth,height=\basiswidth\linewidth,keepaspectratio]{#1-04} \\
-\includegraphics[width=\basiswidth\linewidth,height=\basiswidth\linewidth,keepaspectratio]{#1-05} &
-\includegraphics[width=\basiswidth\linewidth,height=\basiswidth\linewidth,keepaspectratio]{#1-06} &
-\includegraphics[width=\basiswidth\linewidth,height=\basiswidth\linewidth,keepaspectratio]{#1-07} &
-\includegraphics[width=\basiswidth\linewidth,height=\basiswidth\linewidth,keepaspectratio]{#1-08} \\
-\includegraphics[width=\basiswidth\linewidth,height=\basiswidth\linewidth,keepaspectratio]{#1-09} &
-\includegraphics[width=\basiswidth\linewidth,height=\basiswidth\linewidth,keepaspectratio]{#1-10} &
-\includegraphics[width=\basiswidth\linewidth,height=\basiswidth\linewidth,keepaspectratio]{#1-11} &
-\includegraphics[width=\basiswidth\linewidth,height=\basiswidth\linewidth,keepaspectratio]{#1-12} \\
-\includegraphics[width=\basiswidth\linewidth,height=\basiswidth\linewidth,keepaspectratio]{#1-13} &
-\includegraphics[width=\basiswidth\linewidth,height=\basiswidth\linewidth,keepaspectratio]{#1-14} &
-\includegraphics[width=\basiswidth\linewidth,height=\basiswidth\linewidth,keepaspectratio]{#1-15} &
-\includegraphics[width=\basiswidth\linewidth,height=\basiswidth\linewidth,keepaspectratio]{#1-16} 
-\end{tabular}
-}
-\noindent\begin{tabular}{@{}c@{\hspace{0.5em}}c@{\hspace{0.5em}}c@{}}
-\begin{minipage}{0.3\linewidth}
-  \includegraphics[width=\linewidth]{basis-giraffe-example-frame}\\[1em]
-\end{minipage}&
-\begin{minipage}{0.3\linewidth}
-  \imagegrid{basis-giraffe-basis}
-\end{minipage}&
-\begin{minipage}{0.3\linewidth}
-  \imagegrid{basis-giraffe-response}
-\end{minipage}\\
-\smaller Image &\smaller  Filter Bank &\smaller  Response
-\end{tabular}\\[1em]
-\indent{}Speed is achieved by preprocessing the video with an adaptive filter
-bank as in~\cite{awf:tracking}. Preprocessing was sped up significantly, but is
-still slower than realtime.
-
-This encodes the video into 16 byte per pixel feature vectors. We implemented
-an efficient search for similar patches using the SIMD hardware of modern
-processors, and only evaluate the cost on these candidate patches. (Typically
-200 patches per frame). The Graph-Structure focuses the evaluations on the most
-important areas, and makes candidate search and reasoning highly efficient,
-such that the system runs at interactive speed.
-
-Note that the preprocessing is not specific to the interestpoints tracked
-later. A single preprocessed video can therefore be used in many annotation
-sessions.
-   \vspace{0.0em}
+\headerbox{Results}{name=result,column=2,row=0,below=stimulus,bottomaligned=background model}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	Accuracy maps when simulating with linear HRF and estimating with linear HRF:
+   \vspace{0.3em}
   }
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Source Code}{name=source,column=2,below=speed,above=bottom}{
+  \headerbox{Conclusion}{name=Conclusion,column=2,below=result,above=bottom}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \noindent
-  \begin{minipage}{\linewidth}
-  \begin{minipage}{0.7\linewidth}
-    \indent{}The source code and compiled executables with an interactive interface are available at \\
-  \end{minipage}\hfill%
-  \begin{minipage}{0.28\linewidth}
-  \hfill\includegraphics[width=\linewidth]{chart}
-  \end{minipage}
-  \end{minipage}
-  \url{http://www.cs.unibas.ch/personen/amberg_brian/graphtrack}
+	We found that a mismatch between the HRFs may lead to erroneous pRF estimations. The errors were particularly severe when the simulation HRF was non-linear
+	and the estimation HRF was linear. Therefore, we recommend that the stimulation
+	protocol should be fine-tuned using computer simulations before an actual fMRI experiment is conducted.
   }
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{A Future Direction}{name=questions,column=1,span=1,below=background model,above=bottom}{
+  \headerbox{Source Code}{name=source,column=1,span=1,below=background model,above=bottom}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    We incorporated a background model, where a click informs us not only that `this is how the
-    patch looks like', but also for the rest of the frame, `this is how the patch
-    does not look like'. 
-    
-   \vspace{0.3em}
-  }
+	\noindent
+	\begin{minipage}{\linewidth}
+		\begin{minipage}{0.7\linewidth}
+			\indent{}The source code and a sample script are available at \\
+		\end{minipage}\hfill%
+		\begin{minipage}{0.28\linewidth}
+			\hfill\includegraphics[width=\linewidth]{chart}
+		\end{minipage}
+	\end{minipage}
+	\url{Github.com/arash-ash/pRFsim}
+	}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Method}{name=method,column=0,below=contribution,above=references}{
+  \headerbox{Method}{name=method,column=0,below=introduction,above=references}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   A population receptive field (pRF) is the region of the visual field where stimuli illicit responses from a local population of neurons. In \cite{Dumoulin2008} the authors proposed a model of neuronal population receptive field defined by a two-dimensional Gaussian function:
   
@@ -400,6 +331,10 @@ sessions.
   \begin{equation}
   r(t) = g (\sum_{x, y} s(x, y, t) g(x, t))^n
   \end{equation}
+  
+  
+  After generating the fMRI responses, we estimated the assumed pRF parameters by minimizing the $l2$ norm of the generated fMRI responses minus the predicted time series. Critically, we used different, as well as same HRFs for simulation and estimation.
+  
    \vspace{0.3em}
   }
 
