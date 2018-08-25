@@ -19,7 +19,7 @@
 \usepackage{palatino}
 
 \newcommand{\captionfont}{\footnotesize}
-
+\DeclareMathOperator*{\argmin}{arg\,min}
 \graphicspath{{images/}{../images/}}
 \usetikzlibrary{calc}
 
@@ -182,12 +182,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \headerbox{Introduction}{name=introduction,column=0,row=0}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-   We present a method based on computer simulations to test the goodness of population receptive field (pRF) estimates. In particular, we have examined the effect of having different hemodynamic response function (HRF) models when:
+	\noindent We present a method based on computer simulations to test the goodness of population receptive field (pRF) estimates. In particular, we have examined the effect of having non-linearity in the hemodynamic response function (HRF) by,
  
-   \begin{enumerate}\compresslist
-		\item Simulating fMRI responses using linear and non-linear "simulation HRFs"
-		\item Estimating pRFs using a certain "estimation HRF"
-   \end{enumerate}
+	\begin{enumerate}\compresslist
+		\item Simulating fMRI responses with non-linear "simulation HRFs"
+		\item Estimating pRFs with a "similar" linear "estimation HRF"
+	\end{enumerate}
+	
+	This is an important scenario to test since many estimation methods assume linear HRF models but actual HRF response is non-linear. Hence we present a pipeline to test robustness of stimulation protocols against non-linearities in the BOLD response.
+
    \vspace{0.3em}
  }
 
@@ -195,148 +198,248 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{Stimulation}{name=stimulus,column=1,span=2,row=0}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \noindent We have used the drifting bar apertures at various orientations used in-[1] in order to simulate the fMRI responses.
+  \noindent We first used the exact drifting bar stimululation in \cite{Dumoulin2008}:
   
-    \drawvideo{24}{120}{%
-        \includegraphics[width=0.0417\linewidth]{{stim_0.00_0}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_0.00_1}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_0.00_2}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_0.00_3}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_0.00_4}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_0.00_5}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_0.00_6}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_0.00_7}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_0.00_8}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_0.00_9}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_0.00_10}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_0.00_11}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_0.00_12}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_0.00_13}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_0.00_14}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_0.00_15}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_0.00_16}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_0.00_17}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_0.00_18}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_0.00_19}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_0.00_20}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_0.00_21}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_0.00_22}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_0.00_23}.png}%
+    \drawvideo{24}{72}{%
+        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_0}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_1}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_2}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_3}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_4}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_5}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_6}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_7}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_8}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_9}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_10}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_11}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_12}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_13}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_14}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_15}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_16}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_17}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_18}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_19}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_20}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_21}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_22}.png}%
+        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_23}.png}%
     }
+	\noindent Then we optimized it for angle and bar width to reduce the non-linearity:
+	
+    \drawvideo{24}{72}{%
+	\includegraphics[width=0.0417\linewidth]{{stim_optimal_0}.png}%
+	\includegraphics[width=0.0417\linewidth]{{stim_optimal_1}.png}%
+	\includegraphics[width=0.0417\linewidth]{{stim_optimal_2}.png}%
+	\includegraphics[width=0.0417\linewidth]{{stim_optimal_3}.png}%
+	\includegraphics[width=0.0417\linewidth]{{stim_optimal_4}.png}%
+	\includegraphics[width=0.0417\linewidth]{{stim_optimal_5}.png}%
+	\includegraphics[width=0.0417\linewidth]{{stim_optimal_6}.png}%
+	\includegraphics[width=0.0417\linewidth]{{stim_optimal_7}.png}%
+	\includegraphics[width=0.0417\linewidth]{{stim_optimal_8}.png}%
+	\includegraphics[width=0.0417\linewidth]{{stim_optimal_9}.png}%
+	\includegraphics[width=0.0417\linewidth]{{stim_optimal_10}.png}%
+	\includegraphics[width=0.0417\linewidth]{{stim_optimal_11}.png}%
+	\includegraphics[width=0.0417\linewidth]{{stim_optimal_12}.png}%
+	\includegraphics[width=0.0417\linewidth]{{stim_optimal_13}.png}%
+	\includegraphics[width=0.0417\linewidth]{{stim_optimal_14}.png}%
+	\includegraphics[width=0.0417\linewidth]{{stim_optimal_15}.png}%
+	\includegraphics[width=0.0417\linewidth]{{stim_optimal_16}.png}%
+	\includegraphics[width=0.0417\linewidth]{{stim_optimal_17}.png}%
+	\includegraphics[width=0.0417\linewidth]{{stim_optimal_18}.png}%
+	\includegraphics[width=0.0417\linewidth]{{stim_optimal_19}.png}%
+	\includegraphics[width=0.0417\linewidth]{{stim_optimal_20}.png}%
+	\includegraphics[width=0.0417\linewidth]{{stim_optimal_21}.png}%
+	\includegraphics[width=0.0417\linewidth]{{stim_optimal_22}.png}%
+	\includegraphics[width=0.0417\linewidth]{{stim_optimal_23}.png}%
+}
     \vspace{-0.6em}
 }
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{References}{name=references,column=0,above=bottom}{
+  \headerbox{Experiment}{name=experiment,column=1,below=stimulus}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \smaller
-    \bibliographystyle{ieee}
-    \renewcommand{\section}[2]{\vskip 0.05em}
-      \begin{thebibliography}{1}\itemsep=-0.01em
-      \setlength{\baselineskip}{0.4em}
-      \bibitem{Dumoulin2008}
-        S.~Dumoulin, B.~Wandell.
-        \newblock {P}opulation {R}eceptive {F}ield {E}stimates in {H}uman {V}isual {C}ortex.
-        \newblock In {\em NeuroImage '08}
-      \bibitem{Kay2013}
-        K.~Kay and J.~Winawer et all.
-        \newblock {C}ompressive {S}patial {S}ummation in {H}uman {V}isual {C}ortex.
-        \newblock In {\em Journal of Neurophysiology '13}
-      \end{thebibliography}
-   \vspace{0.3em}
-  }
 
+  \noindent We use following HRFs:
+  
+  \begin{itemize}
+  \small
+  \item Double-Gamma Linear HRF
+  \begin{align*}
+    p(t) &= r(t) * h(t)\\
+  	h(t) &= \frac{1}{C}\frac{\lambda_1^{n_1} (t-t_1)^{n_1-1} e^{-\lambda_1(t-t_1)}}{(n_1-1)!}\\
+  	&-a\frac{\lambda_2^{n_2} (t-t_2)^{n_2-1} e^{-\lambda_2(t-t_2)}}{(n_2-1)!}
+  \end{align*}
+  where C is the normalizing constant.
+  \item Friston Non-Linear HRF
+   \begin{align*}
+  p(t) &= \sum_{i=1}^{3}\beta_i x_i(t)\\
+   &+\sum_{i=1}^{3}\sum_{j=1}^{3}\beta_{ij} x_i(t)x_j(t)\\
+   x_i(t) &= (r * b_i)(t) \\
+	b_i(t) &= \frac{1}{k!} t^k e^{-t} \quad k=5,7,15
+  \end{align*}
+  \end{itemize}
+\normalsize
+	Experiment steps:
+	\begin{enumerate}
+		\item initialize parameters
+		\begin{enumerate}
+			\item number of voxels to simulate
+			\item exponent of response model
+			\item double-Gamma HRF
+		\end{enumerate}
+	\item Estimate from linear response
+	\item fit parameter of non-Linear HRF
+	\item Estimate from non-Linear response
+	\item repeat 4 to optimize the bar width size
+	\item repeat 4 with optimized bar width to optimize the rotation angle
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Background Model}{name=background model,column=1,below=stimulus}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \indent We have assumed a multivariate normal distribution for the pRF model and used log-polar varying sigma values to have a biologically plausible pRF sizes according to:
-  
-  \begin{equation}
-  	\sigma(x, y) = \frac{1}{2} \ln(e + \sqrt{x^2 + y^2})
-  \end{equation}
-  which leads to eccentricity values that resemble the primary visual cortex pRF sizes.
-  
-
-  We have also used a double Gamma function as the linear HRF model which is comprised of two Gamma functions defined according to:
-  
-  \begin{equation}
-  	content...
-  \end{equation}
-  
-  Furthermore, we have used the Friston (1998) non-linear HRF as the non-linear
-  model defined according to:
-  
-  \begin{equation}
-  content...
-  \end{equation}
-  
-  where, 
-  
-  \begin{equation}
-  content...
-  \end{equation}
+	\end{enumerate}
   
    \vspace{0.3em}
   }
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\headerbox{Results}{name=result,column=2,row=0,below=stimulus,bottomaligned=background model}{
+\headerbox{Results}{name=result,column=2,row=0,below=stimulus,bottomaligned=experiment}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	Accuracy maps when simulating with linear HRF and estimating with linear HRF:
-   \vspace{0.3em}
+	\small
+	\noindent Accuracy maps when simulating with linear HRF and estimating with linear HRF.
+	\includegraphics[width=0.49\linewidth]{{0.00_y_8}.eps}
+	\includegraphics[width=0.49\linewidth]{{0.00_sigma_8}.eps}
+	
+	\noindent Accuracy maps when simulating with non-linear HRF and estimating with linear HRF:
+	\includegraphics[width=0.49\linewidth]{{cont_0.00_y_8}.eps}
+	\includegraphics[width=0.49\linewidth]{{cont_0.00_sigma_8}.eps}
+	
+	\noindent Optimization of parameters with average of estimation errors over all pRF parameters:
+	\includegraphics[width=0.45\linewidth]{barWidths}
+	\includegraphics[width=0.45\linewidth]{Rotation}
+	
+	\noindent Accuracy maps of same experiment with optimized parameters for size and rotation:
+	\includegraphics[width=0.49\linewidth]{{optimal_y_8}.eps}
+	\includegraphics[width=0.49\linewidth]{{optimal_sigma_8}.eps}
+   \vspace{-0.3em}
   }
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Conclusion}{name=Conclusion,column=2,below=result,above=bottom}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \noindent
-	We found that a mismatch between the HRFs may lead to erroneous pRF estimations. The errors were particularly severe when the simulation HRF was non-linear
-	and the estimation HRF was linear. Therefore, we recommend that the stimulation
-	protocol should be fine-tuned using computer simulations before an actual fMRI experiment is conducted.
-  }
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Source Code}{name=source,column=1,span=1,below=background model,above=bottom}{
+  \headerbox{Discussion}{name=conclusion,column=1,span=1,below=experiment,above=bottom}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\noindent
-	\begin{minipage}{\linewidth}
-		\begin{minipage}{0.7\linewidth}
-			\indent{}The source code and a sample script are available at \\
-		\end{minipage}\hfill%
-		\begin{minipage}{0.28\linewidth}
-			\hfill\includegraphics[width=\linewidth]{chart}
-		\end{minipage}
-	\end{minipage}
-	\url{Github.com/arash-ash/pRFsim}
+	We found that non-linearity in simulation HRFs may lead to erroneous pRF estimations. However, we showed that it is possible to optimize the stimulution parameters to ameliorate the effect this non-linearity.\\
+	
+	Therefore, we highly recommend that the stimulation
+	protocol (i.e., stimulation and experiment parameters) should be fine-tuned using computer simulations before an actual fMRI experiment is conducted.
+	
+
 	}
 
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Method}{name=method,column=0,below=introduction,above=references}{
+  \headerbox{Method}{name=method,column=0,below=introduction, above=bottom}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  A population receptive field (pRF) is the region of the visual field where stimuli illicit responses from a local population of neurons. In \cite{Dumoulin2008} the authors proposed a model of neuronal population receptive field defined by a two-dimensional Gaussian function:
-  
-  \begin{equation}
-  g(x, y) = e^{-\frac{(x-x_0)^2+(y-y_0)^2}{2\sigma^2}}
-  \end{equation}
-  
-  Recent study by \cite{Kay2013} showed that linear spatial summation model proposed by \cite{Dumoulin2008} deviates from linearity in early visual areas (e.g., V1, V2) and grows more in the anterior extrastriate areas (e.g., LO-2, VO-2) and the data is more accurately explained when this compressive static nonlinearity is applied after linear summation.
-  
-  According to the Compressive Spatial Summation (CSS) model proposed by \cite{Kay2013}, the pRF response is modeled as the element-wise (Hadamard) product of effective stimulus $s(x, y, t)$ and the Gaussian pRF model $g(x, y)$ then raised to power $n$ and multiplied with a gain factor $g$.
-  \begin{equation}
-  r(t) = g (\sum_{x, y} s(x, y, t) g(x, t))^n
-  \end{equation}
-  
-  
-  After generating the fMRI responses, we estimated the assumed pRF parameters by minimizing the $l2$ norm of the generated fMRI responses minus the predicted time series. Critically, we used different, as well as same HRFs for simulation and estimation.
-  
+  	\noindent We have developed a test based on models in \cite{Dumoulin2008}\cite{Kay2013} with following steps: \\
+  	
+  	
+  	\noindent
+    1. Parameter Initialization
+      	
+    Define pRF vector $\Theta = (x_0, y_0, \sigma)$.
+    
+     \noindent Initialize $\Theta=\theta$ such that $x_0, y_0$ are receptive field locations in the visual field corresponding to a voxel measurement and the pRF size is modeled accordingly to account for cortical mapping,
+    \begin{align*}
+    \sigma &= \frac{1}{2} \ln(e + \sqrt{x_0^2 + 2y_0^2})
+    \end{align*} 
+    
+    \noindent
+    2. Data Generation
+  	\begin{align*}
+  	g(x, y, \Theta=\theta) &= e^{-\frac{(x-x_0)^2+(y-y_0)^2}{2\sigma^2}}\\
+  	r(t, \Theta=\theta) &= (\sum_{x, y} s(x, y, t) g(x,y, \theta))^n\\
+  	y(t) &=  h_s(r(t)) + e(t)
+	\end{align*}
+	
+	\noindent
+	3. Parameter Estimation
+  	\begin{align*}
+ 	r(t, \Theta) &= (\sum_{x, y} s(x, y, t) g(x, y, \Theta))^n\\
+ 	p(t) &= h_e(r(t, \Theta))\\
+  	\hat{\Theta} &= \argmin{\sum_{t}^{}(y(t) - p(t))^2}
+  	\end{align*}
+  	
+  	\noindent
+  	4. Accuracy Map Evaluation
+	\begin{align*}
+  	\tilde{x} = \frac{|\hat{x_0}-x_0|}{x_0},~\tilde{y} = \frac{|\hat{y_0}-y_0|}{y_0},~\tilde{\sigma} = \frac{|\hat{\sigma}-\sigma|}{\sigma}
+  	\end{align*}
+  	
+  	\smaller
+  	\noindent with following variable descriptions:
+    \begin{align*}
+    x, y &= \text{point in visual space}\\
+    n &= \text{spatial linearity factor}\\
+  	g(x, y, \Theta) &= \text{pRF model}\\
+  	s(x, y, t) &= \text{stimulation function}\\
+  	r(t) &= \text{pRF response}\\
+  	e(t) &= \text{Gaussian noise}\\
+  	y(t) &= \text{fMRI response}\\
+  	h(.) &= \text{HRF function}\\
+  	\end{align*}
+ 
    \vspace{0.3em}
   }
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{References}{name=references,column=2,below=result}{
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\smaller
+	\bibliographystyle{ieee}
+	\renewcommand{\section}[2]{\vskip 0.05em}
+	\begin{thebibliography}{1}\itemsep=-0.01em
+		\setlength{\baselineskip}{0.4em}
+		\bibitem{Dumoulin2008}
+		S.~Dumoulin, B.~Wandell.
+		\newblock {P}opulation {R}eceptive {F}ield {E}stimates in {H}uman {V}isual {C}ortex.
+		\newblock In {\em NeuroImage '08}
+		\bibitem{Kay2013}
+		K.~Kay and J.~Winawer et all.
+		\newblock {C}ompressive {S}patial {S}ummation in {H}uman {V}isual {C}ortex.
+		\newblock In {\em Journal of Neurophysiology '13}
+	\end{thebibliography}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Source Code}{name=source,column=2,below=references,above=bottom}{
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\smaller
+	\noindent
+	\begin{minipage}{\linewidth}
+		\begin{minipage}{0.83\linewidth}
+			\indent{} The Python \itshape{prfsim} \normalfont package can directly be installed from PyPI:\quad `pip install prfsim`
+
+
+			The source code is available at, \\
+				\url{github.com/arash-ash/pRFsim}
+		\end{minipage}\hfill%
+		\begin{minipage}{0.17\linewidth}
+			\hfill\includegraphics[width=\linewidth]{chart}
+		\end{minipage}
+	\smaller
+	\end{minipage}
+	\vspace{0.3em}
+}
+
 
 \end{poster}
 

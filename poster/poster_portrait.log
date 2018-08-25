@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.8.22)  23 AUG 2018 18:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.8.22)  25 AUG 2018 11:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -796,229 +796,551 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 149.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+Underfull \hbox (badness 2556) in paragraph at lines 195--195
+\T1/ppl/m/n/10 many es-ti-ma-tion meth-ods as-sume lin-ear
+ []
+
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 LaTeX Font Info:    Font shape `T1/ppl/bx/sc' in size <14.4> not available
-(Font)              Font shape `T1/ppl/b/sc' tried instead on input line 192.
+(Font)              Font shape `T1/ppl/b/sc' tried instead on input line 195.
 Missing character: There is no ; in font nullfont!
-<images/stim_0.00_0.png, id=34, 361.35pt x 361.35pt>
-File: images/stim_0.00_0.png Graphic file (type png)
-<use images/stim_0.00_0.png>
-Package pdftex.def Info: images/stim_0.00_0.png  used on input line 227.
+<images/stim_cont_0.00_0.png, id=34, 361.35pt x 361.35pt>
+File: images/stim_cont_0.00_0.png Graphic file (type png)
+<use images/stim_cont_0.00_0.png>
+Package pdftex.def Info: images/stim_cont_0.00_0.png  used on input line 258.
 (pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
-<images/stim_0.00_1.png, id=35, 361.35pt x 361.35pt>
-File: images/stim_0.00_1.png Graphic file (type png)
-<use images/stim_0.00_1.png>
-Package pdftex.def Info: images/stim_0.00_1.png  used on input line 227.
+<images/stim_cont_0.00_1.png, id=35, 361.35pt x 361.35pt>
+File: images/stim_cont_0.00_1.png Graphic file (type png)
+<use images/stim_cont_0.00_1.png>
+Package pdftex.def Info: images/stim_cont_0.00_1.png  used on input line 258.
 (pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
-<images/stim_0.00_2.png, id=36, 361.35pt x 361.35pt>
-File: images/stim_0.00_2.png Graphic file (type png)
-<use images/stim_0.00_2.png>
-Package pdftex.def Info: images/stim_0.00_2.png  used on input line 227.
+<images/stim_cont_0.00_2.png, id=36, 361.35pt x 361.35pt>
+File: images/stim_cont_0.00_2.png Graphic file (type png)
+<use images/stim_cont_0.00_2.png>
+Package pdftex.def Info: images/stim_cont_0.00_2.png  used on input line 258.
 (pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
-<images/stim_0.00_3.png, id=37, 361.35pt x 361.35pt>
-File: images/stim_0.00_3.png Graphic file (type png)
-<use images/stim_0.00_3.png>
-Package pdftex.def Info: images/stim_0.00_3.png  used on input line 227.
+<images/stim_cont_0.00_3.png, id=37, 361.35pt x 361.35pt>
+File: images/stim_cont_0.00_3.png Graphic file (type png)
+<use images/stim_cont_0.00_3.png>
+Package pdftex.def Info: images/stim_cont_0.00_3.png  used on input line 258.
 (pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
-<images/stim_0.00_4.png, id=38, 361.35pt x 361.35pt>
-File: images/stim_0.00_4.png Graphic file (type png)
-<use images/stim_0.00_4.png>
-Package pdftex.def Info: images/stim_0.00_4.png  used on input line 227.
+<images/stim_cont_0.00_4.png, id=38, 361.35pt x 361.35pt>
+File: images/stim_cont_0.00_4.png Graphic file (type png)
+<use images/stim_cont_0.00_4.png>
+Package pdftex.def Info: images/stim_cont_0.00_4.png  used on input line 258.
 (pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
-<images/stim_0.00_5.png, id=39, 361.35pt x 361.35pt>
-File: images/stim_0.00_5.png Graphic file (type png)
-<use images/stim_0.00_5.png>
-Package pdftex.def Info: images/stim_0.00_5.png  used on input line 227.
+<images/stim_cont_0.00_5.png, id=39, 361.35pt x 361.35pt>
+File: images/stim_cont_0.00_5.png Graphic file (type png)
+<use images/stim_cont_0.00_5.png>
+Package pdftex.def Info: images/stim_cont_0.00_5.png  used on input line 258.
 (pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
-<images/stim_0.00_6.png, id=40, 361.35pt x 361.35pt>
-File: images/stim_0.00_6.png Graphic file (type png)
-<use images/stim_0.00_6.png>
-Package pdftex.def Info: images/stim_0.00_6.png  used on input line 227.
+<images/stim_cont_0.00_6.png, id=40, 361.35pt x 361.35pt>
+File: images/stim_cont_0.00_6.png Graphic file (type png)
+<use images/stim_cont_0.00_6.png>
+Package pdftex.def Info: images/stim_cont_0.00_6.png  used on input line 258.
 (pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
-<images/stim_0.00_7.png, id=41, 361.35pt x 361.35pt>
-File: images/stim_0.00_7.png Graphic file (type png)
-<use images/stim_0.00_7.png>
-Package pdftex.def Info: images/stim_0.00_7.png  used on input line 227.
+<images/stim_cont_0.00_7.png, id=41, 361.35pt x 361.35pt>
+File: images/stim_cont_0.00_7.png Graphic file (type png)
+<use images/stim_cont_0.00_7.png>
+Package pdftex.def Info: images/stim_cont_0.00_7.png  used on input line 258.
 (pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
-<images/stim_0.00_8.png, id=42, 361.35pt x 361.35pt>
-File: images/stim_0.00_8.png Graphic file (type png)
-<use images/stim_0.00_8.png>
-Package pdftex.def Info: images/stim_0.00_8.png  used on input line 227.
+<images/stim_cont_0.00_8.png, id=42, 361.35pt x 361.35pt>
+File: images/stim_cont_0.00_8.png Graphic file (type png)
+<use images/stim_cont_0.00_8.png>
+Package pdftex.def Info: images/stim_cont_0.00_8.png  used on input line 258.
 (pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
-<images/stim_0.00_9.png, id=43, 361.35pt x 361.35pt>
-File: images/stim_0.00_9.png Graphic file (type png)
-<use images/stim_0.00_9.png>
-Package pdftex.def Info: images/stim_0.00_9.png  used on input line 227.
+<images/stim_cont_0.00_9.png, id=43, 361.35pt x 361.35pt>
+File: images/stim_cont_0.00_9.png Graphic file (type png)
+<use images/stim_cont_0.00_9.png>
+Package pdftex.def Info: images/stim_cont_0.00_9.png  used on input line 258.
 (pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
-<images/stim_0.00_10.png, id=44, 361.35pt x 361.35pt>
-File: images/stim_0.00_10.png Graphic file (type png)
-<use images/stim_0.00_10.png>
-Package pdftex.def Info: images/stim_0.00_10.png  used on input line 227.
+<images/stim_cont_0.00_10.png, id=44, 361.35pt x 361.35pt>
+File: images/stim_cont_0.00_10.png Graphic file (type png)
+<use images/stim_cont_0.00_10.png>
+Package pdftex.def Info: images/stim_cont_0.00_10.png  used on input line 258.
 (pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
-<images/stim_0.00_11.png, id=45, 361.35pt x 361.35pt>
-File: images/stim_0.00_11.png Graphic file (type png)
-<use images/stim_0.00_11.png>
-Package pdftex.def Info: images/stim_0.00_11.png  used on input line 227.
+<images/stim_cont_0.00_11.png, id=45, 361.35pt x 361.35pt>
+File: images/stim_cont_0.00_11.png Graphic file (type png)
+<use images/stim_cont_0.00_11.png>
+Package pdftex.def Info: images/stim_cont_0.00_11.png  used on input line 258.
 (pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
-<images/stim_0.00_12.png, id=46, 361.35pt x 361.35pt>
-File: images/stim_0.00_12.png Graphic file (type png)
-<use images/stim_0.00_12.png>
-Package pdftex.def Info: images/stim_0.00_12.png  used on input line 227.
+<images/stim_cont_0.00_12.png, id=46, 361.35pt x 361.35pt>
+File: images/stim_cont_0.00_12.png Graphic file (type png)
+<use images/stim_cont_0.00_12.png>
+Package pdftex.def Info: images/stim_cont_0.00_12.png  used on input line 258.
 (pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
-<images/stim_0.00_13.png, id=47, 361.35pt x 361.35pt>
-File: images/stim_0.00_13.png Graphic file (type png)
-<use images/stim_0.00_13.png>
-Package pdftex.def Info: images/stim_0.00_13.png  used on input line 227.
+<images/stim_cont_0.00_13.png, id=47, 361.35pt x 361.35pt>
+File: images/stim_cont_0.00_13.png Graphic file (type png)
+<use images/stim_cont_0.00_13.png>
+Package pdftex.def Info: images/stim_cont_0.00_13.png  used on input line 258.
 (pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
-<images/stim_0.00_14.png, id=48, 361.35pt x 361.35pt>
-File: images/stim_0.00_14.png Graphic file (type png)
-<use images/stim_0.00_14.png>
-Package pdftex.def Info: images/stim_0.00_14.png  used on input line 227.
+<images/stim_cont_0.00_14.png, id=48, 361.35pt x 361.35pt>
+File: images/stim_cont_0.00_14.png Graphic file (type png)
+<use images/stim_cont_0.00_14.png>
+Package pdftex.def Info: images/stim_cont_0.00_14.png  used on input line 258.
 (pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
-<images/stim_0.00_15.png, id=49, 361.35pt x 361.35pt>
-File: images/stim_0.00_15.png Graphic file (type png)
-<use images/stim_0.00_15.png>
-Package pdftex.def Info: images/stim_0.00_15.png  used on input line 227.
+<images/stim_cont_0.00_15.png, id=49, 361.35pt x 361.35pt>
+File: images/stim_cont_0.00_15.png Graphic file (type png)
+<use images/stim_cont_0.00_15.png>
+Package pdftex.def Info: images/stim_cont_0.00_15.png  used on input line 258.
 (pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
-<images/stim_0.00_16.png, id=50, 361.35pt x 361.35pt>
-File: images/stim_0.00_16.png Graphic file (type png)
-<use images/stim_0.00_16.png>
-Package pdftex.def Info: images/stim_0.00_16.png  used on input line 227.
+<images/stim_cont_0.00_16.png, id=50, 361.35pt x 361.35pt>
+File: images/stim_cont_0.00_16.png Graphic file (type png)
+<use images/stim_cont_0.00_16.png>
+Package pdftex.def Info: images/stim_cont_0.00_16.png  used on input line 258.
 (pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
-<images/stim_0.00_17.png, id=51, 361.35pt x 361.35pt>
-File: images/stim_0.00_17.png Graphic file (type png)
-<use images/stim_0.00_17.png>
-Package pdftex.def Info: images/stim_0.00_17.png  used on input line 227.
+<images/stim_cont_0.00_17.png, id=51, 361.35pt x 361.35pt>
+File: images/stim_cont_0.00_17.png Graphic file (type png)
+<use images/stim_cont_0.00_17.png>
+Package pdftex.def Info: images/stim_cont_0.00_17.png  used on input line 258.
 (pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
-<images/stim_0.00_18.png, id=52, 361.35pt x 361.35pt>
-File: images/stim_0.00_18.png Graphic file (type png)
-<use images/stim_0.00_18.png>
-Package pdftex.def Info: images/stim_0.00_18.png  used on input line 227.
+<images/stim_cont_0.00_18.png, id=52, 361.35pt x 361.35pt>
+File: images/stim_cont_0.00_18.png Graphic file (type png)
+<use images/stim_cont_0.00_18.png>
+Package pdftex.def Info: images/stim_cont_0.00_18.png  used on input line 258.
 (pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
-<images/stim_0.00_19.png, id=53, 361.35pt x 361.35pt>
-File: images/stim_0.00_19.png Graphic file (type png)
-<use images/stim_0.00_19.png>
-Package pdftex.def Info: images/stim_0.00_19.png  used on input line 227.
+<images/stim_cont_0.00_19.png, id=53, 361.35pt x 361.35pt>
+File: images/stim_cont_0.00_19.png Graphic file (type png)
+<use images/stim_cont_0.00_19.png>
+Package pdftex.def Info: images/stim_cont_0.00_19.png  used on input line 258.
 (pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
-<images/stim_0.00_20.png, id=54, 361.35pt x 361.35pt>
-File: images/stim_0.00_20.png Graphic file (type png)
-<use images/stim_0.00_20.png>
-Package pdftex.def Info: images/stim_0.00_20.png  used on input line 227.
+<images/stim_cont_0.00_20.png, id=54, 361.35pt x 361.35pt>
+File: images/stim_cont_0.00_20.png Graphic file (type png)
+<use images/stim_cont_0.00_20.png>
+Package pdftex.def Info: images/stim_cont_0.00_20.png  used on input line 258.
 (pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
-<images/stim_0.00_21.png, id=55, 361.35pt x 361.35pt>
-File: images/stim_0.00_21.png Graphic file (type png)
-<use images/stim_0.00_21.png>
-Package pdftex.def Info: images/stim_0.00_21.png  used on input line 227.
+<images/stim_cont_0.00_21.png, id=55, 361.35pt x 361.35pt>
+File: images/stim_cont_0.00_21.png Graphic file (type png)
+<use images/stim_cont_0.00_21.png>
+Package pdftex.def Info: images/stim_cont_0.00_21.png  used on input line 258.
 (pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
-<images/stim_0.00_22.png, id=56, 361.35pt x 361.35pt>
-File: images/stim_0.00_22.png Graphic file (type png)
-<use images/stim_0.00_22.png>
-Package pdftex.def Info: images/stim_0.00_22.png  used on input line 227.
+<images/stim_cont_0.00_22.png, id=56, 361.35pt x 361.35pt>
+File: images/stim_cont_0.00_22.png Graphic file (type png)
+<use images/stim_cont_0.00_22.png>
+Package pdftex.def Info: images/stim_cont_0.00_22.png  used on input line 258.
 (pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
-<images/stim_0.00_23.png, id=57, 361.35pt x 361.35pt>
-File: images/stim_0.00_23.png Graphic file (type png)
-<use images/stim_0.00_23.png>
-Package pdftex.def Info: images/stim_0.00_23.png  used on input line 227.
+<images/stim_cont_0.00_23.png, id=57, 361.35pt x 361.35pt>
+File: images/stim_cont_0.00_23.png Graphic file (type png)
+<use images/stim_cont_0.00_23.png>
+Package pdftex.def Info: images/stim_cont_0.00_23.png  used on input line 258.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_optimal_0.png, id=58, 361.35pt x 361.35pt>
+File: images/stim_optimal_0.png Graphic file (type png)
+<use images/stim_optimal_0.png>
+Package pdftex.def Info: images/stim_optimal_0.png  used on input line 258.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_optimal_1.png, id=59, 361.35pt x 361.35pt>
+File: images/stim_optimal_1.png Graphic file (type png)
+<use images/stim_optimal_1.png>
+Package pdftex.def Info: images/stim_optimal_1.png  used on input line 258.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_optimal_2.png, id=60, 361.35pt x 361.35pt>
+File: images/stim_optimal_2.png Graphic file (type png)
+<use images/stim_optimal_2.png>
+Package pdftex.def Info: images/stim_optimal_2.png  used on input line 258.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_optimal_3.png, id=61, 361.35pt x 361.35pt>
+File: images/stim_optimal_3.png Graphic file (type png)
+<use images/stim_optimal_3.png>
+Package pdftex.def Info: images/stim_optimal_3.png  used on input line 258.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_optimal_4.png, id=62, 361.35pt x 361.35pt>
+File: images/stim_optimal_4.png Graphic file (type png)
+<use images/stim_optimal_4.png>
+Package pdftex.def Info: images/stim_optimal_4.png  used on input line 258.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_optimal_5.png, id=63, 361.35pt x 361.35pt>
+File: images/stim_optimal_5.png Graphic file (type png)
+<use images/stim_optimal_5.png>
+Package pdftex.def Info: images/stim_optimal_5.png  used on input line 258.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_optimal_6.png, id=64, 361.35pt x 361.35pt>
+File: images/stim_optimal_6.png Graphic file (type png)
+<use images/stim_optimal_6.png>
+Package pdftex.def Info: images/stim_optimal_6.png  used on input line 258.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_optimal_7.png, id=65, 361.35pt x 361.35pt>
+File: images/stim_optimal_7.png Graphic file (type png)
+<use images/stim_optimal_7.png>
+Package pdftex.def Info: images/stim_optimal_7.png  used on input line 258.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_optimal_8.png, id=66, 361.35pt x 361.35pt>
+File: images/stim_optimal_8.png Graphic file (type png)
+<use images/stim_optimal_8.png>
+Package pdftex.def Info: images/stim_optimal_8.png  used on input line 258.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_optimal_9.png, id=67, 361.35pt x 361.35pt>
+File: images/stim_optimal_9.png Graphic file (type png)
+<use images/stim_optimal_9.png>
+Package pdftex.def Info: images/stim_optimal_9.png  used on input line 258.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_optimal_10.png, id=68, 361.35pt x 361.35pt>
+File: images/stim_optimal_10.png Graphic file (type png)
+<use images/stim_optimal_10.png>
+Package pdftex.def Info: images/stim_optimal_10.png  used on input line 258.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_optimal_11.png, id=69, 361.35pt x 361.35pt>
+File: images/stim_optimal_11.png Graphic file (type png)
+<use images/stim_optimal_11.png>
+Package pdftex.def Info: images/stim_optimal_11.png  used on input line 258.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_optimal_12.png, id=70, 361.35pt x 361.35pt>
+File: images/stim_optimal_12.png Graphic file (type png)
+<use images/stim_optimal_12.png>
+Package pdftex.def Info: images/stim_optimal_12.png  used on input line 258.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_optimal_13.png, id=71, 361.35pt x 361.35pt>
+File: images/stim_optimal_13.png Graphic file (type png)
+<use images/stim_optimal_13.png>
+Package pdftex.def Info: images/stim_optimal_13.png  used on input line 258.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_optimal_14.png, id=72, 361.35pt x 361.35pt>
+File: images/stim_optimal_14.png Graphic file (type png)
+<use images/stim_optimal_14.png>
+Package pdftex.def Info: images/stim_optimal_14.png  used on input line 258.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_optimal_15.png, id=73, 361.35pt x 361.35pt>
+File: images/stim_optimal_15.png Graphic file (type png)
+<use images/stim_optimal_15.png>
+Package pdftex.def Info: images/stim_optimal_15.png  used on input line 258.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_optimal_16.png, id=74, 361.35pt x 361.35pt>
+File: images/stim_optimal_16.png Graphic file (type png)
+<use images/stim_optimal_16.png>
+Package pdftex.def Info: images/stim_optimal_16.png  used on input line 258.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_optimal_17.png, id=75, 361.35pt x 361.35pt>
+File: images/stim_optimal_17.png Graphic file (type png)
+<use images/stim_optimal_17.png>
+Package pdftex.def Info: images/stim_optimal_17.png  used on input line 258.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_optimal_18.png, id=76, 361.35pt x 361.35pt>
+File: images/stim_optimal_18.png Graphic file (type png)
+<use images/stim_optimal_18.png>
+Package pdftex.def Info: images/stim_optimal_18.png  used on input line 258.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_optimal_19.png, id=77, 361.35pt x 361.35pt>
+File: images/stim_optimal_19.png Graphic file (type png)
+<use images/stim_optimal_19.png>
+Package pdftex.def Info: images/stim_optimal_19.png  used on input line 258.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_optimal_20.png, id=78, 361.35pt x 361.35pt>
+File: images/stim_optimal_20.png Graphic file (type png)
+<use images/stim_optimal_20.png>
+Package pdftex.def Info: images/stim_optimal_20.png  used on input line 258.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_optimal_21.png, id=79, 361.35pt x 361.35pt>
+File: images/stim_optimal_21.png Graphic file (type png)
+<use images/stim_optimal_21.png>
+Package pdftex.def Info: images/stim_optimal_21.png  used on input line 258.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_optimal_22.png, id=80, 361.35pt x 361.35pt>
+File: images/stim_optimal_22.png Graphic file (type png)
+<use images/stim_optimal_22.png>
+Package pdftex.def Info: images/stim_optimal_22.png  used on input line 258.
+(pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
+<images/stim_optimal_23.png, id=81, 361.35pt x 361.35pt>
+File: images/stim_optimal_23.png Graphic file (type png)
+<use images/stim_optimal_23.png>
+Package pdftex.def Info: images/stim_optimal_23.png  used on input line 258.
 (pdftex.def)             Requested size: 17.21349pt x 17.2084pt.
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 302.
 
-Underfull \hbox (badness 1824) in paragraph at lines 282--282
-[]\T1/ppl/m/n/10 Furthermore, we have used the Fris-
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsppl.fd
+File: omsppl.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <9> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 302.
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Package epstopdf Info: Source file: <images/0.00_y_8.eps>
+(epstopdf)                    date: 2018-08-24 23:02:20
+(epstopdf)                    size: 127082 bytes
+(epstopdf)             Output file: <images/0.00_y_8-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-08-25 10:35:31
+(epstopdf)                    size: 16030 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/0.00_y_8-eps-conver
+ted-to.pdf images/0.00_y_8.eps>
+(epstopdf)             \includegraphics on input line 325.
+Package epstopdf Info: Output file is already uptodate.
+<images/0.00_y_8-eps-converted-to.pdf, id=82, 361.35pt x 361.35pt>
+File: images/0.00_y_8-eps-converted-to.pdf Graphic file (type pdf)
+<use images/0.00_y_8-eps-converted-to.pdf>
+Package pdftex.def Info: images/0.00_y_8-eps-converted-to.pdf  used on input li
+ne 325.
+(pdftex.def)             Requested size: 96.22997pt x 96.22595pt.
+Package epstopdf Info: Source file: <images/0.00_sigma_8.eps>
+(epstopdf)                    date: 2018-08-24 23:02:21
+(epstopdf)                    size: 127317 bytes
+(epstopdf)             Output file: <images/0.00_sigma_8-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-08-24 23:03:44
+(epstopdf)                    size: 16681 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/0.00_sigma_8-eps-co
+nverted-to.pdf images/0.00_sigma_8.eps>
+(epstopdf)             \includegraphics on input line 325.
+Package epstopdf Info: Output file is already uptodate.
+<images/0.00_sigma_8-eps-converted-to.pdf, id=83, 361.35pt x 361.35pt>
+File: images/0.00_sigma_8-eps-converted-to.pdf Graphic file (type pdf)
+<use images/0.00_sigma_8-eps-converted-to.pdf>
+Package pdftex.def Info: images/0.00_sigma_8-eps-converted-to.pdf  used on inpu
+t line 325.
+(pdftex.def)             Requested size: 96.22997pt x 96.22595pt.
+
+Underfull \hbox (badness 8075) in paragraph at lines 325--325
+\T1/ppl/m/n/9 Accuracy maps when sim-u-lat-ing with lin-
+ []
+
+
+Underfull \hbox (badness 7256) in paragraph at lines 325--325
+\T1/ppl/m/n/9 ear HRF and es-ti-mat-ing with lin-ear HRF.
+ []
+
+Package epstopdf Info: Source file: <images/cont_0.00_y_8.eps>
+(epstopdf)                    date: 2018-08-25 08:20:23
+(epstopdf)                    size: 127090 bytes
+(epstopdf)             Output file: <images/cont_0.00_y_8-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2018-08-25 10:36:48
+(epstopdf)                    size: 16659 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/cont_0.00_y_8-eps-c
+onverted-to.pdf images/cont_0.00_y_8.eps>
+(epstopdf)             \includegraphics on input line 325.
+Package epstopdf Info: Output file is already uptodate.
+<images/cont_0.00_y_8-eps-converted-to.pdf, id=84, 361.35pt x 361.35pt>
+File: images/cont_0.00_y_8-eps-converted-to.pdf Graphic file (type pdf)
+<use images/cont_0.00_y_8-eps-converted-to.pdf>
+Package pdftex.def Info: images/cont_0.00_y_8-eps-converted-to.pdf  used on inp
+ut line 325.
+(pdftex.def)             Requested size: 96.22997pt x 96.22595pt.
+Package epstopdf Info: Source file: <images/cont_0.00_sigma_8.eps>
+(epstopdf)                    date: 2018-08-25 08:20:23
+(epstopdf)                    size: 127325 bytes
+(epstopdf)             Output file: <images/cont_0.00_sigma_8-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2018-08-25 10:36:48
+(epstopdf)                    size: 17170 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/cont_0.00_sigma_8-e
+ps-converted-to.pdf images/cont_0.00_sigma_8.eps>
+(epstopdf)             \includegraphics on input line 325.
+Package epstopdf Info: Output file is already uptodate.
+<images/cont_0.00_sigma_8-eps-converted-to.pdf, id=85, 361.35pt x 361.35pt>
+File: images/cont_0.00_sigma_8-eps-converted-to.pdf Graphic file (type pdf)
+<use images/cont_0.00_sigma_8-eps-converted-to.pdf>
+Package pdftex.def Info: images/cont_0.00_sigma_8-eps-converted-to.pdf  used on
+ input line 325.
+(pdftex.def)             Requested size: 96.22997pt x 96.22595pt.
+
+Underfull \hbox (badness 4647) in paragraph at lines 325--325
+\T1/ppl/m/n/9 Accuracy maps when sim-u-lat-ing with non-
+ []
+
+
+Underfull \hbox (badness 2134) in paragraph at lines 325--325
+\T1/ppl/m/n/9 linear HRF and es-ti-mat-ing with lin-ear HRF:
+ []
+
+Package epstopdf Info: Source file: <images/barWidths.eps>
+(epstopdf)                    date: 2018-08-25 10:07:55
+(epstopdf)                    size: 22508 bytes
+(epstopdf)             Output file: <images/barWidths-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-08-25 10:35:15
+(epstopdf)                    size: 14544 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/barWidths-eps-conve
+rted-to.pdf images/barWidths.eps>
+(epstopdf)             \includegraphics on input line 325.
+Package epstopdf Info: Output file is already uptodate.
+<images/barWidths-eps-converted-to.pdf, id=86, 361.35pt x 289.08pt>
+File: images/barWidths-eps-converted-to.pdf Graphic file (type pdf)
+<use images/barWidths-eps-converted-to.pdf>
+Package pdftex.def Info: images/barWidths-eps-converted-to.pdf  used on input l
+ine 325.
+(pdftex.def)             Requested size: 88.37288pt x 70.69508pt.
+Package epstopdf Info: Source file: <images/Rotation.eps>
+(epstopdf)                    date: 2018-08-25 10:19:48
+(epstopdf)                    size: 22293 bytes
+(epstopdf)             Output file: <images/Rotation-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-08-25 10:35:15
+(epstopdf)                    size: 13575 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/Rotation-eps-conver
+ted-to.pdf images/Rotation.eps>
+(epstopdf)             \includegraphics on input line 325.
+Package epstopdf Info: Output file is already uptodate.
+<images/Rotation-eps-converted-to.pdf, id=87, 361.35pt x 289.08pt>
+File: images/Rotation-eps-converted-to.pdf Graphic file (type pdf)
+<use images/Rotation-eps-converted-to.pdf>
+Package pdftex.def Info: images/Rotation-eps-converted-to.pdf  used on input li
+ne 325.
+(pdftex.def)             Requested size: 88.37288pt x 70.69508pt.
+
+Underfull \hbox (badness 3271) in paragraph at lines 325--325
+\T1/ppl/m/n/9 Optimization of pa-ram-e-ters with av-er-age of
+ []
+
+
+Underfull \hbox (badness 7631) in paragraph at lines 325--325
+\T1/ppl/m/n/9 es-ti-ma-tion er-rors over all pRF pa-ram-e-ters:
+ []
+
+Package epstopdf Info: Source file: <images/optimal_y_8.eps>
+(epstopdf)                    date: 2018-08-25 10:21:06
+(epstopdf)                    size: 127723 bytes
+(epstopdf)             Output file: <images/optimal_y_8-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-08-25 10:35:32
+(epstopdf)                    size: 16491 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/optimal_y_8-eps-con
+verted-to.pdf images/optimal_y_8.eps>
+(epstopdf)             \includegraphics on input line 325.
+Package epstopdf Info: Output file is already uptodate.
+<images/optimal_y_8-eps-converted-to.pdf, id=88, 361.35pt x 361.35pt>
+File: images/optimal_y_8-eps-converted-to.pdf Graphic file (type pdf)
+<use images/optimal_y_8-eps-converted-to.pdf>
+Package pdftex.def Info: images/optimal_y_8-eps-converted-to.pdf  used on input
+ line 325.
+(pdftex.def)             Requested size: 96.22997pt x 96.22595pt.
+Package epstopdf Info: Source file: <images/optimal_sigma_8.eps>
+(epstopdf)                    date: 2018-08-25 10:21:06
+(epstopdf)                    size: 127957 bytes
+(epstopdf)             Output file: <images/optimal_sigma_8-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2018-08-25 10:35:15
+(epstopdf)                    size: 17575 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/optimal_sigma_8-eps
+-converted-to.pdf images/optimal_sigma_8.eps>
+(epstopdf)             \includegraphics on input line 325.
+Package epstopdf Info: Output file is already uptodate.
+<images/optimal_sigma_8-eps-converted-to.pdf, id=89, 361.35pt x 361.35pt>
+File: images/optimal_sigma_8-eps-converted-to.pdf Graphic file (type pdf)
+<use images/optimal_sigma_8-eps-converted-to.pdf>
+Package pdftex.def Info: images/optimal_sigma_8-eps-converted-to.pdf  used on i
+nput line 325.
+(pdftex.def)             Requested size: 96.22997pt x 96.22595pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 325--325
+\T1/ppl/m/n/9 Accuracy maps of same ex-per-i-ment with
+ []
+
+
+Underfull \hbox (badness 4429) in paragraph at lines 325--325
+\T1/ppl/m/n/9 op-ti-mized pa-ram-e-ters for size and ro-ta-tion:
  []
 
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Underfull \hbox (badness 1038) in paragraph at lines 290--290
-[]\T1/ppl/m/n/10 Accuracy maps when sim-u-lat-ing with
+Underfull \hbox (badness 3199) in paragraph at lines 339--339
+\T1/ppl/m/n/10 HRFs may lead to er-ro-neous pRF es-ti-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
+
+ []
+
+
+Underfull \hbox (badness 1137) in paragraph at lines 339--339
+[]\T1/ppl/m/n/10 Therefore, we highly rec-om-mend that
+ []
+
+
+Underfull \hbox (badness 1565) in paragraph at lines 339--339
+\T1/ppl/m/n/10 the stim-u-la-tion pro-to-col (i.e., stim-u-la-tion
  []
 
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Underfull \hbox (badness 1253) in paragraph at lines 300--300
-\T1/ppl/m/n/10 er-rors were par-tic-u-larly se-vere when the
- []
+Underfull \hbox (badness 10000) in paragraph at lines 396--396
 
-
-Underfull \hbox (badness 1540) in paragraph at lines 300--300
-\T1/ppl/m/n/10 rec-om-mend that the stim-u-la-tion pro-to-col
  []
 
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-
-Underfull \hbox (badness 10000) in paragraph at lines 316--316
-
- []
-
-<images/chart.png, id=58, 150.5625pt x 150.5625pt>
-File: images/chart.png Graphic file (type png)
-<use images/chart.png>
-Package pdftex.def Info: images/chart.png  used on input line 316.
-(pdftex.def)             Requested size: 54.9877pt x 54.98816pt.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 316.
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 441.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
+<images/chart.png, id=90, 150.5625pt x 150.5625pt>
+File: images/chart.png Graphic file (type png)
+<use images/chart.png>
+Package pdftex.def Info: images/chart.png  used on input line 441.
+(pdftex.def)             Requested size: 33.38518pt x 33.38574pt.
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-
-Underfull \hbox (badness 1377) in paragraph at lines 339--339
-[]\T1/ppl/m/n/10 According to the Com-pres-sive Spa-tial
- []
-
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-[2
+ [2
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/BAM.png> <./image
-s/bilkent-eps-converted-to.pdf> <./images/stim_0.00_0.png> <./images/stim_0.00_
-1.png> <./images/stim_0.00_2.png> <./images/stim_0.00_3.png> <./images/stim_0.0
-0_4.png> <./images/stim_0.00_5.png> <./images/stim_0.00_6.png> <./images/stim_0
-.00_7.png> <./images/stim_0.00_8.png> <./images/stim_0.00_9.png> <./images/stim
-_0.00_10.png> <./images/stim_0.00_11.png> <./images/stim_0.00_12.png> <./images
-/stim_0.00_13.png> <./images/stim_0.00_14.png> <./images/stim_0.00_15.png> <./i
-mages/stim_0.00_16.png> <./images/stim_0.00_17.png> <./images/stim_0.00_18.png>
- <./images/stim_0.00_19.png> <./images/stim_0.00_20.png> <./images/stim_0.00_21
-.png> <./images/stim_0.00_22.png> <./images/stim_0.00_23.png> <./images/chart.p
-ng>] (./poster_portrait.aux) ) 
+s/bilkent-eps-converted-to.pdf> <./images/stim_cont_0.00_0.png> <./images/stim_
+cont_0.00_1.png> <./images/stim_cont_0.00_2.png> <./images/stim_cont_0.00_3.png
+> <./images/stim_cont_0.00_4.png> <./images/stim_cont_0.00_5.png> <./images/sti
+m_cont_0.00_6.png> <./images/stim_cont_0.00_7.png> <./images/stim_cont_0.00_8.p
+ng> <./images/stim_cont_0.00_9.png> <./images/stim_cont_0.00_10.png> <./images/
+stim_cont_0.00_11.png> <./images/stim_cont_0.00_12.png> <./images/stim_cont_0.0
+0_13.png> <./images/stim_cont_0.00_14.png> <./images/stim_cont_0.00_15.png> <./
+images/stim_cont_0.00_16.png> <./images/stim_cont_0.00_17.png> <./images/stim_c
+ont_0.00_18.png> <./images/stim_cont_0.00_19.png> <./images/stim_cont_0.00_20.p
+ng> <./images/stim_cont_0.00_21.png> <./images/stim_cont_0.00_22.png> <./images
+/stim_cont_0.00_23.png> <./images/stim_optimal_0.png> <./images/stim_optimal_1.
+png> <./images/stim_optimal_2.png> <./images/stim_optimal_3.png> <./images/stim
+_optimal_4.png> <./images/stim_optimal_5.png> <./images/stim_optimal_6.png> <./
+images/stim_optimal_7.png> <./images/stim_optimal_8.png> <./images/stim_optimal
+_9.png> <./images/stim_optimal_10.png> <./images/stim_optimal_11.png> <./images
+/stim_optimal_12.png> <./images/stim_optimal_13.png> <./images/stim_optimal_14.
+png> <./images/stim_optimal_15.png> <./images/stim_optimal_16.png> <./images/st
+im_optimal_17.png> <./images/stim_optimal_18.png> <./images/stim_optimal_19.png
+> <./images/stim_optimal_20.png> <./images/stim_optimal_21.png> <./images/stim_
+optimal_22.png> <./images/stim_optimal_23.png> <./images/0.00_y_8-eps-converted
+-to.pdf> <./images/0.00_sigma_8-eps-converted-to.pdf> <./images/cont_0.00_y_8-e
+ps-converted-to.pdf> <./images/cont_0.00_sigma_8-eps-converted-to.pdf> <./image
+s/barWidths-eps-converted-to.pdf> <./images/Rotation-eps-converted-to.pdf> <./i
+mages/optimal_y_8-eps-converted-to.pdf> <./images/optimal_sigma_8-eps-converted
+-to.pdf> <./images/chart.png>] (./poster_portrait.aux) ) 
 Here is how much of TeX's memory you used:
- 15933 strings out of 492982
- 324928 string characters out of 6134896
- 847228 words of memory out of 5000000
- 19110 multiletter control sequences out of 15000+600000
- 26826 words of font info for 54 fonts, out of 8000000 for 9000
+ 16173 strings out of 492982
+ 330981 string characters out of 6134896
+ 758479 words of memory out of 5000000
+ 19283 multiletter control sequences out of 15000+600000
+ 38640 words of font info for 86 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 62i,14n,76p,417b,1354s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/ba
-se/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courie
-r/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on poster_portrait.pdf (1 page, 266666 bytes).
+ 62i,15n,76p,417b,1367s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/tex
+mf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cmextra/cmex9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palat
+ino/uplri8a.pfb>
+Output written on poster_portrait.pdf (1 page, 531817 bytes).
 PDF statistics:
- 146 PDF objects out of 1000 (max. 8388607)
- 60 compressed objects within 1 object stream
+ 503 PDF objects out of 1000 (max. 8388607)
+ 138 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 250 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 410 words of extra memory for PDF output out of 10000 (max. 10000000)
 

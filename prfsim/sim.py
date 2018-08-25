@@ -451,25 +451,28 @@ def findNonLinearHRF(neuronal_responses, hrf):
         Description of returned object.
 
     """
-    # count = 0
-    # prev_cost = 1e30
+    count = 0
+    prev_cost = 1e50
     bolds = np.zeros((duration, sqrtVoxels, sqrtVoxels))
     for i in range(sqrtVoxels):
         for j in range(sqrtVoxels):
-            # count += 1
+            count += 1
             n = neuronal_responses[:, i, j]
             bolds[:, i, j] = np.convolve(
                 hrf, n)[0:duration]
-            # x0 = 10 * (np.random.rand(12) + 1e-10)
-            # res = least_squares(RSS_NHRF, x0, args=(bolds[:, i, j], n))
-            # if res.cost < prev_cost:
-            #     pars = res.x
-            #     prev_cost = res.cost
-            #     print(count)
-    x0 = 10 * (np.random.rand(12) + 1e-10)
-    res = least_squares(RSS_NHRF, x0, args=(np.mean(np.mean(bolds)),
-                        np.mean(np.mean(neuronal_responses))))
-    pars = res.x
+
+            pos = count/sqrtVoxels**2
+            if pos > 0.4 and pos < 0.5:
+                x0 = 10 * (np.random.rand(12) + 1e-10)
+                res = least_squares(RSS_NHRF, x0, args=(bolds[:, i, j], n))
+                if res.cost < prev_cost:
+                    pars = res.x
+                    prev_cost = res.cost
+                    print(count)
+    # x0 = 10 * (np.random.rand(12) + 1e-10)
+    # res = least_squares(RSS_NHRF, x0, args=(np.mean(np.mean(bolds)),
+    #                     np.mean(np.mean(neuronal_responses))))
+    # pars = res.x
     return pars
 
 
@@ -514,13 +517,13 @@ def findLinearHRF(neuronal_responses, n_hrf_pars):
         Description of returned object.
 
     """
-    # count = 0
-    # prev_cost = 1e30
+    count = 0
+    prev_cost = 1e50
     x = n_hrf_pars
     bolds = np.zeros((duration, sqrtVoxels, sqrtVoxels))
     for i in range(sqrtVoxels):
         for j in range(sqrtVoxels):
-            # count += 1
+            count += 1
             n = neuronal_responses[:, i, j]
             bolds[:, i, j] = bold_response_nonlinear(n=n, t=t,
                                                      beta1=x[0],
@@ -532,16 +535,18 @@ def findLinearHRF(neuronal_responses, n_hrf_pars):
                                                      beta31=x[9],
                                                      beta32=x[10],
                                                      beta33=x[11])
-            # x0 = 10 * (np.random.rand(12) + 1e-10)
-            # res = least_squares(RSS_NHRF, x0, args=(bolds[:, i, j], n))
-            # if res.cost < prev_cost:
-            #     pars = res.x
-            #     prev_cost = res.cost
-            #     print(count)
-    x0 = 10 * (np.random.rand(7) + 1e-10)
-    res = least_squares(RSS_HRF, x0, args=(np.mean(np.mean(bolds)),
-                        np.mean(np.mean(neuronal_responses))))
-    pars = res.x
+            pos = count/sqrtVoxels**2
+            if pos > 0.4 and pos < 0.5:
+                x0 = 10 * (np.random.rand(7) + 1e-10)
+                res = least_squares(RSS_HRF, x0, args=(bolds[:, i, j], n))
+                if res.cost < prev_cost:
+                    pars = res.x
+                    prev_cost = res.cost
+                    print(count)
+    # x0 = 10 * (np.random.rand(7) + 1e-10)
+    # res = least_squares(RSS_HRF, x0, args=(np.mean(np.mean(bolds)),
+    #                     np.mean(np.mean(neuronal_responses))))
+    # pars = res.x
     return pars
 
 
