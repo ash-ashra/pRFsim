@@ -282,19 +282,19 @@
   \end{align*}
   \end{itemize}
 \normalsize
-	Experiment steps:
+	HRF non-linearity experiment steps:
 	\begin{enumerate}
-		\item initialize parameters
+		\item Initialize parameters
 		\begin{enumerate}
 			\item number of voxels to simulate
-			\item exponent of response model
+			\item spatial linearity factor
 			\item double-Gamma HRF
 		\end{enumerate}
-	\item Estimate from linear response
-	\item fit parameter of non-Linear HRF
+	\item Estimate from linear BOLD response
+	\item Find parameter of non-Linear HRF
 	\item Estimate from non-Linear response
-	\item repeat 4 to optimize the bar width size
-	\item repeat 4 with optimized bar width to optimize the rotation angle
+	\item Repeat 4 to optimize the bar width size
+	\item Repeat 4 with optimized bar width to optimize the rotation angle
 
 	\end{enumerate}
   
@@ -362,15 +362,15 @@
   	\begin{align*}
   	g(x, y, \Theta=\theta) &= e^{-\frac{(x-x_0)^2+(y-y_0)^2}{2\sigma^2}}\\
   	r(t, \Theta=\theta) &= (\sum_{x, y} s(x, y, t) g(x,y, \theta))^n\\
-  	y(t) &=  h_s(r(t)) + e(t)
+  	B(t) &=  h(r(t, \Theta=\theta)) + e(t)
 	\end{align*}
 	
 	\noindent
 	3. Parameter Estimation
   	\begin{align*}
  	r(t, \Theta) &= (\sum_{x, y} s(x, y, t) g(x, y, \Theta))^n\\
- 	p(t) &= h_e(r(t, \Theta))\\
-  	\hat{\Theta} &= \argmin{\sum_{t}^{}(y(t) - p(t))^2}
+ 	p(t, \Theta) &= h(r(t, \Theta))\\
+  	\hat{\Theta} &= \argmin{\sum_{t}^{}(B(t) - p(t, \Theta))^2}
   	\end{align*}
   	
   	\noindent
@@ -386,9 +386,9 @@
     n &= \text{spatial linearity factor}\\
   	g(x, y, \Theta) &= \text{pRF model}\\
   	s(x, y, t) &= \text{stimulation function}\\
-  	r(t) &= \text{pRF response}\\
+  	r(t, \Theta) &= \text{pRF response}\\
   	e(t) &= \text{Gaussian noise}\\
-  	y(t) &= \text{fMRI response}\\
+  	B(t) &= \text{BOLD response}\\
   	h(.) &= \text{HRF function}\\
   	\end{align*}
  
