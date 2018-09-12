@@ -27,7 +27,7 @@ figSize = 5
 
 def init(radius_tmp, barWidth_tmp, precision_tmp, TR_tmp,
          TRs_tmp, sqrtVoxels_tmp, angles, t_tmp, title,
-         makeDiscontinous=False):
+         interleaved=False):
     """Short summary.
 
     Parameters
@@ -51,7 +51,7 @@ def init(radius_tmp, barWidth_tmp, precision_tmp, TR_tmp,
     title : type
         Description of parameter `title`.
     makeDiscontinous : type
-        Description of parameter `makeDiscontinous`.
+        Description of parameter `interleaved`.
 
     Returns
     -------
@@ -117,25 +117,29 @@ def init(radius_tmp, barWidth_tmp, precision_tmp, TR_tmp,
 
     # rotate them
     stim_compact = np.zeros((nFrames, length, length))
+    stim_mixed = np.zeros((nFrames, length, length))
     f = 0
     for angle in angles:
         for k in range(3):
             rot = rotate(img_temps[k], angle=angle,
                          mode='nearest', reshape=False)
-
-            if makeDiscontinous:
-                index = (5*f) % nFrames
-            else:
-                index = f
-            stim_compact[index, :, :] = (rot > np.max(rot) / 2) * 1.0
+            stim_compact[f, :, :] = (rot > np.max(rot) / 2) * 1.0
             f += 1
+    if interleaved:
+        for f in range(nFrames):
+            if f < int(nFrames/2):
+                index = 2*f
+            else:
+                index = 2*f - nFrames + 1
+            stim_mixed[f, :, :] = stim_compact[index, :, :]
+    else:
+        stim_mixed = stim_compact
 
     for f in range(nFrames):
         plt.figure(figsize=(figSize, figSize))
         plt.grid(None)
         plt.axis('off')
-        plt.imshow(stim_compact[f, :, :],
-                   cmap="Blues")
+        plt.imshow(stim_mixed[f, :, :], cmap="Blues")
         plt.savefig('/home/arash/results/stim_%s_%d.png' % (title, f))
         plt.close()
 
@@ -145,7 +149,7 @@ def init(radius_tmp, barWidth_tmp, precision_tmp, TR_tmp,
     stim = np.zeros((duration, length, length))
     for f in range(nFrames):
         for TR in range(TRs):
-            stim[f * TRs + TR, :, :] = stim_compact[f, :, :]
+            stim[f * TRs + TR, :, :] = stim_mixed[f, :, :]
 
     shape2D = (len(X), len(Y))
     proj2D = np.zeros(shape2D)
@@ -204,7 +208,8 @@ def pRF_model(x0, y0, sigma):
     # rf = multivariate_normal(mean=mean, cov=cov)
     # pos = np.dstack((x, y))
     # model = rf.pdf(pos)
-    model = np.exp((-(x_grid - x0)**2 - (y_grid - y0)**2) / (2 * sigma**2))
+    model = np.exp((-(x_grid - x0)**2 - (y_grid - y0)**2) / (2 * sigma**2)) / (
+            2*np.pi*sigma**2)
     return model
 
 
@@ -462,7 +467,7 @@ def findNonLinearHRF(neuronal_responses, hrf):
                 hrf, n)[0:duration]
 
             pos = count/sqrtVoxels**2
-            if pos > 0.4 and pos < 0.5:
+            if pos > 0.2 and pos < 0.5:
                 x0 = 10 * (np.random.rand(12) + 1e-10)
                 res = least_squares(RSS_NHRF, x0, args=(bolds[:, i, j], n))
                 if res.cost < prev_cost:
@@ -536,7 +541,7 @@ def findLinearHRF(neuronal_responses, n_hrf_pars):
                                                      beta32=x[10],
                                                      beta33=x[11])
             pos = count/sqrtVoxels**2
-            if pos > 0.4 and pos < 0.5:
+            if pos > 0.2 and pos < 0.5:
                 x0 = 10 * (np.random.rand(7) + 1e-10)
                 res = least_squares(RSS_HRF, x0, args=(bolds[:, i, j], n))
                 if res.cost < prev_cost:

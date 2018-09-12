@@ -12,7 +12,7 @@ from matplotlib import pyplot as plt
 
 # experiment parameters
 radius = 10  # in cm
-precision = 0.2  # in cm
+precision = 0.05  # in cm
 
 angles = [
           -90, 45, -180, 315, 90, 225, 0, 135
@@ -21,8 +21,8 @@ angles = [
           # ,-91, 44, -181, 314, 91, 224, 1, 134
           ]
 
-TR = 3.0  # in seconds
-TRs = 3   # number of TRs for each frame
+TR = 2.0  # in seconds
+TRs = 2   # number of TRs for each frame
 
 noise = 1.0  # in cm
 exponent = 0.8  # power of the CSS model
@@ -38,10 +38,10 @@ a = 0.3
 
 # try first time for finding HRFs
 sqrtVoxels = 20  # number of voxels in each dimension
-title = 'cont_0.00'
+title = 'cont'
 t = np.arange(0, len(angles)*3*TRs*TR, TR)
 stim = psim.init(radius, radius/4, precision, TR, TRs, sqrtVoxels,
-                 angles, t, title, makeDiscontinous=False)
+                 angles, t, title, interleaved=True)
 print('stimulus generated')
 
 
@@ -71,14 +71,15 @@ results = psim.estimateAll(bolds, exponent,
 print('pRF estimation errors generated')
 
 
+sqrtVoxels = 10
 # optimizing the parameters
 # bar widths
 barWidths = []
 errors = []
-for barWidth in np.arange(radius/64, radius/4+radius/64, radius/64):
+for barWidth in np.arange(radius/8, radius/2+radius/64, radius/64):
     title = '%.2f' % barWidth
     stim = psim.init(radius, barWidth, precision, TR, TRs, sqrtVoxels,
-                     angles, t, title, makeDiscontinous=False)
+                     angles, t, title, interleaved=True)
     print('stimulus generated')
 
     neuronal_responses = psim.getNeuronalResponse(exponent)
@@ -122,7 +123,7 @@ errors = []
 for rot in np.arange(0, 45, 5):
     title = 'rot_%d' % rot
     stim = psim.init(radius, barWidthMax, precision, TR, TRs, sqrtVoxels,
-                     angles+rot, t, title, makeDiscontinous=False)
+                     angles+rot, t, title, interleaved=True)
     print('stimulus generated')
 
     neuronal_responses = psim.getNeuronalResponse(exponent)
@@ -160,12 +161,58 @@ ax.set_ylabel('Average estimiation errors ($\%$)')
 plt.savefig('/home/arash/results/Rotation.eps')
 rotMax = rotations[np.argmin(errors)]
 
+
+# # bar nVoxels
+# sqrtVoxelss = []
+# errors = []
+# for sqrtVoxels in np.arange(5, 55, 5):
+#     title = 'sqrtVoxels_%d' % sqrtVoxels
+#     stim = psim.init(radius, barWidthMax, precision, TR, TRs, sqrtVoxels,
+#                      angles+rotMax, t, title, interleaved=True)
+#     print('stimulus generated')
+#
+#     neuronal_responses = psim.getNeuronalResponse(exponent)
+#     print('Neuronal responses generated')
+#
+#     bolds = psim.generateData(neuronal_responses, noise,
+#                               hrf, n_hrf_pars,
+#                               makeNonLinear=True)
+#     print('BOLD responses generated')
+#
+#     print('pRF estimations started...')
+#     results = psim.estimateAll(bolds, exponent,
+#                                hrf, n_hrf_pars, title,
+#                                assumeLinear=True)
+#     sqrtVoxelss.append(sqrtVoxels)
+#     s_mean = np.mean(results['s_err%'])
+#     x_mean = np.mean(results['x_err%'])
+#     y_mean = np.mean(results['y_err%'])
+#     errors.append((s_mean+x_mean+y_mean)/3)
+#     print('pRF estimation errors generated')
+#
+# plt.axes(facecolor='w')
+# plt.rc('font', family='serif')
+# plt.rc('xtick', labelsize='x-small')
+# plt.rc('ytick', labelsize='x-small')
+#
+# fig = plt.figure(figsize=(5, 4))
+# ax = fig.add_subplot(1, 1, 1)
+# ax.grid(None)
+# ax.patch.set_facecolor('white')
+# ax.plot(sqrtVoxelss, errors, color='b', ls='solid')
+# ax.set_xlabel('root of number of voxels')
+#
+# ax.set_ylabel('Average estimiation errors ($\%$)')
+# plt.savefig('/home/arash/results/nVoxels.eps')
+# sqrtVoxelsMax = sqrtVoxelss[np.argmin(errors)]
+
+
+sqrtVoxelsMax = sqrtVoxels
 # Now plot the optimal
-# try first time for finding HRFs
-title = 'optimal_%.2f_%d' % (barWidthMax, rotMax)
+title = 'optimal_%d_%.2f_%d' % (sqrtVoxelsMax, barWidthMax, rotMax)
 t = np.arange(0, len(angles)*3*TRs*TR, TR)
-stim = psim.init(radius, barWidthMax, precision, TR, TRs, sqrtVoxels,
-                 angles+rotMax, t, title, makeDiscontinous=False)
+stim = psim.init(radius, barWidthMax, precision, TR, TRs, sqrtVoxelsMax,
+                 angles+rotMax, t, title, interleaved=True)
 print('stimulus generated')
 
 
