@@ -1,0 +1,144 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nyt/global//global/global}
+  \entry{Dumoulin2008}{article}{}
+    \name{author}{2}{}{%
+      {{hash=DSO}{%
+         family={Dumoulin},
+         familyi={D\bibinitperiod},
+         given={Serge\bibnamedelima O.},
+         giveni={S\bibinitperiod\bibinitdelim O\bibinitperiod},
+      }}%
+      {{hash=WBA}{%
+         family={Wandell},
+         familyi={W\bibinitperiod},
+         given={Brian\bibnamedelima A.},
+         giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \keyw{Neuron,V1,Visual areas,Visual cortex,fMRI,pRF}
+    \strng{namehash}{DSOWBA1}
+    \strng{fullhash}{DSOWBA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2008}
+    \field{labeldatesource}{year}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{abstract}{%
+    We introduce functional MRI methods for estimating the neuronal population
+  receptive field (pRF). These methods build on conventional visual field
+  mapping that measures responses to ring and wedge patterns shown at a series
+  of visual field locations and estimates the single position in the visual
+  field that produces the largest response. The new method computes a model of
+  the population receptive field from responses to a wide range of stimuli and
+  estimates the visual field map as well as other neuronal population
+  properties, such as receptive field size and laterality. The visual field
+  maps obtained with the pRF method are more accurate than those obtained using
+  conventional visual field mapping, and we trace with high precision the
+  visual field maps to the center of the foveal representation. We report
+  quantitative estimates of pRF size in medial, lateral and ventral occipital
+  regions of human visual cortex. Also, we quantify the amount of input from
+  ipsi- and contralateral visual fields. The human pRF size estimates in V1-V3
+  agree well with electrophysiological receptive field measurements at a range
+  of eccentricities in corresponding locations within monkey and human visual
+  field maps. The pRF method is non-invasive and can be applied to a wide range
+  of conditions when it is useful to link fMRI signals in the visual pathways
+  to neuronal receptive fields. {\textcopyright} 2007 Elsevier Inc. All rights
+  reserved.%
+    }
+    \verb{doi}
+    \verb 10.1016/j.neuroimage.2007.09.034
+    \endverb
+    \field{isbn}{1053-8119 (Print)$\backslash$n1053-8119 (Linking)}
+    \field{issn}{10538119}
+    \field{number}{2}
+    \field{pages}{647\bibrangedash 660}
+    \field{title}{{Population receptive field estimates in human visual
+  cortex}}
+    \field{volume}{39}
+    \field{journaltitle}{NeuroImage}
+    \field{year}{2008}
+  \endentry
+
+  \entry{Kay2013}{article}{}
+    \name{author}{4}{}{%
+      {{hash=KKN}{%
+         family={Kay},
+         familyi={K\bibinitperiod},
+         given={Kendrick\bibnamedelima N.},
+         giveni={K\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+      {{hash=WJ}{%
+         family={Winawer},
+         familyi={W\bibinitperiod},
+         given={Jonathan},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Mezer},
+         familyi={M\bibinitperiod},
+         given={Aviv},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=WBA}{%
+         family={Wandell},
+         familyi={W\bibinitperiod},
+         given={Brian\bibnamedelima A.},
+         giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \keyw{fMRI,human visual cortex,population receptive field,spatial
+  nonlinearity,spatial summation}
+    \strng{namehash}{KKN+1}
+    \strng{fullhash}{KKNWJMAWBA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2013}
+    \field{labeldatesource}{year}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{abstract}{%
+    Neurons within a small (a few cubic millimeters) region of visual cortex
+  respond to stimuli within a restricted region of the visual field. Previous
+  studies have characterized the population response of such neurons using a
+  model that sums contrast linearly across the visual field. In this study, we
+  tested linear spatial summation of population responses using blood
+  oxygenation level-dependent (BOLD) functional MRI. We measured BOLD responses
+  to a systematic set of contrast patterns and discovered systematic deviation
+  from linearity: the data are more accurately explained by a model in which a
+  compressive static nonlinearity is applied after linear spatial summation. We
+  found that the nonlinearity is present in early visual areas (e.g., V1, V2)
+  and grows more pronounced in relatively anterior extrastriate areas (e.g.,
+  LO-2, VO-2). We then analyzed the effect of compressive spatial summation in
+  terms of changes in the position and size of a viewed object. Compressive
+  spatial summation is consistent with tolerance to changes in position and
+  size, an important characteristic of object representation.%
+    }
+    \verb{doi}
+    \verb 10.1152/jn.00105.2013
+    \endverb
+    \field{isbn}{1522-1598 (Electronic)$\backslash$r0022-3077 (Linking)}
+    \field{issn}{1522-1598}
+    \field{title}{{Compressive spatial summation in human visual cortex.}}
+    \field{journaltitle}{Journal of neurophysiology}
+    \field{year}{2013}
+  \endentry
+\enddatalist
+\endinput

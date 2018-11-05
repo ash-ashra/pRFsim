@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.17)  5 NOV 2018 05:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.17)  5 NOV 2018 11:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -765,25 +765,250 @@ File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
 zlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.1a (rcs-revision 1.9)
 )
-\FSZ=\skip64
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2017/12/19 v3.10 programmable bibliographies (PK/JW/AB)
+
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count168
+
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
+\@xs@message=\write5
+\integerpart=\count169
+\decimalpart=\count170
+)
+Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
+)
+\c@tabx@nest=\count171
+\c@listtotal=\count172
+\c@listcount=\count173
+\c@liststart=\count174
+\c@liststop=\count175
+\c@citecount=\count176
+\c@citetotal=\count177
+\c@multicitecount=\count178
+\c@multicitetotal=\count179
+\c@instcount=\count180
+\c@maxnames=\count181
+\c@minnames=\count182
+\c@maxitems=\count183
+\c@minitems=\count184
+\c@citecounter=\count185
+\c@savedcitecounter=\count186
+\c@uniquelist=\count187
+\c@uniquename=\count188
+\c@refsection=\count189
+\c@refsegment=\count190
+\c@maxextratitle=\count191
+\c@maxextratitleyear=\count192
+\c@maxextradate=\count193
+\c@maxextraalpha=\count194
+\c@abbrvpenalty=\count195
+\c@highnamepenalty=\count196
+\c@lownamepenalty=\count197
+\c@maxparens=\count198
+\c@parenlevel=\count199
+\blx@tempcnta=\count266
+\blx@tempcntb=\count267
+\blx@tempcntc=\count268
+\blx@maxsection=\count269
+\blx@maxsegment@0=\count270
+\blx@notetype=\count271
+\blx@parenlevel@text=\count272
+\blx@parenlevel@foot=\count273
+\blx@sectionciteorder@0=\count274
+\labelnumberwidth=\skip64
+\labelalphawidth=\skip65
+\biblabelsep=\skip66
+\bibitemsep=\skip67
+\bibnamesep=\skip68
+\bibinitsep=\skip69
+\bibparsep=\skip70
+\bibhang=\skip71
+\blx@bcfin=\read2
+\blx@bcfout=\write6
+\c@mincomprange=\count275
+\c@maxcomprange=\count276
+\c@mincompwidth=\count277
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'authoryear.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count278
+\c@savedafterword=\count279
+\c@annotator=\count280
+\c@savedannotator=\count281
+\c@author=\count282
+\c@savedauthor=\count283
+\c@bookauthor=\count284
+\c@savedbookauthor=\count285
+\c@commentator=\count286
+\c@savedcommentator=\count287
+\c@editor=\count288
+\c@savededitor=\count289
+\c@editora=\count290
+\c@savededitora=\count291
+\c@editorb=\count292
+\c@savededitorb=\count293
+\c@editorc=\count294
+\c@savededitorc=\count295
+\c@foreword=\count296
+\c@savedforeword=\count297
+\c@holder=\count298
+\c@savedholder=\count299
+\c@introduction=\count300
+\c@savedintroduction=\count301
+\c@namea=\count302
+\c@savednamea=\count303
+\c@nameb=\count304
+\c@savednameb=\count305
+\c@namec=\count306
+\c@savednamec=\count307
+\c@translator=\count308
+\c@savedtranslator=\count309
+\c@shortauthor=\count310
+\c@savedshortauthor=\count311
+\c@shorteditor=\count312
+\c@savedshorteditor=\count313
+\c@labelname=\count314
+\c@savedlabelname=\count315
+\c@institution=\count316
+\c@savedinstitution=\count317
+\c@lista=\count318
+\c@savedlista=\count319
+\c@listb=\count320
+\c@savedlistb=\count321
+\c@listc=\count322
+\c@savedlistc=\count323
+\c@listd=\count324
+\c@savedlistd=\count325
+\c@liste=\count326
+\c@savedliste=\count327
+\c@listf=\count328
+\c@savedlistf=\count329
+\c@location=\count330
+\c@savedlocation=\count331
+\c@organization=\count332
+\c@savedorganization=\count333
+\c@origlocation=\count334
+\c@savedoriglocation=\count335
+\c@origpublisher=\count336
+\c@savedorigpublisher=\count337
+\c@publisher=\count338
+\c@savedpublisher=\count339
+\c@language=\count340
+\c@savedlanguage=\count341
+\c@origlanguage=\count342
+\c@savedoriglanguage=\count343
+\c@pageref=\count344
+\c@savedpageref=\count345
+\shorthandwidth=\skip72
+\shortjournalwidth=\skip73
+\shortserieswidth=\skip74
+\shorttitlewidth=\skip75
+\shortauthorwidth=\skip76
+\shorteditorwidth=\skip77
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2017/12/19 v3.10 biblatex compatibility (PK/JW/AB)
+)
+Package biblatex Info: Trying to load BibTeX backend compatibility...
+Package biblatex Info: ... file 'blx-bibtex.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-bibtex.def
+File: blx-bibtex.def 2017/12/19 v3.10 biblatex compatibility (PK/JW/AB)
+
+
+Package biblatex Warning: Using fall-back BibTeX(8) backend:
+(biblatex)                functionality may be reduced/unavailable.
+
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2017/12/19 v3.10 biblatex compatibility (PK/JW/AB)
+\c@textcitecount=\count346
+\c@textcitetotal=\count347
+\c@textcitemaxnames=\count348
+\c@biburlnumpenalty=\count349
+\c@biburlucpenalty=\count350
+\c@biburllcpenalty=\count351
+\c@smartand=\count352
+)
+Package biblatex Info: Trying to load natbib compatibility...
+Package biblatex Info: ... file 'blx-natbib.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-natbib.def
+File: blx-natbib.def 2017/12/19 v3.10 biblatex compatibility (PK/JW/AB)
+)
+Package biblatex Info: Trying to load bibliography style 'authoryear'...
+Package biblatex Info: ... file 'authoryear.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+File: authoryear.bbx 2017/12/19 v3.10 biblatex bibliography style (PK/JW/AB)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2017/12/19 v3.10 biblatex bibliography style (PK/JW/AB)
+\c@bbx:relatedcount=\count353
+\c@bbx:relatedtotal=\count354
+))
+Package biblatex Info: Trying to load citation style 'authoryear'...
+Package biblatex Info: ... file 'authoryear.cbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx
+File: authoryear.cbx 2017/12/19 v3.10 biblatex citation style (PK/JW/AB)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+))
+\FSZ=\skip78
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2017/12/19 v3.10 biblatex localization (PK/JW/AB)
+)
+\@quotelevel=\count355
+\@quotereset=\count356
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -820,16 +1045,16 @@ LaTeX Font Info:    ... okay on input line 72.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count168
+\scratchcounter=\count357
 \scratchdimen=\dimen260
 \scratchbox=\box59
-\nofMPsegments=\count169
-\nofMParguments=\count170
+\nofMPsegments=\count358
+\nofMParguments=\count359
 \everyMPshowfont=\toks46
-\MPscratchCnt=\count171
+\MPscratchCnt=\count360
 \MPscratchDim=\dimen261
-\MPnumerator=\count172
-\makeMPintoPDFobject=\count173
+\MPnumerator=\count361
+\makeMPintoPDFobject=\count362
 \everyMPtoPDFconversion=\toks47
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -850,7 +1075,7 @@ e
 ))
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box60
-Package hyperref Info: Link coloring OFF on input line 72.
+Package hyperref Info: Link coloring OFF on input line 75.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -858,54 +1083,54 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count174
+\c@section@level=\count363
 )
-LaTeX Info: Redefining \ref on input line 72.
-LaTeX Info: Redefining \pageref on input line 72.
-LaTeX Info: Redefining \nameref on input line 72.
+LaTeX Info: Redefining \ref on input line 75.
+LaTeX Info: Redefining \pageref on input line 75.
+LaTeX Info: Redefining \nameref on input line 75.
 
 (./main.out) (./main.out)
-\@outlinefile=\write5
-\openout5 = `main.out'.
+\@outlinefile=\write7
+\openout7 = `main.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 72.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 75.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 72.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 75.
 \symnumbers=\mathgroup9
 \sympureletters=\mathgroup10
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 72.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 72.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 72.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 75.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 75.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 75.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 72.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 75.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 72.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 72.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 75.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 75.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 72.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 75.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 72.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 72.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 75.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 75.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 72.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 75.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 72.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 75.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 72.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 75.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 72.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 75.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 72.
+(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 75.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 72.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 75.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 72.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 75.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 72.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 75.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 72.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 75.
 
 (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary
 -English.dict
@@ -930,160 +1155,36 @@ Dictionary: translator-numbers-dictionary, Language: English
 (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-theorem-dictiona
 ry-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
-) (./main.nav)
-LaTeX Font Info:    Try loading font information for U+msa on input line 76.
+)
+Package biblatex Info: No input encoding detected.
+(biblatex)             Assuming 'ascii'.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'ascii'.
+Package biblatex Info: Input encoding 'ascii' specified.
+Package biblatex Info: Data encoding 'ascii' specified.
+(biblatex)             No need to reencode data.
+\openout6 = `main-blx.bib'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'main.bbl' found.
+ (./main.bbl)
+Package biblatex Info: Reference section=0 on input line 75.
+Package biblatex Info: Reference segment=0 on input line 75.
+ (./main.nav)
+LaTeX Font Info:    Try loading font information for U+msa on input line 79.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 76.
+LaTeX Font Info:    Try loading font information for U+msb on input line 79.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
 
-LaTeX Warning: Citation `Dumoulin2008' on page 2 undefined on input line 108.
-
-<images/stim_cont_0.00_0.png, id=52, 361.35pt x 361.35pt>
-File: images/stim_cont_0.00_0.png Graphic file (type png)
-<use images/stim_cont_0.00_0.png>
-Package pdftex.def Info: images/stim_cont_0.00_0.png  used on input line 108.
-(pdftex.def)             Requested size: 14.27449pt x 14.26958pt.
-<images/stim_cont_0.00_1.png, id=54, 361.35pt x 361.35pt>
-File: images/stim_cont_0.00_1.png Graphic file (type png)
-<use images/stim_cont_0.00_1.png>
-Package pdftex.def Info: images/stim_cont_0.00_1.png  used on input line 108.
-(pdftex.def)             Requested size: 14.27449pt x 14.26958pt.
-<images/stim_cont_0.00_2.png, id=55, 361.35pt x 361.35pt>
-File: images/stim_cont_0.00_2.png Graphic file (type png)
-<use images/stim_cont_0.00_2.png>
-Package pdftex.def Info: images/stim_cont_0.00_2.png  used on input line 108.
-(pdftex.def)             Requested size: 14.27449pt x 14.26958pt.
-<images/stim_cont_0.00_3.png, id=56, 361.35pt x 361.35pt>
-File: images/stim_cont_0.00_3.png Graphic file (type png)
-<use images/stim_cont_0.00_3.png>
-Package pdftex.def Info: images/stim_cont_0.00_3.png  used on input line 108.
-(pdftex.def)             Requested size: 14.27449pt x 14.26958pt.
-<images/stim_cont_0.00_4.png, id=57, 361.35pt x 361.35pt>
-File: images/stim_cont_0.00_4.png Graphic file (type png)
-<use images/stim_cont_0.00_4.png>
-Package pdftex.def Info: images/stim_cont_0.00_4.png  used on input line 108.
-(pdftex.def)             Requested size: 14.27449pt x 14.26958pt.
-<images/stim_cont_0.00_5.png, id=58, 361.35pt x 361.35pt>
-File: images/stim_cont_0.00_5.png Graphic file (type png)
-<use images/stim_cont_0.00_5.png>
-Package pdftex.def Info: images/stim_cont_0.00_5.png  used on input line 108.
-(pdftex.def)             Requested size: 14.27449pt x 14.26958pt.
-<images/stim_cont_0.00_6.png, id=59, 361.35pt x 361.35pt>
-File: images/stim_cont_0.00_6.png Graphic file (type png)
-<use images/stim_cont_0.00_6.png>
-Package pdftex.def Info: images/stim_cont_0.00_6.png  used on input line 108.
-(pdftex.def)             Requested size: 14.27449pt x 14.26958pt.
-<images/stim_cont_0.00_7.png, id=60, 361.35pt x 361.35pt>
-File: images/stim_cont_0.00_7.png Graphic file (type png)
-<use images/stim_cont_0.00_7.png>
-Package pdftex.def Info: images/stim_cont_0.00_7.png  used on input line 108.
-(pdftex.def)             Requested size: 14.27449pt x 14.26958pt.
-<images/stim_cont_0.00_8.png, id=61, 361.35pt x 361.35pt>
-File: images/stim_cont_0.00_8.png Graphic file (type png)
-<use images/stim_cont_0.00_8.png>
-Package pdftex.def Info: images/stim_cont_0.00_8.png  used on input line 108.
-(pdftex.def)             Requested size: 14.27449pt x 14.26958pt.
-<images/stim_cont_0.00_9.png, id=62, 361.35pt x 361.35pt>
-File: images/stim_cont_0.00_9.png Graphic file (type png)
-<use images/stim_cont_0.00_9.png>
-Package pdftex.def Info: images/stim_cont_0.00_9.png  used on input line 108.
-(pdftex.def)             Requested size: 14.27449pt x 14.26958pt.
-<images/stim_cont_0.00_10.png, id=63, 361.35pt x 361.35pt>
-File: images/stim_cont_0.00_10.png Graphic file (type png)
-<use images/stim_cont_0.00_10.png>
-Package pdftex.def Info: images/stim_cont_0.00_10.png  used on input line 108.
-(pdftex.def)             Requested size: 14.27449pt x 14.26958pt.
-<images/stim_cont_0.00_11.png, id=64, 361.35pt x 361.35pt>
-File: images/stim_cont_0.00_11.png Graphic file (type png)
-<use images/stim_cont_0.00_11.png>
-Package pdftex.def Info: images/stim_cont_0.00_11.png  used on input line 108.
-(pdftex.def)             Requested size: 14.27449pt x 14.26958pt.
-<images/stim_cont_0.00_12.png, id=65, 361.35pt x 361.35pt>
-File: images/stim_cont_0.00_12.png Graphic file (type png)
-<use images/stim_cont_0.00_12.png>
-Package pdftex.def Info: images/stim_cont_0.00_12.png  used on input line 108.
-(pdftex.def)             Requested size: 14.27449pt x 14.26958pt.
-<images/stim_cont_0.00_13.png, id=66, 361.35pt x 361.35pt>
-File: images/stim_cont_0.00_13.png Graphic file (type png)
-<use images/stim_cont_0.00_13.png>
-Package pdftex.def Info: images/stim_cont_0.00_13.png  used on input line 108.
-(pdftex.def)             Requested size: 14.27449pt x 14.26958pt.
-<images/stim_cont_0.00_14.png, id=67, 361.35pt x 361.35pt>
-File: images/stim_cont_0.00_14.png Graphic file (type png)
-<use images/stim_cont_0.00_14.png>
-Package pdftex.def Info: images/stim_cont_0.00_14.png  used on input line 108.
-(pdftex.def)             Requested size: 14.27449pt x 14.26958pt.
-<images/stim_cont_0.00_15.png, id=68, 361.35pt x 361.35pt>
-File: images/stim_cont_0.00_15.png Graphic file (type png)
-<use images/stim_cont_0.00_15.png>
-Package pdftex.def Info: images/stim_cont_0.00_15.png  used on input line 108.
-(pdftex.def)             Requested size: 14.27449pt x 14.26958pt.
-<images/stim_cont_0.00_16.png, id=69, 361.35pt x 361.35pt>
-File: images/stim_cont_0.00_16.png Graphic file (type png)
-<use images/stim_cont_0.00_16.png>
-Package pdftex.def Info: images/stim_cont_0.00_16.png  used on input line 108.
-(pdftex.def)             Requested size: 14.27449pt x 14.26958pt.
-<images/stim_cont_0.00_17.png, id=70, 361.35pt x 361.35pt>
-File: images/stim_cont_0.00_17.png Graphic file (type png)
-<use images/stim_cont_0.00_17.png>
-Package pdftex.def Info: images/stim_cont_0.00_17.png  used on input line 108.
-(pdftex.def)             Requested size: 14.27449pt x 14.26958pt.
-<images/stim_cont_0.00_18.png, id=71, 361.35pt x 361.35pt>
-File: images/stim_cont_0.00_18.png Graphic file (type png)
-<use images/stim_cont_0.00_18.png>
-Package pdftex.def Info: images/stim_cont_0.00_18.png  used on input line 108.
-(pdftex.def)             Requested size: 14.27449pt x 14.26958pt.
-<images/stim_cont_0.00_19.png, id=72, 361.35pt x 361.35pt>
-File: images/stim_cont_0.00_19.png Graphic file (type png)
-<use images/stim_cont_0.00_19.png>
-Package pdftex.def Info: images/stim_cont_0.00_19.png  used on input line 108.
-(pdftex.def)             Requested size: 14.27449pt x 14.26958pt.
-<images/stim_cont_0.00_20.png, id=73, 361.35pt x 361.35pt>
-File: images/stim_cont_0.00_20.png Graphic file (type png)
-<use images/stim_cont_0.00_20.png>
-Package pdftex.def Info: images/stim_cont_0.00_20.png  used on input line 108.
-(pdftex.def)             Requested size: 14.27449pt x 14.26958pt.
-<images/stim_cont_0.00_21.png, id=74, 361.35pt x 361.35pt>
-File: images/stim_cont_0.00_21.png Graphic file (type png)
-<use images/stim_cont_0.00_21.png>
-Package pdftex.def Info: images/stim_cont_0.00_21.png  used on input line 108.
-(pdftex.def)             Requested size: 14.27449pt x 14.26958pt.
-<images/stim_cont_0.00_22.png, id=75, 361.35pt x 361.35pt>
-File: images/stim_cont_0.00_22.png Graphic file (type png)
-<use images/stim_cont_0.00_22.png>
-Package pdftex.def Info: images/stim_cont_0.00_22.png  used on input line 108.
-(pdftex.def)             Requested size: 14.27449pt x 14.26958pt.
-<images/stim_cont_0.00_23.png, id=76, 361.35pt x 361.35pt>
-File: images/stim_cont_0.00_23.png Graphic file (type png)
-<use images/stim_cont_0.00_23.png>
-Package pdftex.def Info: images/stim_cont_0.00_23.png  used on input line 108.
-(pdftex.def)             Requested size: 14.27449pt x 14.26958pt.
-
-Overfull \hbox (0.4pt too wide) in paragraph at lines 108--108
-[] 
- []
-
-[2
-
- <./images/stim_cont_0.00_0.png> <./images/stim_cont_0.00_1.png> <./images/stim
-_cont_0.00_2.png> <./images/stim_cont_0.00_3.png> <./images/stim_cont_0.00_4.pn
-g> <./images/stim_cont_0.00_5.png> <./images/stim_cont_0.00_6.png> <./images/st
-im_cont_0.00_7.png> <./images/stim_cont_0.00_8.png> <./images/stim_cont_0.00_9.
-png> <./images/stim_cont_0.00_10.png> <./images/stim_cont_0.00_11.png> <./image
-s/stim_cont_0.00_12.png> <./images/stim_cont_0.00_13.png> <./images/stim_cont_0
-.00_14.png> <./images/stim_cont_0.00_15.png> <./images/stim_cont_0.00_16.png> <
-./images/stim_cont_0.00_17.png> <./images/stim_cont_0.00_18.png> <./images/stim
-_cont_0.00_19.png> <./images/stim_cont_0.00_20.png> <./images/stim_cont_0.00_21
-.png> <./images/stim_cont_0.00_22.png> <./images/stim_cont_0.00_23.png>]
-[3
+] [3
 
 ] [4
 
@@ -1096,7 +1197,7 @@ _cont_0.00_19.png> <./images/stim_cont_0.00_20.png> <./images/stim_cont_0.00_21
 ]
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 201.
+(Font)              using `OT1/cmss/bx/n' instead on input line 205.
 
 [8
 
@@ -1107,52 +1208,93 @@ LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
 ] [11
 
 ]
-\tf@nav=\write6
-\openout6 = `main.nav'.
+<images/2d.png, id=341, 301.125pt x 225.84375pt>
+File: images/2d.png Graphic file (type png)
+<use images/2d.png>
+Package pdftex.def Info: images/2d.png  used on input line 242.
+(pdftex.def)             Requested size: 102.20193pt x 76.65019pt.
+ [12
 
-\tf@toc=\write7
-\openout7 = `main.toc'.
+ <./images/2d.png>]
+File: images/2d.png Graphic file (type png)
+<use images/2d.png>
+Package pdftex.def Info: images/2d.png  used on input line 242.
+(pdftex.def)             Requested size: 102.20193pt x 76.65019pt.
+ [13
 
-\tf@snm=\write8
-\openout8 = `main.snm'.
+]
+File: images/2d.png Graphic file (type png)
+<use images/2d.png>
+Package pdftex.def Info: images/2d.png  used on input line 242.
+(pdftex.def)             Requested size: 102.20193pt x 76.65019pt.
+ [14
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 203.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 203.
- (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 203.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 203.
+]
+File: images/2d.png Graphic file (type png)
+<use images/2d.png>
+Package pdftex.def Info: images/2d.png  used on input line 242.
+(pdftex.def)             Requested size: 102.20193pt x 76.65019pt.
+ [15
+
+]
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <10.95> not available
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 248.
+
+[16
+
+ </usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
+\tf@nav=\write8
+\openout8 = `main.nav'.
+
+\tf@toc=\write9
+\openout9 = `main.toc'.
+
+\tf@snm=\write10
+\openout10 = `main.snm'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 251.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 251.
+
+(./main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 251.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 251.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: 8F24FD931288CEBCC962739B5BFAED6E;95.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20747 strings out of 494847
- 408833 string characters out of 6179079
- 754595 words of memory out of 5000000
- 23552 multiletter control sequences out of 15000+600000
- 16429 words of font info for 59 fonts, out of 8000000 for 9000
+ 26998 strings out of 494847
+ 525714 string characters out of 6179079
+ 773731 words of memory out of 5000000
+ 29753 multiletter control sequences out of 15000+600000
+ 16898 words of font info for 61 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 48i,15n,63p,788b,997s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb>
-Output written on main.pdf (11 pages, 206020 bytes).
+ 48i,15n,63p,788b,1361s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on main.pdf (16 pages, 196640 bytes).
 PDF statistics:
- 413 PDF objects out of 1000 (max. 8388607)
- 326 compressed objects within 4 object streams
- 23 named destinations out of 1000 (max. 500000)
- 193 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 549 PDF objects out of 1000 (max. 8388607)
+ 494 compressed objects within 5 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 94 words of extra memory for PDF output out of 10000 (max. 10000000)
 
