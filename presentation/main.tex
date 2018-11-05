@@ -1,0 +1,203 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{bm}
+\usepackage{tikz}
+\usetikzlibrary{tikzmark,positioning,calc}
+
+\graphicspath{{images/}{../images/}}
+%\definecolor{lightblue}{cmyk}{0.83,0.24,0,0.12}
+\definecolor{lightblue}{rgb}{0.145,0.6666,1}
+
+% Draw a video
+\newlength{\FSZ}
+\newcommand{\drawvideo}[3]{% [0 0.25 0.5 0.75 1 1.25 1.5]
+	\noindent\pgfmathsetlength{\FSZ}{\linewidth/#2}
+	\begin{tikzpicture}[outer sep=0pt,inner sep=0pt,x=\FSZ,y=\FSZ]
+	\draw[color=lightblue!50!black] (0,0) node[outer sep=0pt,inner sep=0pt,text width=\linewidth,minimum height=0] (video) {\noindent#3};
+	\path [fill=lightblue!50!black,line width=0pt] 
+	(video.north west) rectangle ([yshift=\FSZ] video.north east) 
+	\foreach \x in {1,2,...,#2} {
+		{[rounded corners=0.6] ($(video.north west)+(-0.7,0.8)+(\x,0)$) rectangle +(0.4,-0.6)}
+	}
+	;
+	\path [fill=lightblue!50!black,line width=0pt] 
+	([yshift=-1\FSZ] video.south west) rectangle (video.south east) 
+	\foreach \x in {1,2,...,#2} {
+		{[rounded corners=0.6] ($(video.south west)+(-0.7,-0.2)+(\x,0)$) rectangle +(0.4,-0.6)}
+	}
+	;
+	\foreach \x in {1,...,#1} {
+		\draw[color=lightblue!50!black] ([xshift=\x\linewidth/#1] video.north west) -- ([xshift=\x\linewidth/#1] video.south west);
+	}
+	\foreach \x in {0,#1} {
+		\draw[color=lightblue!50!black] ([xshift=\x\linewidth/#1,yshift=1\FSZ] video.north west) -- ([xshift=\x\linewidth/#1,yshift=-1\FSZ] video.south west);
+	}
+	\end{tikzpicture}
+}
+
+
+
+\title[Test of pRF Estimates] %optional
+{Test of Goodness for \\Population Receptive Field Estimates}
+
+\subtitle{simulation study}
+
+\author[Ashrafnejad, Arash] % (optional, for multiple authors)
+{A.~Ashrafnejad\inst{1} \and H.~Mehrzadfar\inst{2} \and H.~Boyaci\inst{2} \inst{3}}
+
+\institute[CBVG] % (optional)
+{
+	\inst{1}%
+	Department of Electrical and Electronics Engineering
+	\and
+	\inst{2}%
+	Neuroscience Graduate Program
+	\and
+	\inst{3}%
+	Department of Psychology\\
+	
+	Bilkent University
+}
+
+\date{\today}
+
+
+\begin{document}
+	
+	\begin{frame}
+	\titlepage
+	\end{frame}
+
+
+	\begin{frame}{Stimulation}
+	  \noindent We first used the exact drifting bar stimululation in \cite{Dumoulin2008}:
+	
+	\drawvideo{24}{72}{%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_0}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_1}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_2}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_3}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_4}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_5}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_6}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_7}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_8}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_9}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_10}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_11}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_12}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_13}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_14}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_15}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_16}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_17}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_18}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_19}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_20}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_21}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_22}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_23}.png}%
+	}
+	\end{frame}
+
+	\begin{frame}{Data Generation}
+	
+	\begin{exampleblock}{BOLD response model}
+		\[
+		B(t) =  \tikzmark{first}\mathcal{H}(\tikzmark{second}r(t, \Theta=\tikzmark{third}\theta)) + \tikzmark{forth}e(t)
+		\]
+		\begin{tikzpicture}[
+		remember picture,
+		overlay,
+		expl/.style={draw=orange,fill=orange!30,rounded corners,text width=3cm},
+		arrow/.style={red!80!black,ultra thick,->,>=latex}
+		]
+		\node<2->[expl] 
+		(firstN) 
+		at (4,-2cm)
+		{Linear or Non-linear HRF function};
+		
+		\node<3->[expl] 
+		(secondN) 
+		at (4,3.5cm)
+		{assumed pRF response (neuronal response)};
+		
+		\node<4->[expl] 
+		(thirdN) 
+		at (8,-2cm)
+		{assumed pRF parameters; $x_0,y_0,\sigma$};
+		
+		\node<5->[expl] 
+		(forthN) 
+		at (8,3.5cm)
+		{Gaussian noise due to large population of neurons};
+		
+		\draw<2->[arrow]
+		(firstN) to[out=90,in=180] ([yshift=0.5ex]{pic cs:first});  
+		
+		\draw<3->[arrow]
+		(secondN.south) to[out=-90,in=90] ([yshift=0.5ex]{pic cs:second});  
+		
+		\draw<4->[arrow]
+		(thirdN.north) to[out=90,in=-90] ([yshift=0.5ex]{pic cs:third});  
+		
+		\draw<5->[arrow]
+		(forthN.south) to[out=-90,in=90] ([yshift=0.5ex]{pic cs:forth});  
+		\end{tikzpicture}
+	\end{exampleblock}
+	\end{frame}
+	
+	\begin{frame}{Data Generation}
+	\begin{itemize}
+		\item 
+		Neurons within a small region of visual cortex respond to stimuli within a restricted region of the visual field.
+		\item
+		The population response of such neurons in general can $\boldsymbol{not}$ be modeled using a model that sums contrast linearly across the visual field. hence, Compressive spatial summation (CSS) model is used,
+	\end{itemize}
+	\begin{exampleblock}{pRF response model}
+	\[
+	r(t, \Theta=\theta) = (\sum_{x, y} \tikzmark{first2}s(x, y, t) \tikzmark{second2} g(x,y, \theta))^ n \tikzmark{third2}
+	\]
+	\begin{tikzpicture}[
+	remember picture,
+	overlay,
+	expl/.style={draw=orange,fill=orange!30,rounded corners,text width=3cm},
+	arrow/.style={red!80!black,ultra thick,->,>=latex}
+	]
+	\node<2->[expl] 
+	(firstN2) 
+	at (2,-1cm)
+	{stimulus function to be presented};
+	
+	\node<3->[expl] 
+	(secondN2) 
+	at (6,-1cm)
+	{assumed pRF model};
+	
+	\node<4->[expl] 
+	(thirdN2) 
+	at (10,-1cm)
+	{spatial linearity factor from 0 to 1};
+
+	
+	\draw<2->[arrow]
+	(firstN2) to[out=90,in=180] ([yshift=0.5ex]{pic cs:first2});  
+	
+	\draw<3->[arrow]
+	(secondN2.north) to[out=90,in=-90] ([yshift=0.5ex]{pic cs:second2});  
+	
+	\draw<4->[arrow]
+	(thirdN2.north) to[out=90,in=-90] ([yshift=0.5ex]{pic cs:third2});  
+
+	\end{tikzpicture}
+	\end{exampleblock}
+	\end{frame}
+
+\end{document}

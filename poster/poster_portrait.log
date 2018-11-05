@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.8.22)  25 AUG 2018 14:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.17)  5 NOV 2018 02:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **poster_portrait.tex
 (./poster_portrait.tex
 LaTeX2e <2017-04-15>
-Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
+Babel <3.18> and hyphenation patterns for 7 language(s) loaded.
 (./baposter.cls
 Document Class: baposter 2011/11/26 v2.0 baposter class
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -764,10 +764,10 @@ File: images/BAM.png Graphic file (type png)
 Package pdftex.def Info: images/BAM.png  used on input line 149.
 (pdftex.def)             Requested size: 116.68413pt x 120.0pt.
 Package epstopdf Info: Source file: <images/bilkent.eps>
-(epstopdf)                    date: 2018-08-23 11:59:25
+(epstopdf)                    date: 2018-05-05 13:55:01
 (epstopdf)                    size: 263960 bytes
 (epstopdf)             Output file: <images/bilkent-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-08-23 11:59:25
+(epstopdf)                    date: 2018-05-05 13:55:01
 (epstopdf)                    size: 16905 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/bilkent-eps-convert
 ed-to.pdf images/bilkent.eps>
@@ -1059,10 +1059,10 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Package epstopdf Info: Source file: <images/0.00_y_8.eps>
-(epstopdf)                    date: 2018-08-24 23:02:20
+(epstopdf)                    date: 2018-11-05 01:01:17
 (epstopdf)                    size: 127082 bytes
 (epstopdf)             Output file: <images/0.00_y_8-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-08-25 10:35:31
+(epstopdf)                    date: 2018-11-05 01:01:17
 (epstopdf)                    size: 16030 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/0.00_y_8-eps-conver
 ted-to.pdf images/0.00_y_8.eps>
@@ -1075,10 +1075,10 @@ Package pdftex.def Info: images/0.00_y_8-eps-converted-to.pdf  used on input li
 ne 325.
 (pdftex.def)             Requested size: 96.22997pt x 96.22595pt.
 Package epstopdf Info: Source file: <images/0.00_sigma_8.eps>
-(epstopdf)                    date: 2018-08-24 23:02:21
+(epstopdf)                    date: 2018-11-05 01:01:17
 (epstopdf)                    size: 127317 bytes
 (epstopdf)             Output file: <images/0.00_sigma_8-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-08-24 23:03:44
+(epstopdf)                    date: 2018-11-05 01:01:17
 (epstopdf)                    size: 16681 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/0.00_sigma_8-eps-co
 nverted-to.pdf images/0.00_sigma_8.eps>
@@ -1101,11 +1101,11 @@ Underfull \hbox (badness 7256) in paragraph at lines 325--325
  []
 
 Package epstopdf Info: Source file: <images/cont_0.00_y_8.eps>
-(epstopdf)                    date: 2018-08-25 08:20:23
+(epstopdf)                    date: 2018-11-05 01:01:17
 (epstopdf)                    size: 127090 bytes
 (epstopdf)             Output file: <images/cont_0.00_y_8-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2018-08-25 10:36:48
+(epstopdf)                    date: 2018-11-05 01:01:17
 (epstopdf)                    size: 16659 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/cont_0.00_y_8-eps-c
 onverted-to.pdf images/cont_0.00_y_8.eps>
@@ -1118,11 +1118,11 @@ Package pdftex.def Info: images/cont_0.00_y_8-eps-converted-to.pdf  used on inp
 ut line 325.
 (pdftex.def)             Requested size: 96.22997pt x 96.22595pt.
 Package epstopdf Info: Source file: <images/cont_0.00_sigma_8.eps>
-(epstopdf)                    date: 2018-08-25 08:20:23
+(epstopdf)                    date: 2018-11-05 01:01:17
 (epstopdf)                    size: 127325 bytes
 (epstopdf)             Output file: <images/cont_0.00_sigma_8-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2018-08-25 10:36:48
+(epstopdf)                    date: 2018-11-05 01:01:17
 (epstopdf)                    size: 17170 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/cont_0.00_sigma_8-e
 ps-converted-to.pdf images/cont_0.00_sigma_8.eps>
@@ -1145,10 +1145,10 @@ Underfull \hbox (badness 2134) in paragraph at lines 325--325
  []
 
 Package epstopdf Info: Source file: <images/barWidths.eps>
-(epstopdf)                    date: 2018-08-25 10:07:55
+(epstopdf)                    date: 2018-11-05 01:01:17
 (epstopdf)                    size: 22508 bytes
 (epstopdf)             Output file: <images/barWidths-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-08-25 10:35:15
+(epstopdf)                    date: 2018-11-05 01:01:17
 (epstopdf)                    size: 14544 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/barWidths-eps-conve
 rted-to.pdf images/barWidths.eps>
@@ -1161,10 +1161,10 @@ Package pdftex.def Info: images/barWidths-eps-converted-to.pdf  used on input l
 ine 325.
 (pdftex.def)             Requested size: 88.37288pt x 70.69508pt.
 Package epstopdf Info: Source file: <images/Rotation.eps>
-(epstopdf)                    date: 2018-08-25 10:19:48
+(epstopdf)                    date: 2018-11-05 01:01:17
 (epstopdf)                    size: 22293 bytes
 (epstopdf)             Output file: <images/Rotation-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-08-25 10:35:15
+(epstopdf)                    date: 2018-11-05 01:01:17
 (epstopdf)                    size: 13575 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/Rotation-eps-conver
 ted-to.pdf images/Rotation.eps>
@@ -1187,10 +1187,10 @@ Underfull \hbox (badness 7631) in paragraph at lines 325--325
  []
 
 Package epstopdf Info: Source file: <images/optimal_y_8.eps>
-(epstopdf)                    date: 2018-08-25 10:21:06
+(epstopdf)                    date: 2018-11-05 01:01:17
 (epstopdf)                    size: 127723 bytes
 (epstopdf)             Output file: <images/optimal_y_8-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-08-25 10:35:32
+(epstopdf)                    date: 2018-11-05 01:01:17
 (epstopdf)                    size: 16491 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/optimal_y_8-eps-con
 verted-to.pdf images/optimal_y_8.eps>
@@ -1203,11 +1203,11 @@ Package pdftex.def Info: images/optimal_y_8-eps-converted-to.pdf  used on input
  line 325.
 (pdftex.def)             Requested size: 96.22997pt x 96.22595pt.
 Package epstopdf Info: Source file: <images/optimal_sigma_8.eps>
-(epstopdf)                    date: 2018-08-25 10:21:06
+(epstopdf)                    date: 2018-11-05 01:01:17
 (epstopdf)                    size: 127957 bytes
 (epstopdf)             Output file: <images/optimal_sigma_8-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2018-08-25 10:35:15
+(epstopdf)                    date: 2018-11-05 01:01:17
 (epstopdf)                    size: 17575 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/optimal_sigma_8-eps
 -converted-to.pdf images/optimal_sigma_8.eps>
@@ -1307,12 +1307,12 @@ s/barWidths-eps-converted-to.pdf> <./images/Rotation-eps-converted-to.pdf> <./i
 mages/optimal_y_8-eps-converted-to.pdf> <./images/optimal_sigma_8-eps-converted
 -to.pdf> <./images/chart.png>] (./poster_portrait.aux) ) 
 Here is how much of TeX's memory you used:
- 16173 strings out of 492982
- 330981 string characters out of 6134896
- 758479 words of memory out of 5000000
- 19283 multiletter control sequences out of 15000+600000
+ 16173 strings out of 494847
+ 330981 string characters out of 6179079
+ 753791 words of memory out of 5000000
+ 19042 multiletter control sequences out of 15000+600000
  38640 words of font info for 86 fonts, out of 8000000 for 9000
- 1143 hyphenation exceptions out of 8191
+ 61 hyphenation exceptions out of 8191
  62i,15n,76p,417b,1367s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/tex
 mf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/
