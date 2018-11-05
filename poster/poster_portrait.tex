@@ -53,9 +53,9 @@
 % Save space in lists. Use this after the opening of the list
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\compresslist}{%
-\setlength{\itemsep}{1pt}%
-\setlength{\parskip}{0pt}%
-\setlength{\parsep}{0pt}%
+	\setlength{\itemsep}{1pt}%
+	\setlength{\parskip}{0pt}%
+	\setlength{\parsep}{0pt}%
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -63,387 +63,385 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Here starts the poster
-%%%---------------------------------------------------------------------------
-%%% Format it to your taste with the options
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Define some colors
-
-%\definecolor{lightblue}{cmyk}{0.83,0.24,0,0.12}
-\definecolor{lightblue}{rgb}{0.145,0.6666,1}
-
-% Draw a video
-\newlength{\FSZ}
-\newcommand{\drawvideo}[3]{% [0 0.25 0.5 0.75 1 1.25 1.5]
-   \noindent\pgfmathsetlength{\FSZ}{\linewidth/#2}
-   \begin{tikzpicture}[outer sep=0pt,inner sep=0pt,x=\FSZ,y=\FSZ]
-   \draw[color=lightblue!50!black] (0,0) node[outer sep=0pt,inner sep=0pt,text width=\linewidth,minimum height=0] (video) {\noindent#3};
-   \path [fill=lightblue!50!black,line width=0pt] 
-     (video.north west) rectangle ([yshift=\FSZ] video.north east) 
-    \foreach \x in {1,2,...,#2} {
-      {[rounded corners=0.6] ($(video.north west)+(-0.7,0.8)+(\x,0)$) rectangle +(0.4,-0.6)}
-    }
-;
-   \path [fill=lightblue!50!black,line width=0pt] 
-     ([yshift=-1\FSZ] video.south west) rectangle (video.south east) 
-    \foreach \x in {1,2,...,#2} {
-      {[rounded corners=0.6] ($(video.south west)+(-0.7,-0.2)+(\x,0)$) rectangle +(0.4,-0.6)}
-    }
-;
-   \foreach \x in {1,...,#1} {
-     \draw[color=lightblue!50!black] ([xshift=\x\linewidth/#1] video.north west) -- ([xshift=\x\linewidth/#1] video.south west);
-   }
-   \foreach \x in {0,#1} {
-     \draw[color=lightblue!50!black] ([xshift=\x\linewidth/#1,yshift=1\FSZ] video.north west) -- ([xshift=\x\linewidth/#1,yshift=-1\FSZ] video.south west);
-   }
-   \end{tikzpicture}
-}
-
-\hyphenation{resolution occlusions}
-%%
-\begin{poster}%
-  % Poster Options
-  {
-  % Show grid to help with alignment
-  grid=false,
-  % Column spacing
-  colspacing=1em,
-  % Color style
-  bgColorOne=white,
-  bgColorTwo=white,
-  borderColor=lightblue,
-  headerColorOne=black,
-  headerColorTwo=lightblue,
-  headerFontColor=white,
-  boxColorOne=white,
-  boxColorTwo=lightblue,
-  % Format of textbox
-  textborder=roundedleft,
-  % Format of text header
-  eyecatcher=true,
-  headerborder=closed,
-  headerheight=0.12\textheight,
-%  textfont=\sc, An example of changing the text font
-  headershape=roundedright,
-  headershade=shadelr,
-  headerfont=\Large\bf\textsc, %Sans Serif
-  textfont={\setlength{\parindent}{1.5em}},
-  boxshade=plain,
-%  background=shade-tb,
-  background=plain,
-  linewidth=2pt
-  }
-  % Eye Catcher
-  {\includegraphics[height=12.0em]{images/BAM.png}} 
-  % Title
-  {\bf\textsc{Test of Goodness of Population Receptive Field Estimates}\vspace{0.3em}}
-  % Authors
-  {\textsc{ Arash.Ashrafnejad and Hossein.Mehrzadfar and Huseyin.Boyaci @bilkent.edu.tr}\\
-  \vspace{1em}
-  \bf41st European Conference on Visual Perception ECVP 2018}
-  % University logo
-  {% The makebox allows the title to flow into the logo, this is a hack because of the L shaped logo.
-    \includegraphics[height=10.0em]{images/bilkent.eps}
-  }
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Now define the boxes that make up the poster
-%%%---------------------------------------------------------------------------
-%%% Each box has a name and can be placed absolutely or relatively.
-%%% The only inconvenience is that you can only specify a relative position 
-%%% towards an already declared box. So if you have a box attached to the 
-%%% bottom, one to the top and a third one which should be in between, you 
-%%% have to specify the top and bottom boxes before you specify the middle 
-%%% box.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    %
-    % A coloured circle useful as a bullet with an adjustably strong filling
-    \newcommand{\colouredcircle}{%
-      \tikz{\useasboundingbox (-0.2em,-0.32em) rectangle(0.2em,0.32em); \draw[draw=black,fill=lightblue,line width=0.03em] (0,0) circle(0.18em);}}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Introduction}{name=introduction,column=0,row=0}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\noindent We present a method based on computer simulations to test the goodness of population receptive field (pRF) estimates. In particular, we have examined the effect of having non-linearity in the hemodynamic response function (HRF) by,
- 
-	\begin{enumerate}\compresslist
-		\item Simulating fMRI responses with non-linear "simulation HRFs"
-		\item Estimating pRFs with a "similar" linear "estimation HRF"
-	\end{enumerate}
 	
-	This is an important scenario to test since many estimation methods assume linear HRF models but actual HRF response is non-linear. Hence we present a pipeline to test robustness of stimulation protocols against non-linearities in the BOLD response.
-
-   \vspace{0.3em}
- }
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\headerbox{Stimulation}{name=stimulus,column=1,span=2,row=0}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \noindent We first used the exact drifting bar stimululation in \cite{Dumoulin2008}:
-  
-    \drawvideo{24}{72}{%
-        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_0}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_1}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_2}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_3}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_4}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_5}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_6}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_7}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_8}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_9}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_10}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_11}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_12}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_13}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_14}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_15}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_16}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_17}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_18}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_19}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_20}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_21}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_22}.png}%
-        \includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_23}.png}%
-    }
-	\noindent Then we optimized it for angle and bar width to reduce the non-linearity:
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%% Here starts the poster
+	%%%---------------------------------------------------------------------------
+	%%% Format it to your taste with the options
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% Define some colors
 	
-    \drawvideo{24}{72}{%
-	\includegraphics[width=0.0417\linewidth]{{stim_optimal_0}.png}%
-	\includegraphics[width=0.0417\linewidth]{{stim_optimal_1}.png}%
-	\includegraphics[width=0.0417\linewidth]{{stim_optimal_2}.png}%
-	\includegraphics[width=0.0417\linewidth]{{stim_optimal_3}.png}%
-	\includegraphics[width=0.0417\linewidth]{{stim_optimal_4}.png}%
-	\includegraphics[width=0.0417\linewidth]{{stim_optimal_5}.png}%
-	\includegraphics[width=0.0417\linewidth]{{stim_optimal_6}.png}%
-	\includegraphics[width=0.0417\linewidth]{{stim_optimal_7}.png}%
-	\includegraphics[width=0.0417\linewidth]{{stim_optimal_8}.png}%
-	\includegraphics[width=0.0417\linewidth]{{stim_optimal_9}.png}%
-	\includegraphics[width=0.0417\linewidth]{{stim_optimal_10}.png}%
-	\includegraphics[width=0.0417\linewidth]{{stim_optimal_11}.png}%
-	\includegraphics[width=0.0417\linewidth]{{stim_optimal_12}.png}%
-	\includegraphics[width=0.0417\linewidth]{{stim_optimal_13}.png}%
-	\includegraphics[width=0.0417\linewidth]{{stim_optimal_14}.png}%
-	\includegraphics[width=0.0417\linewidth]{{stim_optimal_15}.png}%
-	\includegraphics[width=0.0417\linewidth]{{stim_optimal_16}.png}%
-	\includegraphics[width=0.0417\linewidth]{{stim_optimal_17}.png}%
-	\includegraphics[width=0.0417\linewidth]{{stim_optimal_18}.png}%
-	\includegraphics[width=0.0417\linewidth]{{stim_optimal_19}.png}%
-	\includegraphics[width=0.0417\linewidth]{{stim_optimal_20}.png}%
-	\includegraphics[width=0.0417\linewidth]{{stim_optimal_21}.png}%
-	\includegraphics[width=0.0417\linewidth]{{stim_optimal_22}.png}%
-	\includegraphics[width=0.0417\linewidth]{{stim_optimal_23}.png}%
-}
-    \vspace{-0.6em}
-}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Experiment}{name=experiment,column=1,below=stimulus}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-  \noindent We use following HRFs:
-  
-  \begin{itemize}
-  \small
-  \item Double-Gamma Linear HRF
-  \begin{align*}
-    p(t) &= r(t) * h(t)\\
-  	h(t) &= \frac{1}{C}\frac{\lambda_1^{n_1} (t-t_1)^{n_1-1} e^{-\lambda_1(t-t_1)}}{(n_1-1)!}\\
-  	&-a\frac{\lambda_2^{n_2} (t-t_2)^{n_2-1} e^{-\lambda_2(t-t_2)}}{(n_2-1)!}
-  \end{align*}
-  where C is the normalizing constant.
-  \item Friston Non-Linear HRF
-   \begin{align*}
-  p(t) &= \sum_{i=1}^{3}\beta_i x_i(t)\\
-   &+\sum_{i=1}^{3}\sum_{j=1}^{3}\beta_{ij} x_i(t)x_j(t)\\
-   x_i(t) &= (r * b_i)(t) \\
-	b_i(t) &= \frac{1}{k!} t^k e^{-t} \quad k=5,7,15
-  \end{align*}
-  \end{itemize}
-\normalsize
-	HRF non-linearity experiment steps:
-	\begin{enumerate}
-		\item Initialize parameters
-		\begin{enumerate}
-			\item number of voxels to simulate
-			\item spatial linearity factor
-			\item double-Gamma HRF
-		\end{enumerate}
-	\item Estimate from linear BOLD response
-	\item Find parameter of non-Linear HRF
-	\item Estimate from non-Linear response
-	\item Repeat 4 to optimize the bar width size
-	\item Repeat 4 with optimized bar width to optimize the rotation angle
-
-	\end{enumerate}
-  
-   \vspace{0.3em}
-  }
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\headerbox{Results}{name=result,column=2,row=0,below=stimulus,bottomaligned=experiment}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\small
-	\noindent Accuracy maps when simulating with linear HRF and estimating with linear HRF.
-	\includegraphics[width=0.49\linewidth]{{0.00_y_8}.eps}
-	\includegraphics[width=0.49\linewidth]{{0.00_sigma_8}.eps}
+	%\definecolor{lightblue}{cmyk}{0.83,0.24,0,0.12}
+	\definecolor{lightblue}{rgb}{0.145,0.6666,1}
 	
-	\noindent Accuracy maps when simulating with non-linear HRF and estimating with linear HRF:
-	\includegraphics[width=0.49\linewidth]{{cont_0.00_y_8}.eps}
-	\includegraphics[width=0.49\linewidth]{{cont_0.00_sigma_8}.eps}
-	
-	\noindent Optimization of parameters with average of estimation errors over all pRF parameters:
-	\includegraphics[width=0.45\linewidth]{barWidths}
-	\includegraphics[width=0.45\linewidth]{Rotation}
-	
-	\noindent Accuracy maps of same experiment with optimized parameters for size and rotation:
-	\includegraphics[width=0.49\linewidth]{{optimal_y_8}.eps}
-	\includegraphics[width=0.49\linewidth]{{optimal_sigma_8}.eps}
-   \vspace{-0.3em}
-  }
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Discussion}{name=conclusion,column=1,span=1,below=experiment,above=bottom}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\noindent
-	We found that non-linearity in simulation HRFs may lead to erroneous pRF estimations. However, we showed that it is possible to optimize the stimulution parameters to ameliorate the effect this non-linearity.\\
-	
-	Therefore, we highly recommend that the stimulation
-	protocol (i.e., stimulation and experiment parameters) should be fine-tuned using computer simulations before an actual fMRI experiment is conducted.
-	
-
+	% Draw a video
+	\newlength{\FSZ}
+	\newcommand{\drawvideo}[3]{% [0 0.25 0.5 0.75 1 1.25 1.5]
+		\noindent\pgfmathsetlength{\FSZ}{\linewidth/#2}
+		\begin{tikzpicture}[outer sep=0pt,inner sep=0pt,x=\FSZ,y=\FSZ]
+		\draw[color=lightblue!50!black] (0,0) node[outer sep=0pt,inner sep=0pt,text width=\linewidth,minimum height=0] (video) {\noindent#3};
+		\path [fill=lightblue!50!black,line width=0pt] 
+		(video.north west) rectangle ([yshift=\FSZ] video.north east) 
+		\foreach \x in {1,2,...,#2} {
+			{[rounded corners=0.6] ($(video.north west)+(-0.7,0.8)+(\x,0)$) rectangle +(0.4,-0.6)}
+		}
+		;
+		\path [fill=lightblue!50!black,line width=0pt] 
+		([yshift=-1\FSZ] video.south west) rectangle (video.south east) 
+		\foreach \x in {1,2,...,#2} {
+			{[rounded corners=0.6] ($(video.south west)+(-0.7,-0.2)+(\x,0)$) rectangle +(0.4,-0.6)}
+		}
+		;
+		\foreach \x in {1,...,#1} {
+			\draw[color=lightblue!50!black] ([xshift=\x\linewidth/#1] video.north west) -- ([xshift=\x\linewidth/#1] video.south west);
+		}
+		\foreach \x in {0,#1} {
+			\draw[color=lightblue!50!black] ([xshift=\x\linewidth/#1,yshift=1\FSZ] video.north west) -- ([xshift=\x\linewidth/#1,yshift=-1\FSZ] video.south west);
+		}
+		\end{tikzpicture}
 	}
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Method}{name=method,column=0,below=introduction, above=bottom}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  	\noindent We have developed a test based on models in \cite{Dumoulin2008}\cite{Kay2013} with following steps: \\
-  	
-  	
-  	\noindent
-    1. Parameter Initialization
-      	
-    Define pRF vector $\Theta = (x_0, y_0, \sigma)$.
-    
-     \noindent Initialize $\Theta=\theta$ such that $x_0, y_0$ are receptive field locations in the visual field corresponding to a voxel measurement and the pRF size is modeled accordingly to account for cortical mapping,
-    \begin{align*}
-    \sigma &= \frac{1}{2} \ln(e + \sqrt{x_0^2 + 2y_0^2})
-    \end{align*} 
-    
-    \noindent
-    2. Data Generation
-  	\begin{align*}
-  	g(x, y, \Theta=\theta) &= e^{-\frac{(x-x_0)^2+(y-y_0)^2}{2\sigma^2}}\\
-  	r(t, \Theta=\theta) &= (\sum_{x, y} s(x, y, t) g(x,y, \theta))^n\\
-  	B(t) &=  h(r(t, \Theta=\theta)) + e(t)
-	\end{align*}
 	
-	\noindent
-	3. Parameter Estimation
-  	\begin{align*}
- 	r(t, \Theta) &= (\sum_{x, y} s(x, y, t) g(x, y, \Theta))^n\\
- 	p(t, \Theta) &= h(r(t, \Theta))\\
-  	\hat{\Theta} &= \argmin{\sum_{t}^{}(B(t) - p(t, \Theta))^2}
-  	\end{align*}
-  	
-  	\noindent
-  	4. Accuracy Map Evaluation
-	\begin{align*}
-  	\tilde{x} = \frac{|\hat{x_0}-x_0|}{x_0},~\tilde{y} = \frac{|\hat{y_0}-y_0|}{y_0},~\tilde{\sigma} = \frac{|\hat{\sigma}-\sigma|}{\sigma}
-  	\end{align*}
-  	
-  	\smaller
-  	\noindent with following variable descriptions:
-    \begin{align*}
-    x, y &= \text{point in visual space}\\
-    n &= \text{\begin{flushleft}
-    	spatial linearity factor
-    	\end{flushleft}}\\
-  	g(x, y, \Theta) &= \text{pRF model}\\
-  	s(x, y, t) &= \text{stimulation function}\\
-  	r(t, \Theta) &= \text{pRF response}\\
-  	e(t) &= \text{Gaussian noise}\\
-  	B(t) &= \text{BOLD response}\\
-  	h(.) &= \text{HRF function}\\
-  	\end{align*}
- 
-   \vspace{0.3em}
-  }
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\headerbox{References}{name=references,column=2,below=result}{
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\smaller
-	\bibliographystyle{ieee}
-	\renewcommand{\section}[2]{\vskip 0.05em}
-	\begin{thebibliography}{1}\itemsep=-0.01em
-		\setlength{\baselineskip}{0.4em}
-		\bibitem{Dumoulin2008}
-		S.~Dumoulin, B.~Wandell.
-		\newblock {P}opulation {R}eceptive {F}ield {E}stimates in {H}uman {V}isual {C}ortex.
-		\newblock In {\em NeuroImage '08}
-		\bibitem{Kay2013}
-		K.~Kay and J.~Winawer et all.
-		\newblock {C}ompressive {S}patial {S}ummation in {H}uman {V}isual {C}ortex.
-		\newblock In {\em Journal of Neurophysiology '13}
-	\end{thebibliography}
-}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\headerbox{Source Code}{name=source,column=2,below=references,above=bottom}{
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\smaller
-	\noindent
-	\begin{minipage}{\linewidth}
-		\begin{minipage}{0.83\linewidth}
-			\indent{} The Python \itshape{prfsim} \normalfont package can directly be installed from PyPI:\quad `pip install prfsim`
-
-
-			The source code is available at, \\
-				\url{github.com/arash-ash/pRFsim}
-		\end{minipage}\hfill%
-		\begin{minipage}{0.17\linewidth}
-			\hfill\includegraphics[width=\linewidth]{chart}
-		\end{minipage}
-	\smaller
-	\end{minipage}
-	\vspace{0.3em}
-}
-
-
-\end{poster}
-
+	\hyphenation{resolution occlusions}
+	%%
+	\begin{poster}%
+		% Poster Options
+		{
+			% Show grid to help with alignment
+			grid=false,
+			% Column spacing
+			colspacing=1em,
+			% Color style
+			bgColorOne=white,
+			bgColorTwo=white,
+			borderColor=lightblue,
+			headerColorOne=black,
+			headerColorTwo=lightblue,
+			headerFontColor=white,
+			boxColorOne=white,
+			boxColorTwo=lightblue,
+			% Format of textbox
+			textborder=roundedleft,
+			% Format of text header
+			eyecatcher=true,
+			headerborder=closed,
+			headerheight=0.12\textheight,
+			%  textfont=\sc, An example of changing the text font
+			headershape=roundedright,
+			headershade=shadelr,
+			headerfont=\Large\bf\textsc, %Sans Serif
+			textfont={\setlength{\parindent}{1.5em}},
+			boxshade=plain,
+			%  background=shade-tb,
+			background=plain,
+			linewidth=2pt
+		}
+		% Eye Catcher
+		{\includegraphics[height=12.0em]{images/BAM.png}} 
+		% Title
+		{\bf\textsc{Test of Goodness of Population Receptive Field Estimates}\vspace{0.3em}}
+		% Authors
+		{\textsc{ Arash.Ashrafnejad and Hossein.Mehrzadfar and Huseyin.Boyaci @bilkent.edu.tr}\\
+			\vspace{1em}
+			\bf41st European Conference on Visual Perception ECVP 2018}
+		% University logo
+		{% The makebox allows the title to flow into the logo, this is a hack because of the L shaped logo.
+			\includegraphics[height=10.0em]{images/bilkent.eps}
+		}
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%%% Now define the boxes that make up the poster
+		%%%---------------------------------------------------------------------------
+		%%% Each box has a name and can be placed absolutely or relatively.
+		%%% The only inconvenience is that you can only specify a relative position 
+		%%% towards an already declared box. So if you have a box attached to the 
+		%%% bottom, one to the top and a third one which should be in between, you 
+		%%% have to specify the top and bottom boxes before you specify the middle 
+		%%% box.
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%
+		% A coloured circle useful as a bullet with an adjustably strong filling
+		\newcommand{\colouredcircle}{%
+			\tikz{\useasboundingbox (-0.2em,-0.32em) rectangle(0.2em,0.32em); \draw[draw=black,fill=lightblue,line width=0.03em] (0,0) circle(0.18em);}}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\headerbox{Introduction}{name=introduction,column=0,row=0}{
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			\noindent We present a method based on computer simulations to test the goodness of population receptive field (pRF) estimates. In particular, we have examined the effect of having non-linearity in the hemodynamic response function (HRF) by,
+			
+			\begin{enumerate}\compresslist
+				\item Simulating fMRI responses with non-linear "simulation HRFs"
+				\item Estimating pRFs with a "similar" linear "estimation HRF"
+			\end{enumerate}
+			
+			This is an important scenario to test since many estimation methods assume linear HRF models but actual HRF response is non-linear. Hence we present a pipeline to test robustness of stimulation protocols against non-linearities in the BOLD response.
+			
+			\vspace{0.3em}
+		}
+		
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\headerbox{Stimulation}{name=stimulus,column=1,span=2,row=0}{
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			\noindent We first used the exact drifting bar stimululation in \cite{Dumoulin2008}:
+			
+			\drawvideo{24}{72}{%
+				\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_0}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_1}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_2}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_3}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_4}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_5}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_6}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_7}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_8}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_9}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_10}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_11}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_12}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_13}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_14}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_15}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_16}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_17}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_18}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_19}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_20}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_21}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_22}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_23}.png}%
+			}
+			\noindent Then we optimized it for angle and bar width to reduce the non-linearity:
+			
+			\drawvideo{24}{72}{%
+				\includegraphics[width=0.0417\linewidth]{{stim_optimal_0}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_optimal_1}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_optimal_2}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_optimal_3}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_optimal_4}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_optimal_5}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_optimal_6}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_optimal_7}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_optimal_8}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_optimal_9}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_optimal_10}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_optimal_11}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_optimal_12}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_optimal_13}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_optimal_14}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_optimal_15}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_optimal_16}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_optimal_17}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_optimal_18}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_optimal_19}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_optimal_20}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_optimal_21}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_optimal_22}.png}%
+				\includegraphics[width=0.0417\linewidth]{{stim_optimal_23}.png}%
+			}
+			\vspace{-0.6em}
+		}
+		
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\headerbox{Experiment}{name=experiment,column=1,below=stimulus}{
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			
+			\noindent We use following HRFs:
+			
+			\begin{itemize}
+				\small
+				\item Double-Gamma Linear HRF
+				\begin{align*}
+				p(t) &= r(t) * h(t)\\
+				h(t) &= \frac{1}{C}\frac{\lambda_1^{n_1} (t-t_1)^{n_1-1} e^{-\lambda_1(t-t_1)}}{(n_1-1)!}\\
+				&-a\frac{\lambda_2^{n_2} (t-t_2)^{n_2-1} e^{-\lambda_2(t-t_2)}}{(n_2-1)!}
+				\end{align*}
+				where C is the normalizing constant.
+				\item Friston Non-Linear HRF
+				\begin{align*}
+				p(t) &= \sum_{i=1}^{3}\beta_i x_i(t)\\
+				&+\sum_{i=1}^{3}\sum_{j=1}^{3}\beta_{ij} x_i(t)x_j(t)\\
+				x_i(t) &= (r * b_i)(t) \\
+				b_i(t) &= \frac{1}{k!} t^k e^{-t} \quad k=5,7,15
+				\end{align*}
+			\end{itemize}
+			\normalsize
+			HRF non-linearity experiment steps:
+			\begin{enumerate}
+				\item Initialize parameters
+				\begin{enumerate}
+					\item number of voxels to simulate
+					\item spatial linearity factor
+					\item double-Gamma HRF
+					\item Friston non-Linear HRF
+				\end{enumerate}
+				\item Generate BOLD with non-linear HRF
+				\item Estimate with linear HRF
+				\item Repeat 3 to optimize the bar width size
+				\item Repeat 3 with optimized bar width to optimize the rotation angle
+				
+			\end{enumerate}
+			
+			\vspace{0.3em}
+		}
+		
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\headerbox{Results}{name=result,column=2,row=0,below=stimulus,bottomaligned=experiment}{
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			\small
+			\noindent Accuracy maps when simulating with non-linear HRF and estimating with non-linear HRF.
+			\includegraphics[width=0.49\linewidth]{{0.00_y_8}.eps}
+			\includegraphics[width=0.49\linewidth]{{0.00_sigma_8}.eps}
+			
+			\noindent Accuracy maps when simulating with non-linear HRF and estimating with linear HRF:
+			\includegraphics[width=0.49\linewidth]{{cont_0.00_y_8}.eps}
+			\includegraphics[width=0.49\linewidth]{{cont_0.00_sigma_8}.eps}
+			
+			\noindent Optimization of parameters with average of estimation errors over all pRF parameters:
+			\includegraphics[width=0.45\linewidth]{barWidths}
+			\includegraphics[width=0.45\linewidth]{Rotation}
+			
+			\noindent Accuracy maps when estimating with linear HRF with optimized parameters for size and rotation:
+			\includegraphics[width=0.49\linewidth]{{optimal_y_8}.eps}
+			\includegraphics[width=0.49\linewidth]{{optimal_sigma_8}.eps}
+			\vspace{-0.3em}
+		}
+		
+		
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\headerbox{Discussion}{name=conclusion,column=1,span=1,below=experiment,above=bottom}{
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			\noindent
+			We found that non-linearity in simulation HRFs may lead to erroneous pRF estimations. However, we showed that it is possible to optimize the stimulus parameters to ameliorate the effect of this non-linearity.\\
+			
+			Therefore, we highly recommend that the stimulation
+			protocol (i.e., stimulation and experiment parameters) should be fine-tuned using computer simulations before an actual fMRI experiment is conducted.
+			
+			
+		}
+		
+		
+		
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\headerbox{Method}{name=method,column=0,below=introduction, above=bottom}{
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			\noindent We have developed a test based on models in \cite{Dumoulin2008}\cite{Kay2013} with following steps: \\
+			
+			
+			\noindent
+			1. Parameter Initialization
+			
+			Define pRF vector $\Theta = (x_0, y_0, \sigma)$.
+			
+			\noindent Initialize $\Theta=\theta$ such that $x_0, y_0$ are receptive field locations in the visual field corresponding to a voxel measurement and the pRF size is modeled accordingly to account for cortical mapping,
+			\begin{align*}
+			\sigma &= \frac{1}{2} \ln(e + \sqrt{x_0^2 + 2y_0^2})
+			\end{align*} 
+			
+			\noindent
+			2. Data Generation
+			\begin{align*}
+			g(x, y, \Theta=\theta) &= e^{-\frac{(x-x_0)^2+(y-y_0)^2}{2\sigma^2}}\\
+			r(t, \Theta=\theta) &= (\sum_{x, y} s(x, y, t) g(x,y, \theta))^n\\
+			B(t) &=  h(r(t, \Theta=\theta)) + e(t)
+			\end{align*}
+			
+			\noindent
+			3. Parameter Estimation
+			\begin{align*}
+			r(t, \Theta) &= (\sum_{x, y} s(x, y, t) g(x, y, \Theta))^n\\
+			p(t, \Theta) &= h(r(t, \Theta))\\
+			\hat{\Theta} &= \argmin{\sum_{t}^{}(B(t) - p(t, \Theta))^2}
+			\end{align*}
+			
+			\noindent
+			4. Accuracy Map Evaluation
+			\begin{align*}
+			\tilde{x} = \frac{|\hat{x_0}-x_0|}{x_0},~\tilde{y} = \frac{|\hat{y_0}-y_0|}{y_0},~\tilde{\sigma} = \frac{|\hat{\sigma}-\sigma|}{\sigma}
+			\end{align*}
+			
+			\smaller
+			\noindent with following variable descriptions:
+			\begin{align*}
+			x, y &= \text{point in visual space}\\
+			n &= \text{spatial linearity factor}\\
+			g(x, y, \Theta) &= \text{pRF model}\\
+			s(x, y, t) &= \text{stimulation function}\\
+			r(t, \Theta) &= \text{pRF response}\\
+			e(t) &= \text{Gaussian noise}\\
+			B(t) &= \text{BOLD response}\\
+			h(.) &= \text{HRF function}\\
+			\end{align*}
+			
+			\vspace{0.3em}
+		}
+		
+		
+		
+		
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\headerbox{References}{name=references,column=2,below=result}{
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			\smaller
+			\bibliographystyle{ieee}
+			\renewcommand{\section}[2]{\vskip 0.05em}
+			\begin{thebibliography}{1}\itemsep=-0.01em
+				\setlength{\baselineskip}{0.4em}
+				\bibitem{Dumoulin2008}
+				S.~Dumoulin, B.~Wandell.
+				\newblock {P}opulation {R}eceptive {F}ield {E}stimates in {H}uman {V}isual {C}ortex.
+				\newblock In {\em NeuroImage '08}
+				\bibitem{Kay2013}
+				K.~Kay and J.~Winawer et all.
+				\newblock {C}ompressive {S}patial {S}ummation in {H}uman {V}isual {C}ortex.
+				\newblock In {\em Journal of Neurophysiology '13}
+			\end{thebibliography}
+		}
+		
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\headerbox{Source Code}{name=source,column=2,below=references,above=bottom}{
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			\smaller
+			\noindent
+			\begin{minipage}{\linewidth}
+				\begin{minipage}{0.83\linewidth}
+					\indent{} The Python \itshape{prfsim} \normalfont package can directly be installed from PyPI:\quad `pip install prfsim`
+					
+					
+					The source code is available at, \\
+					\url{github.com/arash-ash/pRFsim}
+				\end{minipage}\hfill%
+				\begin{minipage}{0.17\linewidth}
+					\hfill\includegraphics[width=\linewidth]{chart}
+				\end{minipage}
+				\smaller
+			\end{minipage}
+			\vspace{0.3em}
+		}
+		
+		
+	\end{poster}
+	
 \end{document}
 

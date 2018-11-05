@@ -10,6 +10,7 @@
 \usepackage{bm}
 \usepackage{tikz}
 \usetikzlibrary{tikzmark,positioning,calc}
+\DeclareMathOperator*{\argmin}{arg\,min}
 
 \usepackage[natbib=true,style=authoryear,backend=bibtex,useprefix=true]{biblatex}
 \addbibresource{refs.bib}
@@ -81,34 +82,36 @@
 
 	\section{Data Generation}
 	\begin{frame}{Stimulation}
-	  \noindent We first used the exact drifting bar stimululation in \cite{Dumoulin2008}:
-	
-%	\drawvideo{24}{72}{%
-%		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_0}.png}%
-%		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_1}.png}%
-%		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_2}.png}%
-%		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_3}.png}%
-%		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_4}.png}%
-%		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_5}.png}%
-%		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_6}.png}%
-%		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_7}.png}%
-%		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_8}.png}%
-%		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_9}.png}%
-%		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_10}.png}%
-%		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_11}.png}%
-%		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_12}.png}%
-%		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_13}.png}%
-%		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_14}.png}%
-%		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_15}.png}%
-%		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_16}.png}%
-%		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_17}.png}%
-%		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_18}.png}%
-%		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_19}.png}%
-%		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_20}.png}%
-%		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_21}.png}%
-%		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_22}.png}%
-%		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_23}.png}%
-%	}
+	\begin{itemize}
+
+	  \item drifting bar stimululation in \cite{Dumoulin2008}:
+	\end{itemize}
+	\drawvideo{24}{72}{%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_0}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_1}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_2}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_3}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_4}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_5}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_6}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_7}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_8}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_9}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_10}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_11}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_12}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_13}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_14}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_15}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_16}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_17}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_18}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_19}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_20}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_21}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_22}.png}%
+		\includegraphics[width=0.0417\linewidth]{{stim_cont_0.00_23}.png}%
+	}
 	\end{frame}
 
 	\begin{frame}{fMRI Signal Modelling}
@@ -226,7 +229,7 @@
 			\node<4->[expl] 
 			(thirdN3) 
 			at (10,4cm)
-			{pRF size assumed to be a log-polar function of pRF center};
+			{pRF size assumed to be a log-polar function of pRF center \cite{Harvey2011}};
 			
 			
 			\draw<2->[arrow]
@@ -242,10 +245,158 @@
 		\end{exampleblock}	\end{frame}
 
 
-	\begin{frame}[t,allowframebreaks]
-	\frametitle{References}
-	\printbibliography
+		\begin{frame}{Haemodynamic Response Function Modelling}
+		\begin{exampleblock}{Canonical Linear HRF model}
+		  \begin{align*}
+		\mathcal{H}(r(t)) &= r(t) * h(t)\\
+	h(t) &= \frac{1}{C}\frac{\lambda_1^{n_1} (t-t_1)^{n_1-1} e^{-\lambda_1(t-t_1)}}{(n_1-1)!}-a\frac{\lambda_2^{n_2} (t-t_2)^{n_2-1} e^{-\lambda_2(t-t_2)}}{(n_2-1)!}
+		\end{align*}
+		\end{exampleblock}	
+
+			\begin{exampleblock}{Friston Non-Linear HRF}
+			   \begin{align*}
+			\mathcal{H}(r(t)) &= \sum_{i=1}^{3}\beta_i x_i(t)+\sum_{i=1}^{3}\sum_{j=1}^{3}\beta_{ij} x_i(t)x_j(t)\\
+			x_i(t) &= (r * b_i)(t), \quad b_i(t) = \frac{1}{k!} t^k e^{-t} \quad k=5,7,15
+			\end{align*}
+			\end{exampleblock}
+		\end{frame}
+	
+	\begin{frame}{pRF Estimation}
+	\begin{exampleblock}{MSE model}
+		\begin{align*}
+		r(t, \Theta) &= (\sum_{x, y} s(x, y, t) g(x, y, \Theta))^n\\
+		p(t, \Theta) &= \mathcal{H}(r(t, \Theta))\\
+		\hat{\Theta} &= \argmin{\sum_{t}^{}(B(t) - p(t, \Theta))^2}
+		\end{align*}
+	\end{exampleblock}	
 	\end{frame}
+
+		\begin{frame}{pRF Evaluation}
+	\begin{exampleblock}{Accuracy Map Evaluation}
+	\begin{align*}
+\tilde{x} = \frac{|\hat{x_0}-x_0|}{x_0},~\tilde{y} = \frac{|\hat{y_0}-y_0|}{y_0},~\tilde{\sigma} = \frac{|\hat{\sigma}-\sigma|}{\sigma}
+\end{align*}
+	\end{exampleblock}	
+\end{frame}
+
+		\begin{frame}{Preliminary Results}
+		\begin{itemize}
+
+		\item Estimating with non-linear HRF.
+		\begin{figure}
+		\includegraphics[width=0.25\linewidth]{{0.00_x_8}.eps}
+		\includegraphics[width=0.25\linewidth]{{0.00_y_8}.eps}
+		\includegraphics[width=0.25\linewidth]{{0.00_sigma_8}.eps}
+		\end{figure}
+		\pause
+		\item Estimating with linear HRF.
+		\begin{figure}
+		\includegraphics[width=0.25\linewidth]{{cont_0.00_y_8}.eps}
+		\includegraphics[width=0.25\linewidth]{{cont_0.00_y_8}.eps}
+		\includegraphics[width=0.25\linewidth]{{cont_0.00_sigma_8}.eps}
+		\end{figure}
+		\end{itemize}
+		\end{frame}
+
+
+		\begin{frame}{Optimization}
+		\begin{itemize}
+		\item Optimization of parameters.
+		\begin{figure}
+			\includegraphics[width=0.4\linewidth]{barWidths.eps}
+			\includegraphics[width=0.4\linewidth]{Rotation.eps}
+		\end{figure}
+		\pause
+		\item Optimized Stimulus.
+		\begin{figure}
+	    \drawvideo{24}{72}{%
+			\includegraphics[width=0.0417\linewidth]{{stim_optimal_0}.png}%
+			\includegraphics[width=0.0417\linewidth]{{stim_optimal_1}.png}%
+			\includegraphics[width=0.0417\linewidth]{{stim_optimal_2}.png}%
+			\includegraphics[width=0.0417\linewidth]{{stim_optimal_3}.png}%
+			\includegraphics[width=0.0417\linewidth]{{stim_optimal_4}.png}%
+			\includegraphics[width=0.0417\linewidth]{{stim_optimal_5}.png}%
+			\includegraphics[width=0.0417\linewidth]{{stim_optimal_6}.png}%
+			\includegraphics[width=0.0417\linewidth]{{stim_optimal_7}.png}%
+			\includegraphics[width=0.0417\linewidth]{{stim_optimal_8}.png}%
+			\includegraphics[width=0.0417\linewidth]{{stim_optimal_9}.png}%
+			\includegraphics[width=0.0417\linewidth]{{stim_optimal_10}.png}%
+			\includegraphics[width=0.0417\linewidth]{{stim_optimal_11}.png}%
+			\includegraphics[width=0.0417\linewidth]{{stim_optimal_12}.png}%
+			\includegraphics[width=0.0417\linewidth]{{stim_optimal_13}.png}%
+			\includegraphics[width=0.0417\linewidth]{{stim_optimal_14}.png}%
+			\includegraphics[width=0.0417\linewidth]{{stim_optimal_15}.png}%
+			\includegraphics[width=0.0417\linewidth]{{stim_optimal_16}.png}%
+			\includegraphics[width=0.0417\linewidth]{{stim_optimal_17}.png}%
+			\includegraphics[width=0.0417\linewidth]{{stim_optimal_18}.png}%
+			\includegraphics[width=0.0417\linewidth]{{stim_optimal_19}.png}%
+			\includegraphics[width=0.0417\linewidth]{{stim_optimal_20}.png}%
+			\includegraphics[width=0.0417\linewidth]{{stim_optimal_21}.png}%
+			\includegraphics[width=0.0417\linewidth]{{stim_optimal_22}.png}%
+			\includegraphics[width=0.0417\linewidth]{{stim_optimal_23}.png}%
+		}
+		\end{figure}
+		\end{itemize}
+		\end{frame}
+	
+				\begin{frame}{Optimized Results}
+		\begin{itemize}
+			
+			\item Estimating with linear HRF via Non-optimized stimulus
+			\begin{figure}
+				\includegraphics[width=0.25\linewidth]{{0.00_x_8}.eps}
+				\includegraphics[width=0.25\linewidth]{{0.00_y_8}.eps}
+				\includegraphics[width=0.25\linewidth]{{0.00_sigma_8}.eps}
+			\end{figure}
+			\pause
+			\item Estimating with linear HRF via Optimized stimulus
+			\begin{figure}
+				\includegraphics[width=0.25\linewidth]{{optimal_y_8}.eps}
+				\includegraphics[width=0.25\linewidth]{{optimal_y_8}.eps}
+				\includegraphics[width=0.25\linewidth]{{optimal_sigma_8}.eps}
+			\end{figure}
+		\end{itemize}
+		\end{frame}
+
+
+%		\begin{frame}
+%		\noindent Optimization of parameters with average of estimation errors over all pRF parameters:
+%		\includegraphics[width=0.45\linewidth]{barWidths}
+%		\includegraphics[width=0.45\linewidth]{Rotation}
+%		
+%		\noindent Accuracy maps of same experiment with optimized parameters for size and rotation:
+%		\includegraphics[width=0.49\linewidth]{{optimal_y_8}.eps}
+%		\includegraphics[width=0.49\linewidth]{{optimal_sigma_8}.eps}
+%		\vspace{-0.3em}
+%		\end{frame}
+	
+	
+		\begin{frame}{Discussion and Future work}
+				\begin{exampleblock}{Discussion}
+				\begin{itemize}
+				\item 	We found that non-linearity in simulation HRFs may lead to erroneous pRF estimations. However, we showed that it is possible to optimize the stimulution parameters to ameliorate the effect this non-linearity.
+				\item Therefore, we highly recommend that the stimulation
+				protocol (i.e., stimulation and experiment parameters) should be fine-tuned using computer simulations before an actual fMRI experiment is conducted.
+				\end{itemize}
+				\end{exampleblock}
+				
+				\begin{exampleblock}{Future work}
+					\begin{itemize}
+						\item 	Optimization of more parameters using different stimulus.
+						\item fMRI experiments to validate the improvement of pRF estimates.
+					\end{itemize}
+				\end{exampleblock}
+				
+		\end{frame}
+	
+	
+	
+	
+	
+		\begin{frame}[t,allowframebreaks]
+		\frametitle{References}
+		\printbibliography
+		\end{frame}
 
 
 \end{document}

@@ -77,6 +77,72 @@
     \field{year}{2008}
   \endentry
 
+  \entry{Harvey2011}{article}{}
+    \name{author}{2}{}{%
+      {{hash=HBM}{%
+         family={Harvey},
+         familyi={H\bibinitperiod},
+         given={B.\bibnamedelima M.},
+         giveni={B\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=DSO}{%
+         family={Dumoulin},
+         familyi={D\bibinitperiod},
+         given={S.\bibnamedelima O.},
+         giveni={S\bibinitperiod\bibinitdelim O\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HBMDSO1}
+    \strng{fullhash}{HBMDSO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2011}
+    \field{labeldatesource}{year}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{abstract}{%
+    Receptive field (RF) sizes and cortical magnification factor (CMF) are
+  fundamental organization properties of the visual cortex. At increasing
+  visual eccentricity, RF sizes increase and CMF decreases. A relationship
+  between RF size and CMF suggests constancies in cortical architecture, as
+  their product, the cortical representation of an RF (point image), may be
+  constant. Previous animal neurophysiology studies of this question yield
+  conflicting results. Here, we use fMRI to determine the relationship between
+  the population RF (pRF) and CMF in humans. In average and individual data,
+  the product of CMF and pRF size, the population point image, is near
+  constant, decreasing slightly with eccentricity in V1. Interhemisphere and
+  subject variations in CMF, pRF size, and V1 surface area are correlated, and
+  the population point image varies less than these properties. These results
+  suggest a V1 cortical processing architecture of approximately constant size
+  between humans. Up the visual hierarchy, to V2, V3, hV4, and LO1, the
+  population point image decreases with eccentricity, and both the absolute
+  values and rate of change increase. PRF sizes increase between visual areas
+  and with eccentricity, but when expressed in V1 cortical surface area (i.e.,
+  corticocortical pRFs), they are constant across eccentricity in V2/V3. Thus,
+  V2/V3, and to some degree hV4, sample from a constant extent of V1. This may
+  explain population point image changes in later areas. Consequently, the
+  constant factor determining pRF size may not be the relationship to the local
+  CMF, but rather pRF sizes and CMFs in visual areas from which the pRF
+  samples.%
+    }
+    \verb{doi}
+    \verb 10.1523/JNEUROSCI.2572-11.2011
+    \endverb
+    \field{isbn}{1529-2401 (Electronic)$\backslash$r0270-6474 (Linking)}
+    \field{issn}{0270-6474}
+    \field{number}{38}
+    \field{pages}{13604\bibrangedash 13612}
+    \field{title}{{The Relationship between Cortical Magnification Factor and
+  Population Receptive Field Size in Human Visual Cortex: Constancies in
+  Cortical Architecture}}
+    \verb{url}
+    \verb http://www.jneurosci.org/cgi/doi/10.1523/JNEUROSCI.2572-11.2011
+    \endverb
+    \field{volume}{31}
+    \field{journaltitle}{Journal of Neuroscience}
+    \field{year}{2011}
+  \endentry
+
   \entry{Kay2013}{article}{}
     \name{author}{4}{}{%
       {{hash=KKN}{%
